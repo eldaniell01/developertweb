@@ -29,6 +29,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 .form_log{
     justify-content: space-between;
 }
@@ -55,4 +56,8 @@ body{
 }
 .but:hover{
     background: #107D9E;
+}
+
+.form_reg{
+    display: none;
 }
