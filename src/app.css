@@ -1,5 +1,5 @@
 body{
-    
+    margin: 0%;
     background-image: url(./img/lissete-laverde-_qp5lbyVQtE-unsplash.jpg);
     background-size: cover;
 }
@@ -46,4 +46,13 @@ body{
 .but{
     border:none;
     background: #1F578F;
+    color: white;
+    width: 225px;
+    height: 45px;
+    align-items: center;
+    padding: 0%;
+    transition: 0.3s;
+}
+.but:hover{
+    background: #107D9E;
 }
