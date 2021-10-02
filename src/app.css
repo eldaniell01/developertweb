@@ -23,13 +23,18 @@ body{
     font-family: "Corbel Light";
     font-size: 2em;
 }
-.form_log .reg{
+.form_log{
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
 }
-
+.reg{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
 .form_log{
     justify-content: space-between;
 }
