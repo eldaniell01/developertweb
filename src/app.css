@@ -4,7 +4,7 @@ body{
     background-size: cover;
 }
 .login{
-    background: white;
+    background: #ABD5D9;
     width: 550px;
     height: 100%;
     position: absolute;
@@ -37,8 +37,13 @@ body{
 }
 .txt3{
     border: none;
-    border-bottom: 2px solid;
+    border-bottom: 3px solid;
+    background: none;
 }
 .buttons .txt{
     margin:25px;
+}
+.but{
+    border:none;
+    background: #1F578F;
 }
