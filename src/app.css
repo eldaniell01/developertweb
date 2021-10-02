@@ -1,6 +1,5 @@
 body{
-    padding: 0%;
-    margin: 0%;
+    
     background-image: url(./img/lissete-laverde-_qp5lbyVQtE-unsplash.jpg);
     background-size: cover;
 }
@@ -10,7 +9,36 @@ body{
     height: 100%;
     position: absolute;
     right: 0%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
 }
-.pp{
-    color: violet;
+
+.t{
+    font-family: "Corbel Light";
+    font-size: 4em;
+}
+.txt{
+    font-family: "Corbel Light";
+    font-size: 2em;
+}
+.form_log .reg{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.form_log{
+    justify-content: space-between;
+}
+.txt2{
+    margin-top: 25px;
+}
+.txt3{
+    border: none;
+    border-bottom: 2px solid;
+}
+.buttons .txt{
+    margin:25px;
 }
