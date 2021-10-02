@@ -1,5 +1,16 @@
 body{
     padding: 0%;
     margin: 0%;
-    background: blue;
+    background-image: url(./img/lissete-laverde-_qp5lbyVQtE-unsplash.jpg);
+    background-size: cover;
+}
+.login{
+    background: white;
+    width: 550px;
+    height: 100%;
+    position: absolute;
+    right: 0%;
+}
+.pp{
+    color: violet;
 }
