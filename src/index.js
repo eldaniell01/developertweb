@@ -3,6 +3,7 @@ import React from "react";
 import  ReactDOM  from "react-dom";
 import "./app.css";
 ReactDOM.render(
+    
     <form className="form_log">
         <center><label htmlFor="title" className="t">HOTEL PRINCY</label></center>
         <div className="reg">
@@ -12,8 +13,8 @@ ReactDOM.render(
             <input className="txt txt2 txt3" type="password" id="contraseña" placeholder="Contraseña"></input>
         </div>
         <div className="buttons">
-            <input className="txt" type="button" id="log" value="Iniciar Sesión"></input>
-            <input className="txt" type="button" id="reg" value="Registrar Usuario"></input>
+            <input className="txt but" type="button" id="log" value="Iniciar Sesión"></input>
+            <input className="txt but" type="button" id="reg" value="Registrar Usuario"></input>
         </div>
     </form>,
     
