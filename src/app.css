@@ -2,6 +2,7 @@ body{
     margin: 0%;
     background-image: url(./img/lissete-laverde-_qp5lbyVQtE-unsplash.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 .login{
     background: #ABD5D9;
