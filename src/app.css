@@ -71,3 +71,13 @@ body{
     display:none;
     flex-flow:column;
 }
+.column{
+    display:flex;
+    flex-flow: column;
+}
+.f{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+}

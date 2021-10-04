@@ -19,37 +19,41 @@ ReactDOM.render(
     </form>
     <form className="form_reg" id="formr">
         <center><label htmlFor="title" className="t">HOTEL PRINCY</label></center>
-        <div>
-            <div>
+        <div className="f">
+            <div className="column">
                 <label className="txt txt2" htmlFor="user">Nombre</label>
                 <input className="txt txt2 txt3" type="text" id="usuario" placeholder="Nombre"></input>
             </div>
-            <div>
+            <div className="column">
                 <label className="txt txt2" htmlFor="user">Apellido</label>
                 <input className="txt txt2 txt3" type="text" id="usuario" placeholder="Apellido"></input>
             </div>
-            <div>
+            <div className="column">
                 <label className="txt txt2" htmlFor="user">Dirección</label>
                 <input className="txt txt2 txt3" type="text" id="usuario" placeholder="Dirección"></input>
             </div>
-            <div>
+            <div className="column">
                 <label className="txt txt2" htmlFor="user">Teléfono</label>
                 <input className="txt txt2 txt3" type="text" id="usuario" placeholder="Teléfono"></input>
             </div>
-            <div>
+            <div className="column">
                 <label className="txt txt2" htmlFor="user">No. DPI</label>
                 <input className="txt txt2 txt3" type="text" id="usuario" placeholder="DPI"></input>
             </div>
-            <div>
+            <div className="column">
                 <label className="txt txt2" htmlFor="user">Correo Eléctronico </label>
                 <input className="txt txt2 txt3" type="email" id="usuario" placeholder="Correo Eléctronico"></input>
             </div> 
         </div>
         <div>
-            <label className="txt txt2" htmlFor="user">Contraseña</label>
-            <input className="txt txt2 txt3" type="password" id="usuario" placeholder="Contraseña"></input>
-            <label className="txt txt2" htmlFor="user">Repita la contraseña</label>
-            <input className="txt txt2 txt3" type="password" id="usuario" placeholder="Contraseña"></input>
+            <div>
+                <label className="txt txt2" htmlFor="user">Contraseña</label>
+                <input className="txt txt2 txt3" type="password" id="usuario" placeholder="Contraseña"></input>
+            </div>
+            <div>
+                <label className="txt txt2" htmlFor="user">Repita la contraseña</label>
+                <input className="txt txt2 txt3" type="password" id="usuario" placeholder="Contraseña"></input>
+            </div>
         </div>
         <div>
             <input className="txt txt2 txt3" type="checkbox" id="term"></input>
