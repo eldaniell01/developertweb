@@ -14,7 +14,9 @@ body{
     flex-flow: row;
     justify-content: center;
     align-items: center;
+    transition: 0.5s;
 }
+
 
 .t{
     font-family: "Corbel Light";
@@ -29,6 +31,7 @@ body{
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    transition: 0.6s;
 }
 .reg{
     display: flex;
@@ -65,5 +68,6 @@ body{
 }
 
 .form_reg{
-    display: none;
+    display:none;
+    flex-flow:column;
 }
