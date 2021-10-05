@@ -43,7 +43,7 @@ body{
     justify-content: space-between;
 }
 .txt2{
-    margin-top: 25px;
+    margin: 10px;
 }
 .txt3{
     border: none;
@@ -52,6 +52,7 @@ body{
 }
 .buttons .txt{
     margin:25px;
+    justify-content: center;
 }
 .but{
     border:none;
@@ -70,6 +71,7 @@ body{
 .form_reg{
     display:none;
     flex-flow:column;
+    justify-content: center;
 }
 .column{
     display:flex;
@@ -80,4 +82,18 @@ body{
     flex-flow: row wrap;
     justify-content: center;
     
+}
+.term{
+    display: flex;
+    justify-content: center;
+}
+
+.buttons1{
+    display: flex;
+    justify-content: center;
+}
+.ter{
+    border-radius: 6px solid;
+    height: 25px;
+    width: 25px;
 }

@@ -41,27 +41,25 @@ ReactDOM.render(
                 <input className="txt txt2 txt3" type="text" id="usuario" placeholder="DPI"></input>
             </div>
             <div className="column">
-                <label className="txt txt2" htmlFor="user">Correo Eléctronico </label>
+                <label className="txt txt2 " htmlFor="user">Correo Eléctronico </label>
                 <input className="txt txt2 txt3" type="email" id="usuario" placeholder="Correo Eléctronico"></input>
             </div> 
-        </div>
-        <div>
-            <div>
+            <div className="column">
                 <label className="txt txt2" htmlFor="user">Contraseña</label>
                 <input className="txt txt2 txt3" type="password" id="usuario" placeholder="Contraseña"></input>
             </div>
-            <div>
+            <div className="column">
                 <label className="txt txt2" htmlFor="user">Repita la contraseña</label>
                 <input className="txt txt2 txt3" type="password" id="usuario" placeholder="Contraseña"></input>
             </div>
         </div>
-        <div>
-            <input className="txt txt2 txt3" type="checkbox" id="term"></input>
+        <div className="term">
+            <input className="ter" type="radio" id="term"></input>
             <label className="txt txt2" htmlFor="user">Endiendo los Terminos</label>
         </div>
-        <div className="buttons">
-            <input className="txt but" type="button" id="create" value="Crear Usuario"></input>
-            <input className="txt but" type="button" id="c" value="Cancelar"></input>
+        <div className="buttons1">
+            <input className="txt txt2 but" type="button" id="create" value="Crear Usuario"></input>
+            <input className="txt txt2 but" type="button" id="cancel" value="Cancelar" onClick={ocultarregistro}></input>
         </div>
     </form></>,
     
@@ -74,4 +72,13 @@ ReactDOM.render(
         document.getElementById("form1").style.display ="none";
         document.getElementById("form1").style.opacity ="0";
         document.getElementById("formr").style.display ="flex";
+        
+    }
+
+    function ocultarregistro(){
+        var caja = document.getElementsByClassName("login")[0];
+        caja.style.width= 550 +"px";
+        document.getElementById("form1").style.display ="flex";
+        document.getElementById("form1").style.opacity ="1";
+        document.getElementById("formr").style.display ="none";
     }
