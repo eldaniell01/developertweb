@@ -22,7 +22,5 @@ class Registro extends React.Component{
     }
 }
 
-const Formulario = styled.form`
-  background: #ccc;
-`
+
 export default Registro;
