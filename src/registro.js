@@ -2,7 +2,10 @@ import React from "react";
 import {render} from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
-import {Formulario, Labell} from "./elements/forms";
+import {Formulario, Labell, Inputsgrup, Textbox} from "./elements/forms";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
+
 class Registro extends React.Component{
     constructor(props){
         super(props);
@@ -14,9 +17,10 @@ class Registro extends React.Component{
             <main>
               <Formulario>
                 <Labell htmlFor="">Usuario</Labell>
-                <div>
-                  <input type="text" placeholder="Usuario"></input>
-                </div>
+                <Inputsgrup>
+                  <Textbox type="text" placeholder="Usuario"></Textbox>
+                  <FontAwesomeIcon icon={faCheck}></FontAwesomeIcon>
+                </Inputsgrup>
                 
                 <p>leyenda</p>
               </Formulario>

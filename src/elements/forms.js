@@ -20,4 +20,23 @@ const Labell = styled.label`
     font-weight: 700;
     font-size: 1.5em;
 `
-export {Formulario, Labell};
+const Inputsgrup = styled.div`
+    position: relative;
+`
+const Textbox = styled.input`
+    width: 100%;
+    
+    background: none;
+    border: 3px;
+    height: 45px;
+    text-align: center;
+    padding: 0 40px 0 10 px;
+    line-height: 45px;
+    transition: 0.5s ease all;
+    border: 3px solid transparent;
+    &:focus{
+        border: 3px solid ${colores.border};
+        outline: none;
+    }
+`
+export {Formulario, Labell, Inputsgrup, Textbox};
