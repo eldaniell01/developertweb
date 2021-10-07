@@ -5,7 +5,7 @@ import  ReactDOM from "react-dom";
 import { render }  from "react-dom";
 import "./app.css";
 import "bootstrap/dist/css/bootstrap.min.css"
-import Registro from "./component/registro.js";
+import Registro from "./registro.js";
 ReactDOM.render(
     
     <Registro/>,
