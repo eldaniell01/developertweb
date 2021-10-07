@@ -14,7 +14,10 @@ class Registro extends React.Component{
             <main>
               <Formulario>
                 <Labell htmlFor="">Usuario</Labell>
-                <input type="text" placeholder="Usuario"></input>
+                <div>
+                  <input type="text" placeholder="Usuario"></input>
+                </div>
+                
                 <p>leyenda</p>
               </Formulario>
             </main>
