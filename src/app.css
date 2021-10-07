@@ -4,10 +4,12 @@ body{
     background-image: url(./img/lissete-laverde-_qp5lbyVQtE-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    
+    background-attachment: fixed;
+    background-position: center center;
+
 }
 .login{
-    background: #ABD5D9;
+    background: #F2E5D5;
     width: 550px;
     height: 100%;
     position: absolute;
