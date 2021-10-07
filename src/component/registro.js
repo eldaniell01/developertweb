@@ -1,11 +1,28 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css"
+import {render} from "react-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import styled from "styled-components";
 class Registro extends React.Component{
     constructor(props){
-
+        super(props);
+        this.state ={}
     }
     render(){
-        retunr( 
-            )
+        return( 
+            <>
+            <main>
+              <Formulario>
+                <label htmlFor="">Usuario</label>
+                <input type="text" placeholder="Usuario"></input>
+                <p>leyenda</p>
+              </Formulario>
+            </main>
+            </>  
+        );
     }
 }
+
+const Formulario = styled.form`
+  background: #ccc;
+`
+export default Registro;
