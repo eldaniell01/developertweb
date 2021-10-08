@@ -11,7 +11,7 @@ const colores ={
 const Formulario = styled.form`
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 10px;
     
 `
 
@@ -19,19 +19,18 @@ const Labell = styled.label`
     display: flex;
     justify-content: center;
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.1em;
 `
 const Inputsgrup = styled.div`
     position: relative;
 `
 const Textbox = styled.input`
     width: 100%;
-    
-    background: none;
+    background: white;
     border: 3px;
     height: 45px;
     text-align: center;
-    padding: 0 40px 0 10 px;
+    padding: 0 40px 0 40px;
     line-height: 45px;
     transition: 0.5s ease all;
     border: 3px solid transparent;
@@ -54,5 +53,59 @@ const Iconvalue = styled(FontAwesomeIcon)`
     bottom: 14px;
     z-index: 100;
     font-size: 16px;
+    display: none;
 `
-export {Formulario, Labell, Inputsgrup, Textbox, Leyend, Iconvalue};
+const Buttongrup = styled.div`
+    display: flex;
+    
+    justify-content: center;
+    
+    border: none;
+    margin: 45px;
+`
+const Iconuser = styled(FontAwesomeIcon)`
+    position: absolute;
+    left: 10px;
+    bottom: 14px;
+    z-index: 100;
+    font-size: 16px;
+`
+const Buttons = styled.button`
+    background: #CDE5F7;
+    transition: 0.4s;
+    margin: 15px;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    &:hover{
+        background: #82C3F5;
+    }
+`
+const Textbutton = styled.p`
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+`
+const Title = styled.label`
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    font-size: 2.4em;
+`
+const Formulario2 = styled.form`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+`
+const Ocultar = styled.div`
+    display: none;
+    flex-flow: column;
+    justify-content: center;
+`   
+export {Formulario, Ocultar, Formulario2, Title, Textbutton, Labell, Inputsgrup, Buttons, Textbox, Leyend, Iconvalue, Buttongrup, Iconuser};
