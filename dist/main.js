@@ -10671,12 +10671,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Formulario": () => (/* binding */ Formulario),
 /* harmony export */   "Labell": () => (/* binding */ Labell),
 /* harmony export */   "Inputsgrup": () => (/* binding */ Inputsgrup),
-/* harmony export */   "Textbox": () => (/* binding */ Textbox)
+/* harmony export */   "Textbox": () => (/* binding */ Textbox),
+/* harmony export */   "Leyend": () => (/* binding */ Leyend),
+/* harmony export */   "Iconvalue": () => (/* binding */ Iconvalue)
 /* harmony export */ });
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-var _templateObject, _templateObject2, _templateObject3, _templateObject4;
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6;
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
 
 
 var colores = {
@@ -10684,10 +10688,12 @@ var colores = {
   error: "#F20530",
   complet: "#3FD49B"
 };
-var Formulario = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].form(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: 1fr;\n    gap: 20px;\n    \n"])));
-var Labell = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].label(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: center;\n    font-weight: 700;\n    font-size: 1.5em;\n"])));
-var Inputsgrup = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    position: relative;\n"])));
-var Textbox = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].input(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    width: 100%;\n    \n    background: none;\n    border: 3px;\n    height: 45px;\n    text-align: center;\n    padding: 0 40px 0 10 px;\n    line-height: 45px;\n    transition: 0.5s ease all;\n    border: 3px solid transparent;\n    &:focus{\n        border: 3px solid ", ";\n        outline: none;\n    }\n"])), colores.border);
+var Formulario = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: 1fr;\n    gap: 20px;\n    \n"])));
+var Labell = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].label(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: center;\n    font-weight: 700;\n    font-size: 1.5em;\n"])));
+var Inputsgrup = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    position: relative;\n"])));
+var Textbox = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    width: 100%;\n    \n    background: none;\n    border: 3px;\n    height: 45px;\n    text-align: center;\n    padding: 0 40px 0 10 px;\n    line-height: 45px;\n    transition: 0.5s ease all;\n    border: 3px solid transparent;\n    &:focus{\n        border: 3px solid ", ";\n        outline: none;\n    }\n"])), colores.border);
+var Leyend = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n    font-family: 'Noto Sans', sans-serif;\n    font-weight: 500;\n    font-size: 12px;\n    margin-bottom: 0%;\n    color: ", ";\n    display: none;\n"])), colores.error);
+var Iconvalue = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_0__.FontAwesomeIcon)(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n    position: absolute;\n    right: 10px;\n    bottom: 14px;\n    z-index: 100;\n    font-size: 16px;\n"])));
 
 
 /***/ }),
@@ -10762,9 +10768,9 @@ var Registro = /*#__PURE__*/function (_React$Component) {
       }, "Usuario"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
         type: "text",
         placeholder: "Usuario"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__.FontAwesomeIcon, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconvalue, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faCheck
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "leyenda"))));
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Leyend, null, "leyenda"))));
     }
   }]);
 

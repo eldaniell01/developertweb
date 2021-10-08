@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const colores ={
     border: "#218DA6",
@@ -39,4 +40,19 @@ const Textbox = styled.input`
         outline: none;
     }
 `
-export {Formulario, Labell, Inputsgrup, Textbox};
+const Leyend = styled.p`
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    margin-bottom: 0%;
+    color: ${colores.error};
+    display: none;
+`
+const Iconvalue = styled(FontAwesomeIcon)`
+    position: absolute;
+    right: 10px;
+    bottom: 14px;
+    z-index: 100;
+    font-size: 16px;
+`
+export {Formulario, Labell, Inputsgrup, Textbox, Leyend, Iconvalue};
