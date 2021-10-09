@@ -10697,7 +10697,7 @@ var colores = {
   complet: "#3FD49B"
 };
 var Formulario = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: 1fr;\n    gap: 10px;\n    \n"])));
-var Labell = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].label(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: center;\n    font-weight: 700;\n    font-size: 1.1em;\n"])));
+var Labell = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].label(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: center;\n    font-weight: 700;\n    font-size: 1.1em;\n    align-items: center;\n"])));
 var Inputsgrup = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    position: relative;\n"])));
 var Textbox = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    width: 100%;\n    background: white;\n    border: 3px;\n    border-radius: 10px;\n    height: 45px;\n    text-align: center;\n    padding: 0 40px 0 40px;\n    line-height: 45px;\n    transition: 0.5s ease all;\n    border: 3px solid transparent;\n    &:focus{\n        border: 3px solid ", ";\n        outline: none;\n    }\n"])), colores.border);
 var Leyend = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n    font-family: 'Noto Sans', sans-serif;\n    font-weight: 500;\n    font-size: 12px;\n    margin-bottom: 0%;\n    color: ", ";\n    display: none;\n"])), colores.error);
@@ -10709,7 +10709,7 @@ var Textbutton = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_te
 var Title = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].label(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n    font-family: 'Noto Sans', sans-serif;\n    font-weight: normal;\n    display: flex;\n    justify-content: center;\n    margin: 20px;\n    font-size: 2.4em;\n"])));
 var Formulario2 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 25px;\n"])));
 var Ocultar = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n    display: none;\n    flex-flow: column;\n    justify-content: center;\n"])));
-var Confirm = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n    border-radius: 3px solid;\n"])));
+var Confirm = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n    border-radius: 3px solid;\n    margin: 15px;\n"])));
 
 
 /***/ }),
@@ -10856,16 +10856,32 @@ var Registro = /*#__PURE__*/function (_React$Component) {
         type: "text",
         placeholder: "Correo Electronico"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconvalue, {
+        id: "ch",
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faCheck
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Leyend, null, "leyenda")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Labell, {
+        htmlFor: ""
+      }, "Contrase\xF1a"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
+        type: "password",
+        placeholder: "*********"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconvalue, {
         id: "v",
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faCheck
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Leyend, null, "leyenda"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Labell, {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Leyend, null, "leyenda")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Labell, {
+        htmlFor: ""
+      }, "Repetir Contrase\xF1a"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
+        type: "password",
+        placeholder: "*********"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconvalue, {
+        id: "v",
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faCheck
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Leyend, null, "leyenda"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Labell, {
         htmlFor: "",
         id: "ter"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Confirm, {
         type: "checkbox",
         name: "terminos",
         id: "terminos"
-      }), "Aceptar Terminos y Condiciones"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Buttongrup, {
+      }), "Aceptar Terminos y Condiciones")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Buttongrup, {
         id: "bt"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Buttons, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Registrar Usuario")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Buttons, {
         onClick: ocultarregistro

@@ -93,13 +93,34 @@ class Registro extends React.Component{
                   <Labell htmlFor="">Correo Electronico</Labell>
                   <Inputsgrup>
                     <Textbox type="text" placeholder="Correo Electronico"></Textbox>
+                    <Iconvalue id="ch" icon={faCheck}></Iconvalue>
+                  </Inputsgrup>
+                  <Leyend>leyenda</Leyend>
+                </div>
+                <div>
+                  <Labell htmlFor="">Contraseña</Labell>
+                  <Inputsgrup>
+                    <Textbox type="password" placeholder="*********"></Textbox>
                     <Iconvalue id="v" icon={faCheck}></Iconvalue>
                   </Inputsgrup>
                   <Leyend>leyenda</Leyend>
                 </div>
-                
+                <div>
+                  <Labell htmlFor="">Repetir Contraseña</Labell>
+                  <Inputsgrup>
+                    <Textbox type="password" placeholder="*********"></Textbox>
+                    <Iconvalue id="v" icon={faCheck}></Iconvalue>
+                  </Inputsgrup>
+                  <Leyend>leyenda</Leyend>
+                </div>
               </Formulario2>
-              <Labell htmlFor="" id="ter"><Confirm type="checkbox" name="terminos" id="terminos"></Confirm>Aceptar Terminos y Condiciones</Labell>
+              <div>
+                <Labell htmlFor="" id="ter">
+                  <Confirm type="checkbox" name="terminos" id="terminos">
+                  </Confirm>Aceptar Terminos y Condiciones
+                </Labell> 
+              </div>
+              
               <Buttongrup id="bt">
                 <Buttons ><Textbutton>Registrar Usuario</Textbutton></Buttons>
                 <Buttons onClick={ocultarregistro}><Textbutton>Cancelar</Textbutton></Buttons>

@@ -20,6 +20,7 @@ const Labell = styled.label`
     justify-content: center;
     font-weight: 700;
     font-size: 1.1em;
+    align-items: center;
 `
 const Inputsgrup = styled.div`
     position: relative;
@@ -111,5 +112,7 @@ const Ocultar = styled.div`
 `
 const Confirm = styled.input`
     border-radius: 3px solid;
-`   
+    margin: 15px;
+`  
+ 
 export {Formulario, Ocultar, Confirm, Formulario2, Title, Textbutton, Labell, Inputsgrup, Buttons, Textbox, Leyend, Iconvalue, Buttongrup, Iconuser};
