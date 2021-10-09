@@ -19,20 +19,26 @@ class Registro extends React.Component{
                 <Title htmlFor="">Hotel</Title>
                 <Labell htmlFor="">Email</Labell>
                 <Inputsgrup>
-                  <Textbox type="text" placeholder="Email" id="textl"></Textbox>
+                  <Textbox type="text" placeholder="Email" id="textname"></Textbox>
                   <Iconvalue icon={faCheck}></Iconvalue>
                   <Iconuser icon={faUserTie}></Iconuser>
                 </Inputsgrup>
                 <Leyend>leyenda</Leyend>
                 <Labell htmlFor="">Contraseña</Labell>
                 <Inputsgrup>
-                  <Textbox type="text" placeholder="Contraseña" id="textl"></Textbox>
+                  <Textbox type="password" placeholder="******" id="pass"></Textbox>
                   <Iconvalue icon={faCheck}></Iconvalue>
-                  <Iconuser icon={faKey}></Iconuser>
+                  <Iconuser icon={faKey} onClick={showpass}></Iconuser>
                 </Inputsgrup>
                 <Leyend id="leyenl">leyenda</Leyend>
-                
+                <div>
+                <Labell htmlFor="" id="ter">
+                  <Confirm type="checkbox" name="terminos" id="terminos" onClick={showpass}>
+                  </Confirm>Mostrartrar contraseña
+                </Labell> 
+              </div>
               </Formulario>
+              
               <Buttongrup id="bt">
                 <Buttons onClick={validarlog}><Textbutton>Iniciar Sesión</Textbutton></Buttons>
                 <Buttons onClick={cambiotamaño}><Textbutton>Crear Usuario</Textbutton></Buttons>
@@ -102,6 +108,7 @@ class Registro extends React.Component{
                   <Inputsgrup>
                     <Textbox type="password" placeholder="*********"></Textbox>
                     <Iconvalue id="v" icon={faCheck}></Iconvalue>
+                    <Iconuser icon={faKey}></Iconuser>
                   </Inputsgrup>
                   <Leyend>leyenda</Leyend>
                 </div>
@@ -110,6 +117,7 @@ class Registro extends React.Component{
                   <Inputsgrup>
                     <Textbox type="password" placeholder="*********"></Textbox>
                     <Iconvalue id="v" icon={faCheck}></Iconvalue>
+                    <Iconuser icon={faKey}></Iconuser>
                   </Inputsgrup>
                   <Leyend>leyenda</Leyend>
                 </div>
@@ -155,14 +163,28 @@ function ocultarregistro(){
   document.getElementById("sing").style.display = "none";
 }
 
-function validarlog(){
-  var textbox = document.getElementById("textl");
-  if(textbox!=(a>z)){
 
+
+
+function validarlog(){
+  var name = document.getElementById("textname").value;
+  var password = document.getElementById("pass").value;
+  if(name.length > 2){
+    
+    console.log(password);
+    console.log('Formulario Enviado');
+    document.getElementById("textname").value ="";
+    document.getElementById("pass").value ="";
   }
-  else{
-    documen.getElementById("leyenl").style.display="flex";
-  }
+}
+
+function showpass(){
+  var tipo = document.getElementById("pass");
+      if(tipo.type == "password"){
+          tipo.type = "text";
+      }else{
+          tipo.type = "password";
+      }
 }
 
 export default Registro;

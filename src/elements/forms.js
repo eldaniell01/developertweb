@@ -39,6 +39,7 @@ const Textbox = styled.input`
     &:focus{
         border: 3px solid ${colores.border};
         outline: none;
+        cursor: pointer;
     }
 `
 const Leyend = styled.p`
@@ -63,7 +64,7 @@ const Buttongrup = styled.div`
     justify-content: center;
     
     border: none;
-    margin: 25px;
+    margin: 10px;
 `
 const Iconuser = styled(FontAwesomeIcon)`
     position: absolute;
@@ -75,7 +76,7 @@ const Iconuser = styled(FontAwesomeIcon)`
 const Buttons = styled.button`
     background: #CDE5F7;
     transition: 0.4s;
-    margin: 15px;
+    margin: 10px;
     width: 150px;
     height: 40px;
     line-height: 40px;

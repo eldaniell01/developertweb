@@ -10699,12 +10699,12 @@ var colores = {
 var Formulario = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: 1fr;\n    gap: 10px;\n    \n"])));
 var Labell = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].label(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: center;\n    font-weight: 700;\n    font-size: 1.1em;\n    align-items: center;\n"])));
 var Inputsgrup = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    position: relative;\n"])));
-var Textbox = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    width: 100%;\n    background: white;\n    border: 3px;\n    border-radius: 10px;\n    height: 45px;\n    text-align: center;\n    padding: 0 40px 0 40px;\n    line-height: 45px;\n    transition: 0.5s ease all;\n    border: 3px solid transparent;\n    &:focus{\n        border: 3px solid ", ";\n        outline: none;\n    }\n"])), colores.border);
+var Textbox = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    width: 100%;\n    background: white;\n    border: 3px;\n    border-radius: 10px;\n    height: 45px;\n    text-align: center;\n    padding: 0 40px 0 40px;\n    line-height: 45px;\n    transition: 0.5s ease all;\n    border: 3px solid transparent;\n    &:focus{\n        border: 3px solid ", ";\n        outline: none;\n        cursor: pointer;\n    }\n"])), colores.border);
 var Leyend = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n    font-family: 'Noto Sans', sans-serif;\n    font-weight: 500;\n    font-size: 12px;\n    margin-bottom: 0%;\n    color: ", ";\n    display: none;\n"])), colores.error);
 var Iconvalue = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_0__.FontAwesomeIcon)(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n    position: absolute;\n    right: 10px;\n    bottom: 14px;\n    z-index: 100;\n    font-size: 16px;\n    display: none;\n"])));
-var Buttongrup = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n    display: flex;\n    \n    justify-content: center;\n    \n    border: none;\n    margin: 25px;\n"])));
+var Buttongrup = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n    display: flex;\n    \n    justify-content: center;\n    \n    border: none;\n    margin: 10px;\n"])));
 var Iconuser = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_0__.FontAwesomeIcon)(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n    position: absolute;\n    left: 10px;\n    bottom: 14px;\n    z-index: 100;\n    font-size: 16px;\n"])));
-var Buttons = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n    background: #CDE5F7;\n    transition: 0.4s;\n    margin: 15px;\n    width: 150px;\n    height: 40px;\n    line-height: 40px;\n    border: none;\n    text-align: center;\n    align-items: center;\n    border-radius: 10px;\n    &:hover{\n        background: #82C3F5;\n    }\n"])));
+var Buttons = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n    background: #CDE5F7;\n    transition: 0.4s;\n    margin: 10px;\n    width: 150px;\n    height: 40px;\n    line-height: 40px;\n    border: none;\n    text-align: center;\n    align-items: center;\n    border-radius: 10px;\n    &:hover{\n        background: #82C3F5;\n    }\n"])));
 var Textbutton = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n    font-family: 'Noto Sans', sans-serif;\n    font-weight: bold;\n    font-size: 0.9em;\n"])));
 var Title = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].label(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n    font-family: 'Noto Sans', sans-serif;\n    font-weight: normal;\n    display: flex;\n    justify-content: center;\n    margin: 20px;\n    font-size: 2.4em;\n"])));
 var Formulario2 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 25px;\n"])));
@@ -10788,7 +10788,7 @@ var Registro = /*#__PURE__*/function (_React$Component) {
       }, "Email"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
         type: "text",
         placeholder: "Email",
-        id: "textl"
+        id: "textname"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconvalue, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faCheck
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconuser, {
@@ -10796,16 +10796,25 @@ var Registro = /*#__PURE__*/function (_React$Component) {
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Leyend, null, "leyenda"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Labell, {
         htmlFor: ""
       }, "Contrase\xF1a"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
-        type: "text",
-        placeholder: "Contrase\xF1a",
-        id: "textl"
+        type: "password",
+        placeholder: "******",
+        id: "pass"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconvalue, {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faCheck
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconuser, {
-        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faKey
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faKey,
+        onClick: showpass
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Leyend, {
         id: "leyenl"
-      }, "leyenda")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Buttongrup, {
+      }, "leyenda"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Labell, {
+        htmlFor: "",
+        id: "ter"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Confirm, {
+        type: "checkbox",
+        name: "terminos",
+        id: "terminos",
+        onClick: showpass
+      }), "Mostrartrar contrase\xF1a"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Buttongrup, {
         id: "bt"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Buttons, {
         onClick: validarlog
@@ -10866,6 +10875,8 @@ var Registro = /*#__PURE__*/function (_React$Component) {
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconvalue, {
         id: "v",
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faCheck
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconuser, {
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faKey
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Leyend, null, "leyenda")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Labell, {
         htmlFor: ""
       }, "Repetir Contrase\xF1a"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
@@ -10874,6 +10885,8 @@ var Registro = /*#__PURE__*/function (_React$Component) {
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconvalue, {
         id: "v",
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faCheck
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconuser, {
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faKey
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Leyend, null, "leyenda"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Labell, {
         htmlFor: "",
         id: "ter"
@@ -10913,10 +10926,24 @@ function ocultarregistro() {
 }
 
 function validarlog() {
-  var textbox = document.getElementById("textl");
+  var name = document.getElementById("textname").value;
+  var password = document.getElementById("pass").value;
 
-  if (textbox != a > z) {} else {
-    documen.getElementById("leyenl").style.display = "flex";
+  if (name.length > 2) {
+    console.log(password);
+    console.log('Formulario Enviado');
+    document.getElementById("textname").value = "";
+    document.getElementById("pass").value = "";
+  }
+}
+
+function showpass() {
+  var tipo = document.getElementById("pass");
+
+  if (tipo.type == "password") {
+    tipo.type = "text";
+  } else {
+    tipo.type = "password";
   }
 }
 
