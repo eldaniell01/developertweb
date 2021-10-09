@@ -28,6 +28,7 @@ const Textbox = styled.input`
     width: 100%;
     background: white;
     border: 3px;
+    border-radius: 10px;
     height: 45px;
     text-align: center;
     padding: 0 40px 0 40px;
@@ -61,7 +62,7 @@ const Buttongrup = styled.div`
     justify-content: center;
     
     border: none;
-    margin: 45px;
+    margin: 25px;
 `
 const Iconuser = styled(FontAwesomeIcon)`
     position: absolute;
@@ -107,5 +108,8 @@ const Ocultar = styled.div`
     display: none;
     flex-flow: column;
     justify-content: center;
+`
+const Confirm = styled.input`
+    border-radius: 3px solid;
 `   
-export {Formulario, Ocultar, Formulario2, Title, Textbutton, Labell, Inputsgrup, Buttons, Textbox, Leyend, Iconvalue, Buttongrup, Iconuser};
+export {Formulario, Ocultar, Confirm, Formulario2, Title, Textbutton, Labell, Inputsgrup, Buttons, Textbox, Leyend, Iconvalue, Buttongrup, Iconuser};

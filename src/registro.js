@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import {render} from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
-import {Formulario, Formulario2, Ocultar, Buttons, Title, Labell, Textbutton, Inputsgrup, Textbox, Buttongrup, Leyend, Iconvalue, Iconuser} from "./elements/forms";
+import {Formulario, Confirm, Formulario2, Ocultar, Buttons, Title, Labell, Textbutton, Inputsgrup, Textbox, Buttongrup, Leyend, Iconvalue, Iconuser} from "./elements/forms";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faUserTie, faKey } from '@fortawesome/free-solid-svg-icons';
 
@@ -19,22 +19,22 @@ class Registro extends React.Component{
                 <Title htmlFor="">Hotel</Title>
                 <Labell htmlFor="">Email</Labell>
                 <Inputsgrup>
-                  <Textbox type="text" placeholder="Email"></Textbox>
+                  <Textbox type="text" placeholder="Email" id="textl"></Textbox>
                   <Iconvalue icon={faCheck}></Iconvalue>
                   <Iconuser icon={faUserTie}></Iconuser>
                 </Inputsgrup>
                 <Leyend>leyenda</Leyend>
                 <Labell htmlFor="">Contraseña</Labell>
                 <Inputsgrup>
-                  <Textbox type="text" placeholder="Contraseña"></Textbox>
+                  <Textbox type="text" placeholder="Contraseña" id="textl"></Textbox>
                   <Iconvalue icon={faCheck}></Iconvalue>
                   <Iconuser icon={faKey}></Iconuser>
                 </Inputsgrup>
-                <Leyend>leyenda</Leyend>
+                <Leyend id="leyenl">leyenda</Leyend>
                 
               </Formulario>
               <Buttongrup id="bt">
-                <Buttons><Textbutton>Iniciar Sesión</Textbutton></Buttons>
+                <Buttons onClick={validarlog}><Textbutton>Iniciar Sesión</Textbutton></Buttons>
                 <Buttons onClick={cambiotamaño}><Textbutton>Crear Usuario</Textbutton></Buttons>
               </Buttongrup> 
             </main>
@@ -99,9 +99,9 @@ class Registro extends React.Component{
                 </div>
                 
               </Formulario2>
-              
+              <Labell htmlFor="" id="ter"><Confirm type="checkbox" name="terminos" id="terminos"></Confirm>Aceptar Terminos y Condiciones</Labell>
               <Buttongrup id="bt">
-                <Buttons onClick={validar}><Textbutton>Registrar Usuario</Textbutton></Buttons>
+                <Buttons ><Textbutton>Registrar Usuario</Textbutton></Buttons>
                 <Buttons onClick={ocultarregistro}><Textbutton>Cancelar</Textbutton></Buttons>
               </Buttongrup> 
               </Ocultar>
@@ -120,6 +120,7 @@ function cambiotamaño(){
   document.getElementById("log").style.display ="none";
   document.getElementById("bt").style.display ="none";
   document.getElementById("sing").style.display = "flex";
+  document.getElementById("ter").style.marginTop="15px"
   /*document.getElementById("form1").style.opacity ="0";
   document.getElementById("formr").style.display ="flex";
 */
@@ -133,8 +134,14 @@ function ocultarregistro(){
   document.getElementById("sing").style.display = "none";
 }
 
-function validar(){
-  
+function validarlog(){
+  var textbox = document.getElementById("textl");
+  if(textbox!=(a>z)){
+
+  }
+  else{
+    documen.getElementById("leyenl").style.display="flex";
+  }
 }
 
 export default Registro;
