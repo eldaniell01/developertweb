@@ -106,18 +106,18 @@ class Registro extends React.Component{
                 <div>
                   <Labell htmlFor="">Contraseña</Labell>
                   <Inputsgrup>
-                    <Textbox type="password" placeholder="*********"></Textbox>
+                    <Textbox type="password" placeholder="*********"  id="pass2"></Textbox>
                     <Iconvalue id="v" icon={faCheck}></Iconvalue>
-                    <Iconuser icon={faKey}></Iconuser>
+                    <Iconuser icon={faKey} onClick={showpass}></Iconuser>
                   </Inputsgrup>
                   <Leyend>leyenda</Leyend>
                 </div>
                 <div>
                   <Labell htmlFor="">Repetir Contraseña</Labell>
                   <Inputsgrup>
-                    <Textbox type="password" placeholder="*********"></Textbox>
+                    <Textbox type="password" placeholder="*********" id="pass3"></Textbox>
                     <Iconvalue id="v" icon={faCheck}></Iconvalue>
-                    <Iconuser icon={faKey}></Iconuser>
+                    <Iconuser icon={faKey} onClick={showpass} ></Iconuser>
                   </Inputsgrup>
                   <Leyend>leyenda</Leyend>
                 </div>
@@ -179,11 +179,17 @@ function validarlog(){
 }
 
 function showpass(){
-  var tipo = document.getElementById("pass");
-      if(tipo.type == "password"){
+  var tipo = document.getElementById("pass")
+  var tipo2 = document.getElementById("pass2");
+  var tipo3 = document.getElementById("pass3");
+      if(tipo.type == "password"| tipo2.type == "password"|tipo3.type == "password"){
           tipo.type = "text";
+          tipo2.type = "text";
+          tipo3.type = "text";
       }else{
           tipo.type = "password";
+          tipo2.type = "password";
+          tipo3.type = "password";
       }
 }
 
