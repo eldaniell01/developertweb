@@ -183,14 +183,18 @@ function showpass(){
   var tipo2 = document.getElementById("pass2");
   var tipo3 = document.getElementById("pass3");
       if(tipo.type == "password"| tipo2.type == "password"|tipo3.type == "password"){
-          tipo.type = "text";
-          tipo2.type = "text";
-          tipo3.type = "text";
+        tipo.type = "text";
+        tipo2.type = "text";
+        tipo3.type = "text";
       }else{
-          tipo.type = "password";
-          tipo2.type = "password";
-          tipo3.type = "password";
+        tipo.type = "password";
+        tipo2.type = "password";
+        tipo3.type = "password";
       }
+}
+
+function conectar(){
+
 }
 
 export default Registro;
