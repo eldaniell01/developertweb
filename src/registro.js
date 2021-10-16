@@ -6,6 +6,7 @@ import {Formulario, Confirm, Formulario2, Ocultar, Buttons, Title, Labell, Textb
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faUserTie, faKey } from '@fortawesome/free-solid-svg-icons';
 
+
 class Registro extends React.Component{
     constructor(props){
         super(props);
@@ -16,7 +17,7 @@ class Registro extends React.Component{
             <>
             <main>
               <Formulario id="log">
-                <Title htmlFor="">Hotel1</Title>
+                <Title htmlFor="">Hotel</Title>
                 <Labell htmlFor="">Email</Labell>
                 <Inputsgrup>
                   <Textbox type="text" placeholder="Email" id="textname"></Textbox>
