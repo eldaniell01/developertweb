@@ -16,7 +16,7 @@ class Registro extends React.Component{
             <>
             <main>
               <Formulario id="log">
-                <Title htmlFor="">Hotel</Title>
+                <Title htmlFor="">Hotel1</Title>
                 <Labell htmlFor="">Email</Labell>
                 <Inputsgrup>
                   <Textbox type="text" placeholder="Email" id="textname"></Textbox>
