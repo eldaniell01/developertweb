@@ -19,6 +19,7 @@
                     "pass"=>$fila['pass'],
                 );
             }
+            return $vector;
         }
     }
 ?>
