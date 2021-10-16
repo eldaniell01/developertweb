@@ -46,7 +46,7 @@
 
         public function adduser($nombre, $apellido, $direccion, $telefono, $dpi, $correo, $pass){
   
-            $conexion = new Conexion();
+            $conexion = new conexion();
             $bd = $conexion->getconexion();
             $sql = "INSERT INTO producto (nombre, apellido, dirección, telefono, dpi, correo, pass) VALUES (:nombre, :apellido, :dirección, :telefono, :dpi, :correo, :pass)";
             $consult = $bd->prepare($sql);
@@ -60,6 +60,18 @@
             $consult->execute();
           
             return '{"msg":" usuario registrado"}';
+          }
+
+          public function deleteuser($id){
+  
+            $conexion = new conexion();
+            $bd = $conexion->getconexion();
+            $sql = "DELETE FROM producto WHERE id=:id";
+            $consult = $bd->prepare($sql);
+            $consult->bindParam(':id', $id); 
+            $consult->execute();
+            
+            return '{"msg":"usuario eliminado"}';
           }
     }
 ?>

@@ -34,4 +34,12 @@
         $json = $api->adduser($nombre, $apellido, $direccion, $telefono, $dpi, $correo, $pass);
         echo $json;
     }
+
+    if($method=="DELETE"){
+        $json = null;
+        $id = $_REQUEST['id'];
+        $api = new executes();
+        $json = $api->deleteuser($id);
+        echo $json;
+    }
 ?>
