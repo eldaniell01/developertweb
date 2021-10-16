@@ -5,7 +5,7 @@ import styled from "styled-components";
 import {Formulario, Confirm, Formulario2, Ocultar, Buttons, Title, Labell, Textbutton, Inputsgrup, Textbox, Buttongrup, Leyend, Iconvalue, Iconuser} from "./elements/forms";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faUserTie, faKey } from '@fortawesome/free-solid-svg-icons';
-
+import axios from "axios";
 
 class Registro extends React.Component{
     constructor(props){
