@@ -44,7 +44,7 @@
             return $vector[0];
         }
 
-        public function addProducto($nombre, $apellido, $direccion, $telefono, $dpi, $correo, $pass){
+        public function adduser($nombre, $apellido, $direccion, $telefono, $dpi, $correo, $pass){
   
             $conexion = new Conexion();
             $bd = $conexion->getconexion();

@@ -18,4 +18,20 @@
             echo $json;
         }
     }
+
+    if($method=="POST"){
+        $json = null;
+        $data = json_decode(file_get_contents("php://input"), true);
+        $nombre = $data['nombre'];
+        $apellido = $data['apellido'];
+        $direccion = $data['direccion'];
+        $telefono = $data['telefono'];
+        $dpi = $data['dpi'];
+        $correo = $data['correo'];
+        $pass = $data['pass'];
+        
+        $api = new executes();
+        $json = $api->adduser($nombre, $apellido, $direccion, $telefono, $dpi, $correo, $pass);
+        echo $json;
+    }
 ?>
