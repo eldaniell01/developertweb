@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState} from "react";
 import {render} from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
@@ -7,11 +7,34 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faUserTie, faKey } from '@fortawesome/free-solid-svg-icons';
 import axios from "axios";
 
+function app(){
+    const [nombre, setnombre] = ('');
+    const [apellido, setapellido] =('');
+    const [direccion, setdireccion]=('');
+    const [telefono, settelefono]=('');
+    const [dpi, setdpi]=('');
+    const [correo, setcorreo]=('');
+    const [passw, setpassw]=('');
+    
+    useEffect(()=>{
+      adduser();
+    },[])
+
+
+    async function addUser(e){
+      e.preventDefault();
+      const obj= {nombre, apellido, direccion, telefono, dpi, correo, passw};
+      const res = await axios.post('http://localhost:3000/api/', obj);
+      console.log(res);
+    }
+
+}
 class Registro extends React.Component{
     constructor(props){
         super(props);
         this.state ={}
     }
+    
     render(){
         return( 
             <>
