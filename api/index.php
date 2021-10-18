@@ -1,10 +1,10 @@
 <?php
-    require_once('./bd/bd.php');
-    require_once('./bd/cors.php');
-    require_once('./bd/executes.php');
+    require_once('./cors.php');
+    require_once('./bd.php');
+    require_once('./executes.php');
     $method =$_SERVER['REQUEST_METHOD'];
     if($method =="GET"){
-        if(!empty($_get['id'])){
+        if(!empty($_GET['id'])){
             $id=$_GET['id'];
             $api = new executes();
             $obj =$api->getmultiusers($id);
@@ -21,15 +21,16 @@
 
     if($method=="POST"){
         $json = null;
-        $data = json_decode(file_get_contents("php://input"), true);
-        $nombre = $data['nombre'];
-        $apellido = $data['apellido'];
-        $direccion = $data['direccion'];
-        $telefono = $data['telefono'];
-        $dpi = $data['dpi'];
-        $correo = $data['correo'];
-        $pass = $data['pass'];
-        
+        $JSONData = file_get_contents("php://input");
+        $data = json_decode($JSONData);
+        $nombre = $data->nombre;
+        $apellido = $data->apellido;
+        $direccion = $data->direccion;
+        $telefono = $data->telefono;
+        $dpi = $data->dpi;
+        $correo = $data->correo;
+        $pass = $data->passw;
+        echo $nombre;
         $api = new executes();
         $json = $api->adduser($nombre, $apellido, $direccion, $telefono, $dpi, $correo, $pass);
         echo $json;

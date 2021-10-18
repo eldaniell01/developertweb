@@ -7,25 +7,57 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faUserTie, faKey } from '@fortawesome/free-solid-svg-icons';
 import axios from "axios";
 
-function app(){
-    const [nombre, setnombre] = ('');
-    const [apellido, setapellido] =('');
-    const [direccion, setdireccion]=('');
-    const [telefono, settelefono]=('');
-    const [dpi, setdpi]=('');
-    const [correo, setcorreo]=('');
-    const [passw, setpassw]=('');
+
+function App(){
+    const [list, setlist] = useState([]);
+    const [nombre, setnombre] = useState('');
+    const [apellido, setapellido] =useState('');
+    const [direccion, setdireccion]=useState('');
+    const [telefono, settelefono]=useState('');
+    const [dpi, setdpi]=useState('');
+    const [correo, setcorreo]=useState('');
+    const [passw, setpassw]=useState('');
+    const [id, setid]=useState('');
+    const [bandera, setbandera]=useState(true);
     
     useEffect(()=>{
-      adduser();
+      getUser();
     },[])
-
+    async function getUser(){
+      const res = await axios.get('http://localhost:3000/api/');
+      setlist(res.data) 
+      console.log(res.data)
+    } 
 
     async function addUser(e){
       e.preventDefault();
       const obj= {nombre, apellido, direccion, telefono, dpi, correo, passw};
-      const res = await axios.post('http://localhost:3000/api/', obj);
-      console.log(res);
+      const res = await axios.post('http://localhost:3000/api/index.php', obj);
+      console.log(res.data);
+    }
+
+    async function updateuser(e){
+      
+      const obj= {id, nombre, apellido, direccion, telefono, dpi, correo, passw};
+      const res = await axios.put('http://localhost:3000/api/', obj);
+      console.log(res.data);
+    }
+
+    function add(e){
+      e.preventDefault();
+      addUser();
+      clearstate();
+    }
+
+    function clearstate(){
+      setid('');
+      setnombre('');
+      setapellido('');
+      setdireccion('');
+      setdpi('');
+      setcorreo('');
+      setpassw('');
+      setbandera(true)
     }
     return( 
       <>
@@ -69,7 +101,7 @@ function app(){
           <div>
             <Labell htmlFor="">Nombre</Labell>
             <Inputsgrup>
-              <Textbox type="text" placeholder="Nombre"></Textbox>
+              <Textbox type="text" placeholder="Nombre" onChange={(e)=>setnombre(e.target.value)} value={nombre}></Textbox>
               <Iconvalue icon={faCheck}></Iconvalue>
             </Inputsgrup>
             <Leyend>leyenda</Leyend>                
@@ -77,7 +109,7 @@ function app(){
           <div> 
             <Labell htmlFor="">Apellido</Labell>
             <Inputsgrup>
-              <Textbox type="text" placeholder="Apellido"></Textbox>
+              <Textbox type="text" placeholder="Apellido" onChange={(e)=>setapellido(e.target.value)} value={apellido}></Textbox>
               <Iconvalue icon={faCheck}></Iconvalue>
             </Inputsgrup>
             <Leyend>leyenda</Leyend>
@@ -86,7 +118,7 @@ function app(){
           <div>
             <Labell htmlFor="">Dirección</Labell>
             <Inputsgrup>
-              <Textbox type="text" placeholder="Dirección"></Textbox>
+              <Textbox type="text" placeholder="Dirección" onChange={(e)=>setdireccion(e.target.value)} value={direccion}></Textbox>
               <Iconvalue icon={faCheck}></Iconvalue>
             </Inputsgrup>
             <Leyend>leyenda</Leyend>
@@ -95,7 +127,7 @@ function app(){
           <div>
             <Labell htmlFor="">Teléfono</Labell>
             <Inputsgrup>
-              <Textbox type="text" placeholder="Teléfono"></Textbox>
+              <Textbox type="text" placeholder="Teléfono" onChange={(e)=>settelefono(e.target.value)} value={telefono}></Textbox>
               <Iconvalue icon={faCheck}></Iconvalue>
             </Inputsgrup>
             <Leyend>leyenda</Leyend>
@@ -104,7 +136,7 @@ function app(){
           <div>
             <Labell htmlFor="">DPI o Nit</Labell>
             <Inputsgrup>
-              <Textbox type="text" placeholder="DPI o Nit"></Textbox>
+              <Textbox type="text" placeholder="DPI o Nit" onChange={(e)=>setdpi(e.target.value)}value={dpi}></Textbox>
               <Iconvalue icon={faCheck}></Iconvalue>
             </Inputsgrup>
             <Leyend>leyenda</Leyend>
@@ -113,7 +145,7 @@ function app(){
           <div>
             <Labell htmlFor="">Correo Electronico</Labell>
             <Inputsgrup>
-              <Textbox type="text" placeholder="Correo Electronico"></Textbox>
+              <Textbox type="text" placeholder="Correo Electronico" onChange={(e)=>setcorreo(e.target.value)} value={correo}></Textbox>
               <Iconvalue id="ch" icon={faCheck}></Iconvalue>
             </Inputsgrup>
             <Leyend>leyenda</Leyend>
@@ -121,7 +153,7 @@ function app(){
           <div>
             <Labell htmlFor="">Contraseña</Labell>
             <Inputsgrup>
-              <Textbox type="password" placeholder="*********"  id="pass2"></Textbox>
+              <Textbox type="password" placeholder="*********"  id="pass2" onChange={(e)=>setpassw(e.target.value)} value={passw}></Textbox>
               <Iconvalue id="v" icon={faCheck}></Iconvalue>
               <Iconuser icon={faKey} onClick={showpass}></Iconuser>
             </Inputsgrup>
@@ -145,7 +177,7 @@ function app(){
         </div>
         
         <Buttongrup id="bt">
-          <Buttons ><Textbutton>Registrar Usuario</Textbutton></Buttons>
+          <Buttons onClick={(e)=>addUser(e)}><Textbutton>Registrar Usuario</Textbutton></Buttons>
           <Buttons onClick={ocultarregistro}><Textbutton>Cancelar</Textbutton></Buttons>
         </Buttongrup> 
         </Ocultar>
@@ -161,8 +193,9 @@ class Registro extends React.Component{
         super(props);
         this.state ={}
     }
-    
+ 
     render(){
+        
         return( 
             <>
             <main>
@@ -205,7 +238,7 @@ class Registro extends React.Component{
                 <div>
                   <Labell htmlFor="">Nombre</Labell>
                   <Inputsgrup>
-                    <Textbox type="text" placeholder="Nombre"></Textbox>
+                    <Textbox type="text" placeholder="Nombre" onChange={(e)=>setnombre(e.target.value)}></Textbox>
                     <Iconvalue icon={faCheck}></Iconvalue>
                   </Inputsgrup>
                   <Leyend>leyenda</Leyend>                
@@ -213,7 +246,7 @@ class Registro extends React.Component{
                 <div> 
                   <Labell htmlFor="">Apellido</Labell>
                   <Inputsgrup>
-                    <Textbox type="text" placeholder="Apellido"></Textbox>
+                    <Textbox type="text" placeholder="Apellido" onChange={(e)=>setapellido(e.target.value)}></Textbox>
                     <Iconvalue icon={faCheck}></Iconvalue>
                   </Inputsgrup>
                   <Leyend>leyenda</Leyend>
@@ -222,7 +255,7 @@ class Registro extends React.Component{
                 <div>
                   <Labell htmlFor="">Dirección</Labell>
                   <Inputsgrup>
-                    <Textbox type="text" placeholder="Dirección"></Textbox>
+                    <Textbox type="text" placeholder="Dirección" onChange={(e)=>setdireccion(e.target.value)}></Textbox>
                     <Iconvalue icon={faCheck}></Iconvalue>
                   </Inputsgrup>
                   <Leyend>leyenda</Leyend>
@@ -231,16 +264,16 @@ class Registro extends React.Component{
                 <div>
                   <Labell htmlFor="">Teléfono</Labell>
                   <Inputsgrup>
-                    <Textbox type="text" placeholder="Teléfono"></Textbox>
+                    <Textbox type="text" placeholder="Teléfono" onChange={(e)=>settelefono(e.target.value)}></Textbox>
                     <Iconvalue icon={faCheck}></Iconvalue>
                   </Inputsgrup>
                   <Leyend>leyenda</Leyend>
                 </div>
                 
                 <div>
-                  <Labell htmlFor="">DPI o Nit</Labell>
+                  <Labell htmlFor="">DPI</Labell>
                   <Inputsgrup>
-                    <Textbox type="text" placeholder="DPI o Nit"></Textbox>
+                    <Textbox type="text" placeholder="DPI" onChange={(e)=>setdpi(e.target.value)}></Textbox>
                     <Iconvalue icon={faCheck}></Iconvalue>
                   </Inputsgrup>
                   <Leyend>leyenda</Leyend>
@@ -249,7 +282,7 @@ class Registro extends React.Component{
                 <div>
                   <Labell htmlFor="">Correo Electronico</Labell>
                   <Inputsgrup>
-                    <Textbox type="text" placeholder="Correo Electronico"></Textbox>
+                    <Textbox type="text" placeholder="Correo Electronico" onChange={(e)=>setcorreo(e.target.value)}></Textbox>
                     <Iconvalue id="ch" icon={faCheck}></Iconvalue>
                   </Inputsgrup>
                   <Leyend>leyenda</Leyend>
@@ -257,7 +290,7 @@ class Registro extends React.Component{
                 <div>
                   <Labell htmlFor="">Contraseña</Labell>
                   <Inputsgrup>
-                    <Textbox type="password" placeholder="*********"  id="pass2"></Textbox>
+                    <Textbox type="password" placeholder="*********"  id="pass2" onChange={(e)=>setpassw(e.target.value)}></Textbox>
                     <Iconvalue id="v" icon={faCheck}></Iconvalue>
                     <Iconuser icon={faKey} onClick={showpass}></Iconuser>
                   </Inputsgrup>
@@ -281,7 +314,7 @@ class Registro extends React.Component{
               </div>
               
               <Buttongrup id="bt">
-                <Buttons ><Textbutton>Registrar Usuario</Textbutton></Buttons>
+                <Buttons onClick={(e)=>app.addUser(e)}><Textbutton>Registrar Usuario</Textbutton></Buttons>
                 <Buttons onClick={ocultarregistro}><Textbutton>Cancelar</Textbutton></Buttons>
               </Buttongrup> 
               </Ocultar>
@@ -348,4 +381,4 @@ function conectar(){
 
 }
 
-export default Registro;
+export default App;

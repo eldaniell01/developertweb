@@ -5,10 +5,10 @@ import  ReactDOM from "react-dom";
 import { render }  from "react-dom";
 import "./app.css";
 import "bootstrap/dist/css/bootstrap.min.css"
-import Registro from "./registro.js";
+import App from "./registro"; "./registro.js";
 ReactDOM.render(
     
-    <Registro/>,
+    <App/>,
     
     document.getElementById("root"));
 
