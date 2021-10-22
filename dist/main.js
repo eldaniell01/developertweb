@@ -13032,29 +13032,38 @@ function App() {
 
   function _addUser() {
     _addUser = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(e) {
-      var obj, res;
+      var num, dpi;
       return regeneratorRuntime.wrap(function _callee2$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
-              e.preventDefault();
-              obj = {
-                nombre: nombre,
-                apellido: apellido,
-                direccion: direccion,
-                telefono: telefono,
-                dpi: dpi,
-                correo: correo,
-                passw: passw
-              };
-              _context2.next = 4;
-              return axios__WEBPACK_IMPORTED_MODULE_5___default().post('http://localhost:3000/api/index.php', obj);
+              num = document.getElementById("phone").value;
+              dpi = document.getElementById("dpi").value;
 
-            case 4:
-              res = _context2.sent;
-              console.log(res.data);
+              if (validetions() != true) {
+                alert("hay un error en el campo");
+              } else {
+                alert("todo");
+              }
+              /*
+              if(num>0){
+                if(num.length>7 && num.length<9){
+                  if(dpi.length>12 && dpi.length<14){
+                e.preventDefault();
+                const obj= {nombre, apellido, direccion, telefono, dpi, correo, passw};
+                const res = await axios.post('http://localhost:3000/api/index.php', obj);
+                clearstate();
+                console.log(res.data);    
+                  }
+                }else{
+                  alert("error en la cantidad de digitos");
+                }
+              }else{
+                alert("no se ingreso un numero");
+              }*/
 
-            case 6:
+
+            case 3:
             case "end":
               return _context2.stop();
           }
@@ -13167,7 +13176,11 @@ function App() {
   }, "Hotel"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Formulario2, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Labell, {
     htmlFor: ""
   }, "Nombre"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
+    id: "name",
     type: "text",
+    pattern: "^[A-Za-z\xF1\xD1\xC1\xC9\xCD\xD3\xDA\xE1\xE9\xED\xF3\xFA ]+$",
+    maxlength: "40",
+    required: true,
     placeholder: "Nombre",
     onChange: function onChange(e) {
       return setnombre(e.target.value);
@@ -13178,7 +13191,11 @@ function App() {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Leyend, null, "leyenda")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Labell, {
     htmlFor: ""
   }, "Apellido"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
+    id: "last_name",
     type: "text",
+    pattern: "^[A-Za-z\xF1\xD1\xC1\xC9\xCD\xD3\xDA\xE1\xE9\xED\xF3\xFA ]+$",
+    maxlength: "40",
+    required: true,
     placeholder: "Apellido",
     onChange: function onChange(e) {
       return setapellido(e.target.value);
@@ -13189,7 +13206,10 @@ function App() {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Leyend, null, "leyenda")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Labell, {
     htmlFor: ""
   }, "Direcci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
+    id: "address",
     type: "text",
+    pattern: "^[A-Za-z\xF1\xD1\xC1\xC9\xCD\xD3\xDA\xE1\xE9\xED\xF3\xFA0-9. ]+$",
+    maxlength: "40",
     placeholder: "Direcci\xF3n",
     onChange: function onChange(e) {
       return setdireccion(e.target.value);
@@ -13200,6 +13220,7 @@ function App() {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Leyend, null, "leyenda")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Labell, {
     htmlFor: ""
   }, "Tel\xE9fono"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
+    id: "phone",
     type: "text",
     placeholder: "Tel\xE9fono",
     onChange: function onChange(e) {
@@ -13211,6 +13232,7 @@ function App() {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Leyend, null, "leyenda")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Labell, {
     htmlFor: ""
   }, "DPI o Nit"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
+    id: "dpi",
     type: "text",
     placeholder: "DPI o Nit",
     onChange: function onChange(e) {
@@ -13222,6 +13244,7 @@ function App() {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Leyend, null, "leyenda")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Labell, {
     htmlFor: ""
   }, "Correo Electronico"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
+    id: "email",
     type: "text",
     placeholder: "Correo Electronico",
     onChange: function onChange(e) {
@@ -13463,8 +13486,33 @@ function showpass() {
   }
 }
 
-function clear() {
-  document.getelement;
+function validetions() {
+  var dat = true;
+  var input = document.getElementById('name');
+
+  if (!input.checkValidity()) {
+    if (/^([0-9])*$/.test(document.getElementById('name').value)) {
+      alert('se esta escribiendo numeros en el campo de nombre');
+      console.log("error");
+      dat = false;
+    }
+
+    dat = false;
+  }
+
+  if (document.getElementById("phone").value.length > 8 || document.getElementById("phone").value.length < 8 || /^([a-z])*$/.test(document.getElementById("phone").value)) {
+    alert("error: se esta escribiendo letras en el campo del teléfono o hay un error en la cantidad de numeros");
+    console.log("error222");
+    dat = false;
+  }
+
+  if (document.getElementById("dpi").value.length > 13 || document.getElementById("dpi").value.length < 13 || /^([a-z])*$/.test(document.getElementById("phone").value)) {
+    alert("error: se esta escribiendo letras en el campo del teléfono o hay un error en la cantidad de numeros");
+    console.log("error222");
+    dat = false;
+  }
+
+  return dat;
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);

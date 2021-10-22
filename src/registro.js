@@ -30,10 +30,30 @@ function App(){
     } 
 
     async function addUser(e){
-      e.preventDefault();
-      const obj= {nombre, apellido, direccion, telefono, dpi, correo, passw};
-      const res = await axios.post('http://localhost:3000/api/index.php', obj);
-      console.log(res.data);
+      var num  = document.getElementById("phone").value;
+      var dpi = document.getElementById("dpi").value;
+      if(validetions()!=true){
+        alert("hay un error en el campo");
+      }else{
+        alert("todo");
+      }
+      /*
+      if(num>0){
+        if(num.length>7 && num.length<9){
+          if(dpi.length>12 && dpi.length<14){
+        e.preventDefault();
+        const obj= {nombre, apellido, direccion, telefono, dpi, correo, passw};
+        const res = await axios.post('http://localhost:3000/api/index.php', obj);
+        clearstate();
+        console.log(res.data);    
+          }
+        }else{
+          alert("error en la cantidad de digitos");
+        }
+      }else{
+        alert("no se ingreso un numero");
+      }*/
+      
     }
 
     async function updateuser(e){
@@ -57,7 +77,8 @@ function App(){
       setdpi('');
       setcorreo('');
       setpassw('');
-      setbandera(true)
+      setbandera(true);
+      
     }
     return( 
       <>
@@ -91,8 +112,6 @@ function App(){
           <Buttons onClick={cambiotamaño}><Textbutton>Crear Usuario</Textbutton></Buttons>
         </Buttongrup> 
       </main>
-
-
       <main>
         <Ocultar id="sing">
         <Title htmlFor="">Hotel</Title>
@@ -101,7 +120,7 @@ function App(){
           <div>
             <Labell htmlFor="">Nombre</Labell>
             <Inputsgrup>
-              <Textbox type="text" placeholder="Nombre" onChange={(e)=>setnombre(e.target.value)} value={nombre}></Textbox>
+              <Textbox id="name" type="text" pattern="^[A-Za-zñÑÁÉÍÓÚáéíóú ]+$" maxlength="40" required placeholder="Nombre" onChange={(e)=>setnombre(e.target.value)} value={nombre}></Textbox>
               <Iconvalue icon={faCheck}></Iconvalue>
             </Inputsgrup>
             <Leyend>leyenda</Leyend>                
@@ -109,7 +128,7 @@ function App(){
           <div> 
             <Labell htmlFor="">Apellido</Labell>
             <Inputsgrup>
-              <Textbox type="text" placeholder="Apellido" onChange={(e)=>setapellido(e.target.value)} value={apellido}></Textbox>
+              <Textbox id="last_name" type="text" pattern="^[A-Za-zñÑÁÉÍÓÚáéíóú ]+$" maxlength="40" required placeholder="Apellido" onChange={(e)=>setapellido(e.target.value)} value={apellido}></Textbox>
               <Iconvalue icon={faCheck}></Iconvalue>
             </Inputsgrup>
             <Leyend>leyenda</Leyend>
@@ -118,7 +137,7 @@ function App(){
           <div>
             <Labell htmlFor="">Dirección</Labell>
             <Inputsgrup>
-              <Textbox type="text" placeholder="Dirección" onChange={(e)=>setdireccion(e.target.value)} value={direccion}></Textbox>
+              <Textbox id="address" type="text" pattern="^[A-Za-zñÑÁÉÍÓÚáéíóú0-9. ]+$" maxlength="40"  placeholder="Dirección" onChange={(e)=>setdireccion(e.target.value)} value={direccion}></Textbox>
               <Iconvalue icon={faCheck}></Iconvalue>
             </Inputsgrup>
             <Leyend>leyenda</Leyend>
@@ -127,7 +146,7 @@ function App(){
           <div>
             <Labell htmlFor="">Teléfono</Labell>
             <Inputsgrup>
-              <Textbox type="text" placeholder="Teléfono" onChange={(e)=>settelefono(e.target.value)} value={telefono}></Textbox>
+              <Textbox id="phone" type="text"  placeholder="Teléfono" onChange={(e)=>settelefono(e.target.value)} value={telefono}></Textbox>
               <Iconvalue icon={faCheck}></Iconvalue>
             </Inputsgrup>
             <Leyend>leyenda</Leyend>
@@ -136,7 +155,7 @@ function App(){
           <div>
             <Labell htmlFor="">DPI o Nit</Labell>
             <Inputsgrup>
-              <Textbox type="text" placeholder="DPI o Nit" onChange={(e)=>setdpi(e.target.value)}value={dpi}></Textbox>
+              <Textbox id="dpi" type="text" placeholder="DPI o Nit" onChange={(e)=>setdpi(e.target.value)}value={dpi}></Textbox>
               <Iconvalue icon={faCheck}></Iconvalue>
             </Inputsgrup>
             <Leyend>leyenda</Leyend>
@@ -145,7 +164,7 @@ function App(){
           <div>
             <Labell htmlFor="">Correo Electronico</Labell>
             <Inputsgrup>
-              <Textbox type="text" placeholder="Correo Electronico" onChange={(e)=>setcorreo(e.target.value)} value={correo}></Textbox>
+              <Textbox id="email" type="text" placeholder="Correo Electronico" onChange={(e)=>setcorreo(e.target.value)} value={correo}></Textbox>
               <Iconvalue id="ch" icon={faCheck}></Iconvalue>
             </Inputsgrup>
             <Leyend>leyenda</Leyend>
@@ -153,7 +172,7 @@ function App(){
           <div>
             <Labell htmlFor="">Contraseña</Labell>
             <Inputsgrup>
-              <Textbox type="password" placeholder="*********"  id="pass2" onChange={(e)=>setpassw(e.target.value)} value={passw}></Textbox>
+              <Textbox  type="password" placeholder="*********"  id="pass2" onChange={(e)=>setpassw(e.target.value)} value={passw}></Textbox>
               <Iconvalue id="v" icon={faCheck}></Iconvalue>
               <Iconuser icon={faKey} onClick={showpass}></Iconuser>
             </Inputsgrup>
@@ -377,8 +396,30 @@ function showpass(){
       }
 }
 
-function clear(){
-  document.getelement
+function validetions(){
+  var dat = true;
+  const input = document.getElementById('name');
+  if(!input.checkValidity()) {
+    if(/^([0-9])*$/.test(document.getElementById('name').value)){
+      alert('se esta escribiendo numeros en el campo de nombre');
+      console.log("error");
+      dat = false;
+    }
+    dat = false;
+  }
+  if(document.getElementById("phone").value.length>8 || document.getElementById("phone").value.length<8 || /^([a-z])*$/.test(document.getElementById("phone").value)){
+      alert("error: se esta escribiendo letras en el campo del teléfono o hay un error en la cantidad de numeros");
+      console.log("error222");
+      dat=false;
+  }
+  if(document.getElementById("dpi").value.length>13 || document.getElementById("dpi").value.length<13 || /^([a-z])*$/.test(document.getElementById("phone").value)){
+    alert("error: se esta escribiendo letras en el campo del teléfono o hay un error en la cantidad de numeros");
+    console.log("error222");
+    dat=false;
+}
+  
+
+  return dat;
 }
 
 export default App;
