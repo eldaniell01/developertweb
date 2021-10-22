@@ -13274,7 +13274,7 @@ function App() {
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Registrar Usuario")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Buttons, {
     onClick: ocultarregistro
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Cancelar"))))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Regresar"))))));
 }
 /*
 class Registro extends React.Component{
@@ -13463,7 +13463,9 @@ function showpass() {
   }
 }
 
-function conectar() {}
+function clear() {
+  document.getelement;
+}
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
 

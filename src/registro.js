@@ -178,7 +178,7 @@ function App(){
         
         <Buttongrup id="bt">
           <Buttons onClick={(e)=>addUser(e)}><Textbutton>Registrar Usuario</Textbutton></Buttons>
-          <Buttons onClick={ocultarregistro}><Textbutton>Cancelar</Textbutton></Buttons>
+          <Buttons onClick={ocultarregistro}><Textbutton>Regresar</Textbutton></Buttons>
         </Buttongrup> 
         </Ocultar>
         
@@ -377,8 +377,8 @@ function showpass(){
       }
 }
 
-function conectar(){
-
+function clear(){
+  document.getelement
 }
 
 export default App;
