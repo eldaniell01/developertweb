@@ -13039,6 +13039,7 @@ function App() {
             case 0:
               num = document.getElementById("phone").value;
               dpi = document.getElementById("dpi").value;
+              e.preventDefault();
 
               if (validetions() != true) {
                 alert("hay un error en el campo");
@@ -13063,7 +13064,7 @@ function App() {
               }*/
 
 
-            case 3:
+            case 4:
             case "end":
               return _context2.stop();
           }
@@ -13173,7 +13174,11 @@ function App() {
     id: "sing"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, {
     htmlFor: ""
-  }, "Hotel"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Formulario2, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Labell, {
+  }, "Hotel"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Formulario2, {
+    name: "form2",
+    id: "form2",
+    onSubmit: chec1
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Labell, {
     htmlFor: ""
   }, "Nombre"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
     id: "name",
@@ -13193,9 +13198,6 @@ function App() {
   }, "Apellido"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
     id: "last_name",
     type: "text",
-    pattern: "^[A-Za-z\xF1\xD1\xC1\xC9\xCD\xD3\xDA\xE1\xE9\xED\xF3\xFA ]+$",
-    maxlength: "40",
-    required: true,
     placeholder: "Apellido",
     onChange: function onChange(e) {
       return setapellido(e.target.value);
@@ -13208,8 +13210,9 @@ function App() {
   }, "Direcci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
     id: "address",
     type: "text",
-    pattern: "^[A-Za-z\xF1\xD1\xC1\xC9\xCD\xD3\xDA\xE1\xE9\xED\xF3\xFA0-9. ]+$",
-    maxlength: "40",
+    pattern: "^[A-Za-z\xF1\xD1\xC1\xC9\xCD\xD3\xDA\xE1\xE9\xED\xF3\xFA.1-9 ]+$",
+    maxlength: "50",
+    required: true,
     placeholder: "Direcci\xF3n",
     onChange: function onChange(e) {
       return setdireccion(e.target.value);
@@ -13222,6 +13225,10 @@ function App() {
   }, "Tel\xE9fono"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
     id: "phone",
     type: "text",
+    pattern: "^[0-9]+$",
+    maxlength: "8",
+    minLength: "8",
+    required: true,
     placeholder: "Tel\xE9fono",
     onChange: function onChange(e) {
       return settelefono(e.target.value);
@@ -13234,6 +13241,10 @@ function App() {
   }, "DPI o Nit"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
     id: "dpi",
     type: "text",
+    pattern: "^[0-9]+$",
+    maxlength: "13",
+    minLength: "13",
+    required: true,
     placeholder: "DPI o Nit",
     onChange: function onChange(e) {
       return setdpi(e.target.value);
@@ -13246,6 +13257,9 @@ function App() {
   }, "Correo Electronico"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
     id: "email",
     type: "text",
+    pattern: "^[a-z_@.]+$",
+    maxlength: "50",
+    required: true,
     placeholder: "Correo Electronico",
     onChange: function onChange(e) {
       return setcorreo(e.target.value);
@@ -13258,6 +13272,9 @@ function App() {
     htmlFor: ""
   }, "Contrase\xF1a"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
     type: "password",
+    pattern: "^[0-9A-Z\xE1\xE9\xED\xF3\xFA\xC1\xC9\xCD\xD3\xDAa-z_*@#. ]+$",
+    minLength: "7",
+    required: true,
     placeholder: "*********",
     id: "pass2",
     onChange: function onChange(e) {
@@ -13274,6 +13291,9 @@ function App() {
     htmlFor: ""
   }, "Repetir Contrase\xF1a"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
     type: "password",
+    pattern: "^[0-9A-Z\xE1\xE9\xED\xF3\xFA\xC1\xC9\xCD\xD3\xDAa-z_*@#. ]+$",
+    minLength: "7",
+    required: true,
     placeholder: "*********",
     id: "pass3"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconvalue, {
@@ -13282,22 +13302,26 @@ function App() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconuser, {
     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faKey,
     onClick: showpass
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Leyend, null, "leyenda"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Labell, {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Leyend, null, "leyenda")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Labell, {
     htmlFor: "",
     id: "ter"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Confirm, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
     type: "checkbox",
     name: "terminos",
-    id: "terminos"
+    id: "termin"
   }), "Aceptar Terminos y Condiciones")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Buttongrup, {
     id: "bt"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Buttons, {
-    onClick: function onClick(e) {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    type: "submit",
+    onSubmit: function onSubmit(e) {
       return addUser(e);
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Registrar Usuario")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Buttons, {
-    onClick: ocultarregistro
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Regresar"))))));
+    },
+    value: "Registrar"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    type: "submit",
+    onSubmit: ocultarregistro,
+    value: "Regresar"
+  }))))));
 }
 /*
 class Registro extends React.Component{
@@ -13486,7 +13510,7 @@ function showpass() {
   }
 }
 
-function validetions() {
+function validetions(e) {
   var dat = true;
   var input = document.getElementById('name');
 
@@ -13505,14 +13529,33 @@ function validetions() {
     console.log("error222");
     dat = false;
   }
-
-  if (document.getElementById("dpi").value.length > 13 || document.getElementById("dpi").value.length < 13 || /^([a-z])*$/.test(document.getElementById("phone").value)) {
+  /*
+  if(document.getElementById("dpi").value.length>13 || document.getElementById("dpi").value.length<13 || /^([a-z])*$/.test(document.getElementById("phone").value)){
     alert("error: se esta escribiendo letras en el campo del teléfono o hay un error en la cantidad de numeros");
     console.log("error222");
-    dat = false;
+    dat=false;
+  }*/
+
+
+  e.preventDefault();
+  return dat;
+}
+
+function chec1(e) {
+  if (!document.getElementById("termin").checked) {
+    alert("debe de aceptar los terminos");
+    e.preventDefault();
+  } else {
+    alert(" terminos");
   }
 
-  return dat;
+  e.preventDefault();
+}
+
+function chec2() {
+  var check = document.getElementById("terminos").checked;
+  var check = false;
+  return check;
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);

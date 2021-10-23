@@ -32,6 +32,7 @@ function App(){
     async function addUser(e){
       var num  = document.getElementById("phone").value;
       var dpi = document.getElementById("dpi").value;
+      e.preventDefault();
       if(validetions()!=true){
         alert("hay un error en el campo");
       }else{
@@ -115,8 +116,7 @@ function App(){
       <main>
         <Ocultar id="sing">
         <Title htmlFor="">Hotel</Title>
-        <Formulario2>
-        
+        <Formulario2 name="form2" id="form2" onSubmit={chec1}>
           <div>
             <Labell htmlFor="">Nombre</Labell>
             <Inputsgrup>
@@ -128,7 +128,7 @@ function App(){
           <div> 
             <Labell htmlFor="">Apellido</Labell>
             <Inputsgrup>
-              <Textbox id="last_name" type="text" pattern="^[A-Za-zñÑÁÉÍÓÚáéíóú ]+$" maxlength="40" required placeholder="Apellido" onChange={(e)=>setapellido(e.target.value)} value={apellido}></Textbox>
+              <Textbox id="last_name" type="text"   placeholder="Apellido" onChange={(e)=>setapellido(e.target.value)} value={apellido}></Textbox>
               <Iconvalue icon={faCheck}></Iconvalue>
             </Inputsgrup>
             <Leyend>leyenda</Leyend>
@@ -137,7 +137,7 @@ function App(){
           <div>
             <Labell htmlFor="">Dirección</Labell>
             <Inputsgrup>
-              <Textbox id="address" type="text" pattern="^[A-Za-zñÑÁÉÍÓÚáéíóú0-9. ]+$" maxlength="40"  placeholder="Dirección" onChange={(e)=>setdireccion(e.target.value)} value={direccion}></Textbox>
+              <Textbox id="address" type="text" pattern="^[A-Za-zñÑÁÉÍÓÚáéíóú.1-9 ]+$" maxlength="50" required placeholder="Dirección" onChange={(e)=>setdireccion(e.target.value)} value={direccion}></Textbox>
               <Iconvalue icon={faCheck}></Iconvalue>
             </Inputsgrup>
             <Leyend>leyenda</Leyend>
@@ -146,7 +146,7 @@ function App(){
           <div>
             <Labell htmlFor="">Teléfono</Labell>
             <Inputsgrup>
-              <Textbox id="phone" type="text"  placeholder="Teléfono" onChange={(e)=>settelefono(e.target.value)} value={telefono}></Textbox>
+              <Textbox id="phone" type="text"  pattern="^[0-9]+$" maxlength="8" minLength="8" required placeholder="Teléfono" onChange={(e)=>settelefono(e.target.value)} value={telefono}></Textbox>
               <Iconvalue icon={faCheck}></Iconvalue>
             </Inputsgrup>
             <Leyend>leyenda</Leyend>
@@ -155,7 +155,7 @@ function App(){
           <div>
             <Labell htmlFor="">DPI o Nit</Labell>
             <Inputsgrup>
-              <Textbox id="dpi" type="text" placeholder="DPI o Nit" onChange={(e)=>setdpi(e.target.value)}value={dpi}></Textbox>
+              <Textbox id="dpi" type="text" pattern="^[0-9]+$" maxlength="13" minLength="13" required placeholder="DPI o Nit" onChange={(e)=>setdpi(e.target.value)}value={dpi}></Textbox>
               <Iconvalue icon={faCheck}></Iconvalue>
             </Inputsgrup>
             <Leyend>leyenda</Leyend>
@@ -164,7 +164,7 @@ function App(){
           <div>
             <Labell htmlFor="">Correo Electronico</Labell>
             <Inputsgrup>
-              <Textbox id="email" type="text" placeholder="Correo Electronico" onChange={(e)=>setcorreo(e.target.value)} value={correo}></Textbox>
+              <Textbox id="email" type="text" pattern="^[a-z_@.]+$" maxlength="50" required placeholder="Correo Electronico" onChange={(e)=>setcorreo(e.target.value)} value={correo}></Textbox>
               <Iconvalue id="ch" icon={faCheck}></Iconvalue>
             </Inputsgrup>
             <Leyend>leyenda</Leyend>
@@ -172,7 +172,7 @@ function App(){
           <div>
             <Labell htmlFor="">Contraseña</Labell>
             <Inputsgrup>
-              <Textbox  type="password" placeholder="*********"  id="pass2" onChange={(e)=>setpassw(e.target.value)} value={passw}></Textbox>
+              <Textbox  type="password" pattern="^[0-9A-ZáéíóúÁÉÍÓÚa-z_*@#. ]+$" minLength="7" required placeholder="*********"  id="pass2" onChange={(e)=>setpassw(e.target.value)} value={passw}></Textbox>
               <Iconvalue id="v" icon={faCheck}></Iconvalue>
               <Iconuser icon={faKey} onClick={showpass}></Iconuser>
             </Inputsgrup>
@@ -181,24 +181,24 @@ function App(){
           <div>
             <Labell htmlFor="">Repetir Contraseña</Labell>
             <Inputsgrup>
-              <Textbox type="password" placeholder="*********" id="pass3"></Textbox>
+              <Textbox type="password" pattern="^[0-9A-ZáéíóúÁÉÍÓÚa-z_*@#. ]+$" minLength="7" required placeholder="*********" id="pass3"></Textbox>
               <Iconvalue id="v" icon={faCheck}></Iconvalue>
               <Iconuser icon={faKey} onClick={showpass} ></Iconuser>
             </Inputsgrup>
             <Leyend>leyenda</Leyend>
           </div>
-        </Formulario2>
-        <div>
+          <div>
           <Labell htmlFor="" id="ter">
-            <Confirm type="checkbox" name="terminos" id="terminos">
-            </Confirm>Aceptar Terminos y Condiciones
+            <input type="checkbox" name="terminos" id="termin">
+            </input>Aceptar Terminos y Condiciones
           </Labell> 
+          
         </div>
-        
         <Buttongrup id="bt">
-          <Buttons onClick={(e)=>addUser(e)}><Textbutton>Registrar Usuario</Textbutton></Buttons>
-          <Buttons onClick={ocultarregistro}><Textbutton>Regresar</Textbutton></Buttons>
+          <input type="submit" onSubmit={(e)=>addUser(e)} value="Registrar"/>
+          <input type="submit" onSubmit={ocultarregistro} value="Regresar"/>
         </Buttongrup> 
+        </Formulario2>
         </Ocultar>
         
       </main>
@@ -396,7 +396,7 @@ function showpass(){
       }
 }
 
-function validetions(){
+function validetions(e){
   var dat = true;
   const input = document.getElementById('name');
   if(!input.checkValidity()) {
@@ -412,14 +412,38 @@ function validetions(){
       console.log("error222");
       dat=false;
   }
+  
+  
+  /*
   if(document.getElementById("dpi").value.length>13 || document.getElementById("dpi").value.length<13 || /^([a-z])*$/.test(document.getElementById("phone").value)){
     alert("error: se esta escribiendo letras en el campo del teléfono o hay un error en la cantidad de numeros");
     console.log("error222");
     dat=false;
-}
+  }*/
+ 
   
-
+  e.preventDefault();
   return dat;
+}
+function chec1(e){
+
+  
+  
+  if(!document.getElementById("termin").checked){
+    
+    alert("debe de aceptar los terminos");
+    e.preventDefault();
+    
+  }else{
+    alert(" terminos");
+  }
+  e.preventDefault();
+
+}
+function chec2(){
+  var check = document.getElementById("terminos").checked;
+  var check = false;
+  return check;
 }
 
 export default App;
