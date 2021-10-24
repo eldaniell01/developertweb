@@ -59,12 +59,11 @@ const Iconvalue = styled(FontAwesomeIcon)`
     display: none;
 `
 const Buttongrup = styled.div`
-    display: flex;
-    
-    justify-content: center;
-    
-    border: none;
-    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 25px;
+    margin: 15px;
 `
 const Iconuser = styled(FontAwesomeIcon)`
     position: absolute;
@@ -102,9 +101,8 @@ const Title = styled.label`
     font-size: 2.4em;
 `
 const Formulario2 = styled.form`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    display: flex;
+    flex-flow: column;
 `
 const Ocultar = styled.div`
     display: none;
@@ -115,5 +113,16 @@ const Confirm = styled.input`
     border-radius: 3px solid;
     margin: 15px;
 `  
- 
-export {Formulario, Ocultar, Confirm, Formulario2, Title, Textbutton, Labell, Inputsgrup, Buttons, Textbox, Leyend, Iconvalue, Buttongrup, Iconuser};
+const Interform1 = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+`
+const Interform2 = styled.div`
+    margin: 15px;
+    padding: 20px;
+    justify-content: center;
+
+`
+
+export {Formulario, Ocultar, Confirm, Formulario2,  Interform1, Interform2, Title, Textbutton, Labell, Inputsgrup, Buttons, Textbox, Leyend, Iconvalue, Buttongrup, Iconuser};

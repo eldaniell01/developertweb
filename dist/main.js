@@ -12856,6 +12856,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Ocultar": () => (/* binding */ Ocultar),
 /* harmony export */   "Confirm": () => (/* binding */ Confirm),
 /* harmony export */   "Formulario2": () => (/* binding */ Formulario2),
+/* harmony export */   "Interform1": () => (/* binding */ Interform1),
+/* harmony export */   "Interform2": () => (/* binding */ Interform2),
 /* harmony export */   "Title": () => (/* binding */ Title),
 /* harmony export */   "Textbutton": () => (/* binding */ Textbutton),
 /* harmony export */   "Labell": () => (/* binding */ Labell),
@@ -12869,7 +12871,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
-var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14;
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16;
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
@@ -12886,14 +12888,16 @@ var Inputsgrup = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_
 var Textbox = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    width: 100%;\n    background: white;\n    border: 3px;\n    border-radius: 10px;\n    height: 45px;\n    text-align: center;\n    padding: 0 40px 0 40px;\n    line-height: 45px;\n    transition: 0.5s ease all;\n    border: 3px solid transparent;\n    &:focus{\n        border: 3px solid ", ";\n        outline: none;\n        cursor: pointer;\n    }\n"])), colores.border);
 var Leyend = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n    font-family: 'Noto Sans', sans-serif;\n    font-weight: 500;\n    font-size: 12px;\n    margin-bottom: 0%;\n    color: ", ";\n    display: none;\n"])), colores.error);
 var Iconvalue = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_0__.FontAwesomeIcon)(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n    position: absolute;\n    right: 10px;\n    bottom: 14px;\n    z-index: 100;\n    font-size: 16px;\n    display: none;\n"])));
-var Buttongrup = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n    display: flex;\n    \n    justify-content: center;\n    \n    border: none;\n    margin: 10px;\n"])));
+var Buttongrup = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    justify-items: center;\n    gap: 25px;\n    margin: 15px;\n"])));
 var Iconuser = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_0__.FontAwesomeIcon)(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n    position: absolute;\n    left: 10px;\n    bottom: 14px;\n    z-index: 100;\n    font-size: 16px;\n"])));
 var Buttons = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n    background: #CDE5F7;\n    transition: 0.4s;\n    margin: 10px;\n    width: 150px;\n    height: 40px;\n    line-height: 40px;\n    border: none;\n    text-align: center;\n    align-items: center;\n    border-radius: 10px;\n    &:hover{\n        background: #82C3F5;\n    }\n"])));
 var Textbutton = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n    font-family: 'Noto Sans', sans-serif;\n    font-weight: bold;\n    font-size: 0.9em;\n"])));
 var Title = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].label(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n    font-family: 'Noto Sans', sans-serif;\n    font-weight: normal;\n    display: flex;\n    justify-content: center;\n    margin: 20px;\n    font-size: 2.4em;\n"])));
-var Formulario2 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 25px;\n"])));
+var Formulario2 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-flow: column;\n"])));
 var Ocultar = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n    display: none;\n    flex-flow: column;\n    justify-content: center;\n"])));
 var Confirm = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n    border-radius: 3px solid;\n    margin: 15px;\n"])));
+var Interform1 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 25px;\n"])));
+var Interform2 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject16 || (_templateObject16 = _taggedTemplateLiteral(["\n    margin: 15px;\n    padding: 20px;\n    justify-content: center;\n\n"])));
 
 
 /***/ }),
@@ -12948,42 +12952,42 @@ function App() {
       list = _useState2[0],
       setlist = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState4 = _slicedToArray(_useState3, 2),
       nombre = _useState4[0],
       setnombre = _useState4[1];
 
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState6 = _slicedToArray(_useState5, 2),
       apellido = _useState6[0],
       setapellido = _useState6[1];
 
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState8 = _slicedToArray(_useState7, 2),
       direccion = _useState8[0],
       setdireccion = _useState8[1];
 
-  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState10 = _slicedToArray(_useState9, 2),
       telefono = _useState10[0],
       settelefono = _useState10[1];
 
-  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState12 = _slicedToArray(_useState11, 2),
       dpi = _useState12[0],
       setdpi = _useState12[1];
 
-  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState14 = _slicedToArray(_useState13, 2),
       correo = _useState14[0],
       setcorreo = _useState14[1];
 
-  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState16 = _slicedToArray(_useState15, 2),
-      passw = _useState16[0],
-      setpassw = _useState16[1];
+      pass = _useState16[0],
+      setpass = _useState16[1];
 
-  var _useState17 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState17 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState18 = _slicedToArray(_useState17, 2),
       id = _useState18[0],
       setid = _useState18[1];
@@ -13009,7 +13013,7 @@ function App() {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_5___default().get('http://localhost:3000/api/');
+              return axios__WEBPACK_IMPORTED_MODULE_5___default().get("http://localhost:3000/api/");
 
             case 2:
               res = _context.sent;
@@ -13032,39 +13036,40 @@ function App() {
 
   function _addUser() {
     _addUser = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(e) {
-      var num, dpi;
+      var obj, res;
       return regeneratorRuntime.wrap(function _callee2$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
-              num = document.getElementById("phone").value;
-              dpi = document.getElementById("dpi").value;
-              e.preventDefault();
-
-              if (validetions() != true) {
-                alert("hay un error en el campo");
-              } else {
-                alert("todo");
+              if (!(validetions() != true)) {
+                _context2.next = 4;
+                break;
               }
-              /*
-              if(num>0){
-                if(num.length>7 && num.length<9){
-                  if(dpi.length>12 && dpi.length<14){
-                e.preventDefault();
-                const obj= {nombre, apellido, direccion, telefono, dpi, correo, passw};
-                const res = await axios.post('http://localhost:3000/api/index.php', obj);
-                clearstate();
-                console.log(res.data);    
-                  }
-                }else{
-                  alert("error en la cantidad de digitos");
-                }
-              }else{
-                alert("no se ingreso un numero");
-              }*/
 
+              alert("hay un error en el campo");
+              _context2.next = 11;
+              break;
 
             case 4:
+              alert("todo");
+              e.preventDefault();
+              obj = {
+                nombre: nombre,
+                apellido: apellido,
+                direccion: direccion,
+                telefono: telefono,
+                dpi: dpi,
+                correo: correo,
+                pass: pass
+              };
+              _context2.next = 9;
+              return axios__WEBPACK_IMPORTED_MODULE_5___default().post('http://localhost:3000/api/index.php', obj);
+
+            case 9:
+              res = _context2.sent;
+              console.log(res.data);
+
+            case 11:
             case "end":
               return _context2.stop();
           }
@@ -13093,10 +13098,10 @@ function App() {
                 telefono: telefono,
                 dpi: dpi,
                 correo: correo,
-                passw: passw
+                pass: pass
               };
               _context3.next = 3;
-              return axios__WEBPACK_IMPORTED_MODULE_5___default().put('http://localhost:3000/api/', obj);
+              return axios__WEBPACK_IMPORTED_MODULE_5___default().put("http://localhost:3000/api/", obj);
 
             case 3:
               res = _context3.sent;
@@ -13119,13 +13124,13 @@ function App() {
   }
 
   function clearstate() {
-    setid('');
-    setnombre('');
-    setapellido('');
-    setdireccion('');
-    setdpi('');
-    setcorreo('');
-    setpassw('');
+    setid("");
+    setnombre("");
+    setapellido("");
+    setdireccion("");
+    setdpi("");
+    setcorreo("");
+    setpass("");
     setbandera(true);
   }
 
@@ -13178,7 +13183,7 @@ function App() {
     name: "form2",
     id: "form2",
     onSubmit: chec1
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Labell, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Interform1, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Labell, {
     htmlFor: ""
   }, "Nombre"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
     id: "name",
@@ -13198,6 +13203,9 @@ function App() {
   }, "Apellido"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
     id: "last_name",
     type: "text",
+    pattern: "^[A-Za-z\xF1\xD1\xC1\xC9\xCD\xD3\xDA\xE1\xE9\xED\xF3\xFA ]+$",
+    maxlength: "40",
+    required: true,
     placeholder: "Apellido",
     onChange: function onChange(e) {
       return setapellido(e.target.value);
@@ -13278,9 +13286,9 @@ function App() {
     placeholder: "*********",
     id: "pass2",
     onChange: function onChange(e) {
-      return setpassw(e.target.value);
+      return setpass(e.target.value);
     },
-    value: passw
+    value: pass
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconvalue, {
     id: "v",
     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faCheck
@@ -13302,26 +13310,26 @@ function App() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconuser, {
     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faKey,
     onClick: showpass
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Leyend, null, "leyenda")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Labell, {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Leyend, null, "leyenda"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Interform2, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Labell, {
     htmlFor: "",
     id: "ter"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
     type: "checkbox",
     name: "terminos",
     id: "termin"
-  }), "Aceptar Terminos y Condiciones")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Buttongrup, {
+  }), "Aceptar Terminos y Condiciones"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Buttongrup, {
     id: "bt"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
-    type: "submit",
-    onSubmit: function onSubmit(e) {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Buttons, {
+    type: "button",
+    onClick: function onClick(e) {
       return addUser(e);
     },
     value: "Registrar"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
-    type: "submit",
-    onSubmit: ocultarregistro,
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Registrar Usuario")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Buttons, {
+    type: "button",
+    onClick: ocultarregistro,
     value: "Regresar"
-  }))))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Regresar"))))))));
 }
 /*
 class Registro extends React.Component{
@@ -13488,7 +13496,7 @@ function validarlog() {
 
   if (name.length > 2) {
     console.log(password);
-    console.log('Formulario Enviado');
+    console.log("Formulario Enviado");
     document.getElementById("textname").value = "";
     document.getElementById("pass").value = "";
   }
@@ -13512,32 +13520,50 @@ function showpass() {
 
 function validetions(e) {
   var dat = true;
-  var input = document.getElementById('name');
+  var input = document.getElementById("name");
 
-  if (!input.checkValidity()) {
-    if (/^([0-9])*$/.test(document.getElementById('name').value)) {
-      alert('se esta escribiendo numeros en el campo de nombre');
-      console.log("error");
-      dat = false;
-    }
-
+  if (/^([a-zA-Z])*$/.test(document.getElementById("name").value) && document.getElementById("name").value.length > 2) {} else {
+    console.log("nombre");
     dat = false;
   }
 
-  if (document.getElementById("phone").value.length > 8 || document.getElementById("phone").value.length < 8 || /^([a-z])*$/.test(document.getElementById("phone").value)) {
-    alert("error: se esta escribiendo letras en el campo del teléfono o hay un error en la cantidad de numeros");
-    console.log("error222");
+  if (/^([a-zA-Z])*$/.test(document.getElementById("last_name").value) && document.getElementById("last_name").value.length > 2) {} else {
+    console.log("apellido");
     dat = false;
   }
-  /*
-  if(document.getElementById("dpi").value.length>13 || document.getElementById("dpi").value.length<13 || /^([a-z])*$/.test(document.getElementById("phone").value)){
-    alert("error: se esta escribiendo letras en el campo del teléfono o hay un error en la cantidad de numeros");
-    console.log("error222");
-    dat=false;
-  }*/
 
+  if (/^([A-Za-zñÑÁÉÍÓÚáéíóú.1-9 ])*$/.test(document.getElementById("address").value) && document.getElementById("address").value.length > 3) {} else {
+    console.log("direccion");
+    dat = false;
+  }
 
-  e.preventDefault();
+  if (/^([a-z1-9@*._])*$/.test(document.getElementById("email").value) && document.getElementById("email").value.length > 5) {} else {
+    console.log("email");
+    dat = false;
+  }
+
+  if (document.getElementById("phone").value.length == 8 && /^([0-9])*$/.test(document.getElementById("phone").value)) {} else {
+    console.log("telefono");
+    dat = false;
+  }
+
+  if (document.getElementById("dpi").value.length == 13 && /^([0-9])*$/.test(document.getElementById("dpi").value)) {} else {
+    console.log("dpi");
+    dat = false;
+  }
+
+  if (!document.getElementById("termin").checked) {
+    alert("debe de aceptar los terminos");
+    dat = false;
+  } else {
+    alert(" terminos");
+  }
+
+  if (document.getElementById("pass2").value.length > 7 && document.getElementById("pass3").value.length > 7 && document.getElementById("pass2").value == document.getElementById("pass3").value) {} else {
+    console.log("contraseña");
+    dat = false;
+  }
+
   return dat;
 }
 

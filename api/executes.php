@@ -57,13 +57,9 @@
             $consult->bindParam(':dpi', $dpi);
             $consult->bindParam(':correo', $correo);
             $consult->bindParam(':pass', $pass);
-            if($consult!=null){
-                $consult->execute();
-          
-                return '{"msg":" usuario registrado"}';
-            }else{
-                return '{"msg":" error al registrar"}';
-            }
+            $consult->execute();
+            return '{"msg":" usuario registrado"}';
+            
            
           }
 
