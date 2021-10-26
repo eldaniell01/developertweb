@@ -12,6 +12,7 @@ import {
   Labell,
   Textbutton,
   Inputsgrup,
+  Buttonsinputs,
   Textbox,
   Buttongrup,
   Leyend,
@@ -26,19 +27,18 @@ import axios from "axios";
 
 const url_login = "http://localhost:3000/api/login.php";
 
-const sendData = async (url, dat={})=>{
+const sendData = async (url, dat = {}) => {
   const answer = await fetch(url, {
-    method: 'POST',
+    method: "POST",
     body: JSON.stringify(dat),
     headers: {
-      'Content-Type': 'application/json',
-      
-    }
+      "Content-Type": "application/json",
+    },
   });
-  console.log(answer)
+  console.log(answer);
   const json = await answer.json();
-  console.log(json)
-}
+  console.log(json);
+};
 
 function App() {
   const [list, setlist] = useState([]);
@@ -59,55 +59,43 @@ function App() {
     getUser();
   }, []);
   async function getUser() {
-    const res = await axios.get("http://localhost:3000/api/");
+    const res = await axios.get("http://localhost:3000/api/index.php");
     setlist(res.data);
     console.log(res.data);
   }
 
-  async function posdata(url, dat){
-    const response = await fetch(url,{
-      method: 'POST',
-      mode:'cors',
-      headers:{
-        'Content-Type': 'application/json'
+  async function posdata(url, dat) {
+    
+    const response = await fetch(url, {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
       },
-      body:JSON.stringify(dat)
+      body: JSON.parse(JSON.stringify(dat)),
     });
     const json = await response.json();
-    console.log(json)
+    console.log(json);
     console.log(response.json);
   }
 
-  async function logg(e){
+  async function logg(e) {
     e.preventDefault();
-    const obj={refUser, refPassword};
+    const obj = { refUser, refPassword };
     const res = await axios.post(url_login, obj);
     console.log(res.data);
   }
   async function addUser(e) {
-     if (validetions() != true) {
+    if (validetions() != true) {
       alert("hay un error en el campo");
     } else {
       alert("todo");
       e.preventDefault();
-      const obj= {nombre, apellido, direccion, telefono, dpi, correo, pass};
-      const res = await axios.post('http://localhost:3000/api/index.php', obj);
-      
+      const obj = { nombre, apellido, direccion, telefono, dpi, correo, pass };
+      const res = await axios.post("http://localhost:3000/api/index.php", obj);
+
       console.log(res.data);
     }
-    /*
-      if(num>0){
-        if(num.length>7 && num.length<9){
-          if(dpi.length>12 && dpi.length<14){
-        e.preventDefault();
-            
-          }
-        }else{
-          alert("error en la cantidad de digitos");
-        }
-      }else{
-        alert("no se ingreso un numero");
-      }*/
   }
 
   async function updateuser(e) {
@@ -141,31 +129,43 @@ function App() {
     setpass("");
     setbandera(true);
   }
-const login=()=>{
-  const data = {
-      "usuario" : refUser.current.value,
-      "clave" : refPassword.current.value
+  const login = (e) => {
+    e.preventDefault();
+    const data = {
+      usuario: refUser.current.value,
+      clave: refPassword.current.value,
+    };
+    console.log(data);
+    posdata(url_login, data);
   };
-  console.log(data);
-  posdata(url_login, data);
-
-}
 
   return (
     <>
       <main>
-        <Formulario action="./api/login.php" method="post" id="log">
+        <Formulario  id="log">
           <Title htmlFor="">Hotel</Title>
           <Labell htmlFor="">Email</Labell>
           <Inputsgrup>
-            <Textbox type="text" name="usuario" placeholder="Email" id="email1" ref={refUser}></Textbox>
+            <Textbox
+              type="text"
+              name="user"
+              placeholder="Email"
+              id="email1"
+              ref={refUser}
+            ></Textbox>
             <Iconvalue icon={faCheck}></Iconvalue>
             <Iconuser icon={faUserTie}></Iconuser>
           </Inputsgrup>
           <Leyend>leyenda</Leyend>
           <Labell htmlFor="">Contraseña</Labell>
           <Inputsgrup>
-            <Textbox type="password" name="password" placeholder="******" id="pass" ref={refPassword}></Textbox>
+            <Textbox
+              type="password"
+              name="password"
+              placeholder="******"
+              id="pass"
+              ref={refPassword}
+            ></Textbox>
             <Iconvalue icon={faCheck}></Iconvalue>
             <Iconuser icon={faKey} onClick={showpass}></Iconuser>
           </Inputsgrup>
@@ -181,18 +181,16 @@ const login=()=>{
               Mostrartrar contraseña
             </Labell>
           </div>
-        
-        <Buttongrup id="bt">
-          <Buttons type="button" name="enviar" onClick={login}>
-            <Textbutton>Iniciar Sesión</Textbutton>
-          </Buttons>
-          <Buttons type="button" onClick={cambiotamaño}>
-            <Textbutton>Crear Usuario</Textbutton>
-          </Buttons>
-        </Buttongrup>
 
+          <Buttongrup id="bt">
+            <Buttons type="submit" id="enviar" onClick={login}>
+              <Textbutton>Iniciar Sesión</Textbutton>
+            </Buttons>
+            <Buttons type="submit" onClick={cambiotamaño}>
+              <Textbutton>Crear Usuario</Textbutton>
+            </Buttons>
+          </Buttongrup>
         </Formulario>
-
       </main>
       <main>
         <Ocultar id="sing">
@@ -535,20 +533,16 @@ function validarlog() {
     /^([a-z1-9@*._])*$/.test(document.getElementById("email1").value) &&
     document.getElementById("email1").value.length > 5
   ) {
-
   } else {
     console.log("email1");
     dat = false;
   }
-  if (
-    document.getElementById("pass").value.length > 7
-  ){
-
-  }else{
+  if (document.getElementById("pass").value.length > 7) {
+  } else {
     console.log("contraseña");
-    dat=false;
+    dat = false;
   }
- 
+
   return dat;
 }
 
@@ -573,7 +567,6 @@ function showpass() {
 
 function validetions(e) {
   var dat = true;
-  
 
   if (
     /^([a-zA-Z])*$/.test(document.getElementById("name").value) &&
@@ -636,19 +629,16 @@ function validetions(e) {
     alert(" terminos");
   }
   if (
-    (document.getElementById("pass2").value.length > 7 &&
-    document.getElementById("pass3").value.length > 7)&&
-    (
-      document.getElementById("pass2").value ==
+    document.getElementById("pass2").value.length > 7 &&
+    document.getElementById("pass3").value.length > 7 &&
+    document.getElementById("pass2").value ==
       document.getElementById("pass3").value
-    ) 
-  ){
-
-  }else{
+  ) {
+  } else {
     console.log("contraseña");
-    dat=false;
+    dat = false;
   }
-    return dat;
+  return dat;
 }
 
 function chec1(e) {
@@ -663,5 +653,24 @@ function chec1(e) {
 
 
 
-
+function sendform(e){
+  e.preventDefault();
+  if(document.getElementById("enviar")){
+    document.getElementById("enviar").addEventListener('click', function(e){
+      e.preventDefault();
+      let formd = document.getElementById("log");
+      let data = new FormData(formd);
+      fetch('"https://localhost:3000/log.php',{
+        method: 'POST',
+        body: data
+      }).then(datos => datos.json())
+      .then(datosformulario=>{
+        console.log(datosformulario);
+      })
+    
+    });
+  }else{
+    console.log("error");
+  }
+}
 export default App;

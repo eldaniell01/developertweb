@@ -12962,10 +12962,10 @@ var sendData = /*#__PURE__*/function () {
             dat = _args.length > 1 && _args[1] !== undefined ? _args[1] : {};
             _context.next = 3;
             return fetch(url, {
-              method: 'POST',
+              method: "POST",
               body: JSON.stringify(dat),
               headers: {
-                'Content-Type': 'application/json'
+                "Content-Type": "application/json"
               }
             });
 
@@ -13071,7 +13071,7 @@ function App() {
           switch (_context2.prev = _context2.next) {
             case 0:
               _context2.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_5___default().get("http://localhost:3000/api/");
+              return axios__WEBPACK_IMPORTED_MODULE_5___default().get("http://localhost:3000/api/index.php");
 
             case 2:
               res = _context2.sent;
@@ -13101,12 +13101,12 @@ function App() {
             case 0:
               _context3.next = 2;
               return fetch(url, {
-                method: 'POST',
-                mode: 'cors',
+                method: "POST",
+                mode: "cors",
                 headers: {
-                  'Content-Type': 'application/json'
+                  "Content-Type": "application/json"
                 },
-                body: JSON.stringify(dat)
+                body: JSON.parse(JSON.stringify(dat))
               });
 
             case 2:
@@ -13195,7 +13195,7 @@ function App() {
                 pass: pass
               };
               _context5.next = 9;
-              return axios__WEBPACK_IMPORTED_MODULE_5___default().post('http://localhost:3000/api/index.php', obj);
+              return axios__WEBPACK_IMPORTED_MODULE_5___default().post("http://localhost:3000/api/index.php", obj);
 
             case 9:
               res = _context5.sent;
@@ -13266,18 +13266,17 @@ function App() {
     setbandera(true);
   }
 
-  var login = function login() {
+  var login = function login(e) {
+    e.preventDefault();
     var data = {
-      "usuario": refUser.current.value,
-      "clave": refPassword.current.value
+      usuario: refUser.current.value,
+      clave: refPassword.current.value
     };
     console.log(data);
     posdata(url_login, data);
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Formulario, {
-    action: "./api/login.php",
-    method: "post",
     id: "log"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, {
     htmlFor: ""
@@ -13285,7 +13284,7 @@ function App() {
     htmlFor: ""
   }, "Email"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
     type: "text",
-    name: "usuario",
+    name: "user",
     placeholder: "Email",
     id: "email1",
     ref: refUser
@@ -13319,11 +13318,11 @@ function App() {
   }), "Mostrartrar contrase\xF1a")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Buttongrup, {
     id: "bt"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Buttons, {
-    type: "button",
-    name: "enviar",
+    type: "submit",
+    id: "enviar",
     onClick: login
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Iniciar Sesi\xF3n")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Buttons, {
-    type: "button",
+    type: "submit",
     onClick: cambiotamaño
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Crear Usuario"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Ocultar, {
     id: "sing"
@@ -13729,6 +13728,28 @@ function chec1(e) {
   }
 
   e.preventDefault();
+}
+
+function sendform(e) {
+  e.preventDefault();
+
+  if (document.getElementById("enviar")) {
+    document.getElementById("enviar").addEventListener('click', function (e) {
+      e.preventDefault();
+      var formd = document.getElementById("log");
+      var data = new FormData(formd);
+      fetch('"https://localhost:3000/log.php', {
+        method: 'POST',
+        body: data
+      }).then(function (datos) {
+        return datos.json();
+      }).then(function (datosformulario) {
+        console.log(datosformulario);
+      });
+    });
+  } else {
+    console.log("error");
+  }
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);

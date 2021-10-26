@@ -1,44 +1,24 @@
 <?php
- 
-	if(isset($_POST["enviar"])) {
- 
-		require("bd2.php");
- 
-			$loginNombre = $_POST["usuario"];
-			$loginPassword = ($_POST["password"]);
- 
-			$consulta = "SELECT * FROM usuario WHERE correo='$loginNombre' AND pass='$loginPassword'";
- 
-			if($resultado = $mysqli->query($consulta)) {
-				while($row = $resultado->fetch_array()) {
- 
-					$userok = $row["usuario"];
-					$passok = $row["password"];
-				}
-                
-				$resultado->close();
+	require_once('./cors.php');
+	
+	
+	
+	if(isset($_POST['refUser'])){
+		$usuario = $_POST['refUser'];
+		if(isset($_POST['refPassword'])){
+			$password = $_POST['refPassword'];
+			
+			if($usuario ===''|| $password===''){
+				echo json_encode("error");
+			}else{
+				echo json_encode("correcto");
 			}
-			$mysqli->close();
- 
-            
-			if(isset($loginNombre) && isset($loginPassword)) {
- 
-				if($loginNombre == $userok && $loginPassword == $passok) {
- 
-					session_start();
-					/*$_SESSION["logueado"] = TRUE;
-					header("Location: admin.php");*/
-                    echo "<b>holslslslsl </b>";
- 
-				}
-				else {
-					Header("Location: index.php?error=login");
-				}
- 
-			}
- 
-		} else {
-			header("Location: index.php");
+		}else{
+			echo "no";
 		}
- 
- ?>
+	}else{
+		echo "nsi";
+	}
+	
+
+?>
