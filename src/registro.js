@@ -24,6 +24,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faUserTie, faKey } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 
+const url_login = "http://localhost:3000/api/login.php";
+
+const sendData = async (url, dat={})=>{
+  const answer = await fetch(url, {
+    method: 'POST',
+    body: JSON.stringify(dat),
+    headers: {
+      'Content-Type': 'application/json',
+      
+    }
+  });
+  console.log(answer)
+  const json = await answer.json();
+  console.log(json)
+}
+
 function App() {
   const [list, setlist] = useState([]);
   const [nombre, setnombre] = useState("");
@@ -35,7 +51,10 @@ function App() {
   const [pass, setpass] = useState("");
   const [id, setid] = useState("");
   const [bandera, setbandera] = useState(true);
-
+  const [correo2, setcorreo2] = useState("");
+  const [pass2, setpass2] = useState("");
+  const refUser = useRef(null);
+  const refPassword = useRef(null);
   useEffect(() => {
     getUser();
   }, []);
@@ -45,10 +64,28 @@ function App() {
     console.log(res.data);
   }
 
-  async function addUser(e) {
-    
+  async function posdata(url, dat){
+    const response = await fetch(url,{
+      method: 'POST',
+      mode:'cors',
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      body:JSON.stringify(dat)
+    });
+    const json = await response.json();
+    console.log(json)
+    console.log(response.json);
+  }
 
-    if (validetions() != true) {
+  async function logg(e){
+    e.preventDefault();
+    const obj={refUser, refPassword};
+    const res = await axios.post(url_login, obj);
+    console.log(res.data);
+  }
+  async function addUser(e) {
+     if (validetions() != true) {
       alert("hay un error en el campo");
     } else {
       alert("todo");
@@ -104,21 +141,31 @@ function App() {
     setpass("");
     setbandera(true);
   }
+const login=()=>{
+  const data = {
+      "usuario" : refUser.current.value,
+      "clave" : refPassword.current.value
+  };
+  console.log(data);
+  posdata(url_login, data);
+
+}
+
   return (
     <>
       <main>
-        <Formulario id="log">
+        <Formulario action="./api/login.php" method="post" id="log">
           <Title htmlFor="">Hotel</Title>
           <Labell htmlFor="">Email</Labell>
           <Inputsgrup>
-            <Textbox type="text" placeholder="Email" id="textname"></Textbox>
+            <Textbox type="text" name="usuario" placeholder="Email" id="email1" ref={refUser}></Textbox>
             <Iconvalue icon={faCheck}></Iconvalue>
             <Iconuser icon={faUserTie}></Iconuser>
           </Inputsgrup>
           <Leyend>leyenda</Leyend>
           <Labell htmlFor="">Contraseña</Labell>
           <Inputsgrup>
-            <Textbox type="password" placeholder="******" id="pass"></Textbox>
+            <Textbox type="password" name="password" placeholder="******" id="pass" ref={refPassword}></Textbox>
             <Iconvalue icon={faCheck}></Iconvalue>
             <Iconuser icon={faKey} onClick={showpass}></Iconuser>
           </Inputsgrup>
@@ -134,16 +181,18 @@ function App() {
               Mostrartrar contraseña
             </Labell>
           </div>
-        </Formulario>
-
+        
         <Buttongrup id="bt">
-          <Buttons onClick={validarlog}>
+          <Buttons type="button" name="enviar" onClick={login}>
             <Textbutton>Iniciar Sesión</Textbutton>
           </Buttons>
-          <Buttons onClick={cambiotamaño}>
+          <Buttons type="button" onClick={cambiotamaño}>
             <Textbutton>Crear Usuario</Textbutton>
           </Buttons>
         </Buttongrup>
+
+        </Formulario>
+
       </main>
       <main>
         <Ocultar id="sing">
@@ -481,14 +530,26 @@ function ocultarregistro() {
 }
 
 function validarlog() {
-  var name = document.getElementById("textname").value;
-  var password = document.getElementById("pass").value;
-  if (name.length > 2) {
-    console.log(password);
-    console.log("Formulario Enviado");
-    document.getElementById("textname").value = "";
-    document.getElementById("pass").value = "";
+  var dat = true;
+  if (
+    /^([a-z1-9@*._])*$/.test(document.getElementById("email1").value) &&
+    document.getElementById("email1").value.length > 5
+  ) {
+
+  } else {
+    console.log("email1");
+    dat = false;
   }
+  if (
+    document.getElementById("pass").value.length > 7
+  ){
+
+  }else{
+    console.log("contraseña");
+    dat=false;
+  }
+ 
+  return dat;
 }
 
 function showpass() {
@@ -512,7 +573,7 @@ function showpass() {
 
 function validetions(e) {
   var dat = true;
-  const input = document.getElementById("name");
+  
 
   if (
     /^([a-zA-Z])*$/.test(document.getElementById("name").value) &&
@@ -599,11 +660,8 @@ function chec1(e) {
   }
   e.preventDefault();
 }
-function chec2() {
-  var check = document.getElementById("terminos").checked;
-  var check = false;
-  return check;
-}
+
+
 
 
 export default App;

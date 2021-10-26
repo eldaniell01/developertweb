@@ -12854,6 +12854,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Formulario": () => (/* binding */ Formulario),
 /* harmony export */   "Ocultar": () => (/* binding */ Ocultar),
+/* harmony export */   "Buttonsinputs": () => (/* binding */ Buttonsinputs),
 /* harmony export */   "Confirm": () => (/* binding */ Confirm),
 /* harmony export */   "Formulario2": () => (/* binding */ Formulario2),
 /* harmony export */   "Interform1": () => (/* binding */ Interform1),
@@ -12871,7 +12872,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
-var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16;
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16, _templateObject17;
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
@@ -12898,6 +12899,7 @@ var Ocultar = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_tem
 var Confirm = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n    border-radius: 3px solid;\n    margin: 15px;\n"])));
 var Interform1 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 25px;\n"])));
 var Interform2 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject16 || (_templateObject16 = _taggedTemplateLiteral(["\n    margin: 15px;\n    padding: 20px;\n    justify-content: center;\n\n"])));
+var Buttonsinputs = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject17 || (_templateObject17 = _taggedTemplateLiteral(["\n    background: #CDE5F7;\n    transition: 0.4s;\n    margin: 10px;\n    width: 150px;\n    height: 40px;\n    line-height: 40px;\n    border: none;\n    text-align: center;\n    align-items: center;\n    border-radius: 10px;\n    &:hover{\n        background: #82C3F5;\n    }\n"])));
 
 
 /***/ }),
@@ -12921,10 +12923,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -12937,6 +12935,9 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 
 
@@ -12945,6 +12946,51 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
+var url_login = "http://localhost:3000/api/login.php";
+
+var sendData = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(url) {
+    var dat,
+        answer,
+        json,
+        _args = arguments;
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            dat = _args.length > 1 && _args[1] !== undefined ? _args[1] : {};
+            _context.next = 3;
+            return fetch(url, {
+              method: 'POST',
+              body: JSON.stringify(dat),
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            });
+
+          case 3:
+            answer = _context.sent;
+            console.log(answer);
+            _context.next = 7;
+            return answer.json();
+
+          case 7:
+            json = _context.sent;
+            console.log(json);
+
+          case 9:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function sendData(_x) {
+    return _ref.apply(this, arguments);
+  };
+}();
 
 function App() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
@@ -12997,6 +13043,18 @@ function App() {
       bandera = _useState20[0],
       setbandera = _useState20[1];
 
+  var _useState21 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+      _useState22 = _slicedToArray(_useState21, 2),
+      correo2 = _useState22[0],
+      setcorreo2 = _useState22[1];
+
+  var _useState23 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+      _useState24 = _slicedToArray(_useState23, 2),
+      pass2 = _useState24[0],
+      setpass2 = _useState24[1];
+
+  var refUser = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  var refPassword = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     getUser();
   }, []);
@@ -13006,48 +13064,122 @@ function App() {
   }
 
   function _getUser() {
-    _getUser = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+    _getUser = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
       var res;
-      return regeneratorRuntime.wrap(function _callee$(_context) {
+      return regeneratorRuntime.wrap(function _callee2$(_context2) {
         while (1) {
-          switch (_context.prev = _context.next) {
+          switch (_context2.prev = _context2.next) {
             case 0:
-              _context.next = 2;
+              _context2.next = 2;
               return axios__WEBPACK_IMPORTED_MODULE_5___default().get("http://localhost:3000/api/");
 
             case 2:
-              res = _context.sent;
+              res = _context2.sent;
               setlist(res.data);
               console.log(res.data);
 
             case 5:
             case "end":
-              return _context.stop();
+              return _context2.stop();
           }
         }
-      }, _callee);
+      }, _callee2);
     }));
     return _getUser.apply(this, arguments);
   }
 
-  function addUser(_x) {
+  function posdata(_x2, _x3) {
+    return _posdata.apply(this, arguments);
+  }
+
+  function _posdata() {
+    _posdata = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(url, dat) {
+      var response, json;
+      return regeneratorRuntime.wrap(function _callee3$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
+            case 0:
+              _context3.next = 2;
+              return fetch(url, {
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(dat)
+              });
+
+            case 2:
+              response = _context3.sent;
+              _context3.next = 5;
+              return response.json();
+
+            case 5:
+              json = _context3.sent;
+              console.log(json);
+              console.log(response.json);
+
+            case 8:
+            case "end":
+              return _context3.stop();
+          }
+        }
+      }, _callee3);
+    }));
+    return _posdata.apply(this, arguments);
+  }
+
+  function logg(_x4) {
+    return _logg.apply(this, arguments);
+  }
+
+  function _logg() {
+    _logg = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(e) {
+      var obj, res;
+      return regeneratorRuntime.wrap(function _callee4$(_context4) {
+        while (1) {
+          switch (_context4.prev = _context4.next) {
+            case 0:
+              e.preventDefault();
+              obj = {
+                refUser: refUser,
+                refPassword: refPassword
+              };
+              _context4.next = 4;
+              return axios__WEBPACK_IMPORTED_MODULE_5___default().post(url_login, obj);
+
+            case 4:
+              res = _context4.sent;
+              console.log(res.data);
+
+            case 6:
+            case "end":
+              return _context4.stop();
+          }
+        }
+      }, _callee4);
+    }));
+    return _logg.apply(this, arguments);
+  }
+
+  function addUser(_x5) {
     return _addUser.apply(this, arguments);
   }
 
   function _addUser() {
-    _addUser = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(e) {
+    _addUser = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5(e) {
       var obj, res;
-      return regeneratorRuntime.wrap(function _callee2$(_context2) {
+      return regeneratorRuntime.wrap(function _callee5$(_context5) {
         while (1) {
-          switch (_context2.prev = _context2.next) {
+          switch (_context5.prev = _context5.next) {
             case 0:
               if (!(validetions() != true)) {
-                _context2.next = 4;
+                _context5.next = 4;
                 break;
               }
 
               alert("hay un error en el campo");
-              _context2.next = 11;
+              _context5.next = 11;
               break;
 
             case 4:
@@ -13062,33 +13194,33 @@ function App() {
                 correo: correo,
                 pass: pass
               };
-              _context2.next = 9;
+              _context5.next = 9;
               return axios__WEBPACK_IMPORTED_MODULE_5___default().post('http://localhost:3000/api/index.php', obj);
 
             case 9:
-              res = _context2.sent;
+              res = _context5.sent;
               console.log(res.data);
 
             case 11:
             case "end":
-              return _context2.stop();
+              return _context5.stop();
           }
         }
-      }, _callee2);
+      }, _callee5);
     }));
     return _addUser.apply(this, arguments);
   }
 
-  function updateuser(_x2) {
+  function updateuser(_x6) {
     return _updateuser.apply(this, arguments);
   }
 
   function _updateuser() {
-    _updateuser = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(e) {
+    _updateuser = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee6(e) {
       var obj, res;
-      return regeneratorRuntime.wrap(function _callee3$(_context3) {
+      return regeneratorRuntime.wrap(function _callee6$(_context6) {
         while (1) {
-          switch (_context3.prev = _context3.next) {
+          switch (_context6.prev = _context6.next) {
             case 0:
               obj = {
                 id: id,
@@ -13100,19 +13232,19 @@ function App() {
                 correo: correo,
                 pass: pass
               };
-              _context3.next = 3;
+              _context6.next = 3;
               return axios__WEBPACK_IMPORTED_MODULE_5___default().put("http://localhost:3000/api/", obj);
 
             case 3:
-              res = _context3.sent;
+              res = _context6.sent;
               console.log(res.data);
 
             case 5:
             case "end":
-              return _context3.stop();
+              return _context6.stop();
           }
         }
-      }, _callee3);
+      }, _callee6);
     }));
     return _updateuser.apply(this, arguments);
   }
@@ -13134,7 +13266,18 @@ function App() {
     setbandera(true);
   }
 
+  var login = function login() {
+    var data = {
+      "usuario": refUser.current.value,
+      "clave": refPassword.current.value
+    };
+    console.log(data);
+    posdata(url_login, data);
+  };
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Formulario, {
+    action: "./api/login.php",
+    method: "post",
     id: "log"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, {
     htmlFor: ""
@@ -13142,8 +13285,10 @@ function App() {
     htmlFor: ""
   }, "Email"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
     type: "text",
+    name: "usuario",
     placeholder: "Email",
-    id: "textname"
+    id: "email1",
+    ref: refUser
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconvalue, {
     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faCheck
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconuser, {
@@ -13152,8 +13297,10 @@ function App() {
     htmlFor: ""
   }, "Contrase\xF1a"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Inputsgrup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbox, {
     type: "password",
+    name: "password",
     placeholder: "******",
-    id: "pass"
+    id: "pass",
+    ref: refPassword
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconvalue, {
     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__.faCheck
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconuser, {
@@ -13169,13 +13316,16 @@ function App() {
     name: "terminos",
     id: "terminos",
     onClick: showpass
-  }), "Mostrartrar contrase\xF1a"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Buttongrup, {
+  }), "Mostrartrar contrase\xF1a")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Buttongrup, {
     id: "bt"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Buttons, {
-    onClick: validarlog
+    type: "button",
+    name: "enviar",
+    onClick: login
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Iniciar Sesi\xF3n")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Buttons, {
+    type: "button",
     onClick: cambiotamaño
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Crear Usuario")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Ocultar, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Crear Usuario"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Ocultar, {
     id: "sing"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, {
     htmlFor: ""
@@ -13491,15 +13641,19 @@ function ocultarregistro() {
 }
 
 function validarlog() {
-  var name = document.getElementById("textname").value;
-  var password = document.getElementById("pass").value;
+  var dat = true;
 
-  if (name.length > 2) {
-    console.log(password);
-    console.log("Formulario Enviado");
-    document.getElementById("textname").value = "";
-    document.getElementById("pass").value = "";
+  if (/^([a-z1-9@*._])*$/.test(document.getElementById("email1").value) && document.getElementById("email1").value.length > 5) {} else {
+    console.log("email1");
+    dat = false;
   }
+
+  if (document.getElementById("pass").value.length > 7) {} else {
+    console.log("contraseña");
+    dat = false;
+  }
+
+  return dat;
 }
 
 function showpass() {
@@ -13520,7 +13674,6 @@ function showpass() {
 
 function validetions(e) {
   var dat = true;
-  var input = document.getElementById("name");
 
   if (/^([a-zA-Z])*$/.test(document.getElementById("name").value) && document.getElementById("name").value.length > 2) {} else {
     console.log("nombre");
@@ -13576,12 +13729,6 @@ function chec1(e) {
   }
 
   e.preventDefault();
-}
-
-function chec2() {
-  var check = document.getElementById("terminos").checked;
-  var check = false;
-  return check;
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);

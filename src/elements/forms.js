@@ -125,4 +125,20 @@ const Interform2 = styled.div`
 
 `
 
-export {Formulario, Ocultar, Confirm, Formulario2,  Interform1, Interform2, Title, Textbutton, Labell, Inputsgrup, Buttons, Textbox, Leyend, Iconvalue, Buttongrup, Iconuser};
+const Buttonsinputs = styled.input`
+    background: #CDE5F7;
+    transition: 0.4s;
+    margin: 10px;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    &:hover{
+        background: #82C3F5;
+    }
+`
+
+export {Formulario, Ocultar, Buttonsinputs, Confirm, Formulario2,  Interform1, Interform2, Title, Textbutton, Labell, Inputsgrup, Buttons, Textbox, Leyend, Iconvalue, Buttongrup, Iconuser};

@@ -25,7 +25,7 @@
             $vector =array();
             $conexion = new conexion();
             $bd = $conexion->getconexion();
-            $sql = "select *from usuario where id=:id";
+            $sql = "SELECT *FROM usuario WHERE id=:id";
             $consult = $bd->prepare($sql);
             $consult->bindParam(':id', $id);
             $consult->execute();
@@ -42,6 +42,21 @@
                 );
             }
             return $vector[0];
+        }
+
+        public function login($correo, $pass){
+            $conexion = new conexion();
+            $bd = $conexion->getconexion();
+            $
+            $sql = "SELECT correo, pass FROM usuario WHERE correo=:correo AND pass=:pass";
+            $consult = $bd->prepare($sql);
+            $consult->bindParam(':correo', $correo);
+            $consult->bindParam(':pass', $pass);
+            $consul->setFetchMode(PDO::FETCH_ASSOC);
+
+            $consult->execute();
+            
+            echo $consult;
         }
 
         public function adduser($nombre, $apellido, $direccion, $telefono, $dpi, $correo, $pass){
