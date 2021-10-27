@@ -28,16 +28,24 @@ import axios from "axios";
 const url_login = "http://localhost:3000/api/login.php";
 
 const sendData = async (url, dat = {}) => {
-  const answer = await fetch(url, {
-    method: "POST",
-    body: JSON.stringify(dat),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-  console.log(answer);
-  const json = await answer.json();
-  console.log(json);
+  try{
+    const answer = await fetch(url, {
+      method: "POST",
+      body: JSON.stringify(dat),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then(answer=>answer.text())
+    .then(text => console.log(text));
+    //console.log(answer);
+    //const json = await answer.json();
+    //console.log(json);
+  }catch(error){
+    console.log('Error happened here!')
+    console.error(error)
+
+  }
+  
 };
 
 function App() {
@@ -65,18 +73,23 @@ function App() {
   }
 
   async function posdata(url, dat) {
+    try{
+      const response = await fetch(url, {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dat),
+      });
+      const json = await response.json();
+      //console.log(json);
+      //console.log(response.json);
+    }catch(error){
+      console.log('Error happened here!')
+      console.error(error)
+    }
     
-    const response = await fetch(url, {
-      method: "POST",
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.parse(JSON.stringify(dat)),
-    });
-    const json = await response.json();
-    console.log(json);
-    console.log(response.json);
   }
 
   async function logg(e) {
@@ -132,11 +145,11 @@ function App() {
   const login = (e) => {
     e.preventDefault();
     const data = {
-      usuario: refUser.current.value,
-      clave: refPassword.current.value,
+      "usuario": refUser.current.value,
+      "clave": refPassword.current.value,
     };
     console.log(data);
-    posdata(url_login, data);
+    sendData(url_login, data);
   };
 
   return (

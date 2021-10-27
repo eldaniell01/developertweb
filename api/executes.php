@@ -47,16 +47,25 @@
         public function login($correo, $pass){
             $conexion = new conexion();
             $bd = $conexion->getconexion();
-            $
-            $sql = "SELECT correo, pass FROM usuario WHERE correo=:correo AND pass=:pass";
+            
+            $sql = "SELECT * FROM usuario WHERE correo=:correo AND pass=:pass";
             $consult = $bd->prepare($sql);
             $consult->bindParam(':correo', $correo);
             $consult->bindParam(':pass', $pass);
-            $consul->setFetchMode(PDO::FETCH_ASSOC);
-
             $consult->execute();
-            
-            echo $consult;
+            while($fila=$consult->fetch()){
+                $vector[] = array(
+                    "id" => $fila['id'],
+                    "nombre"=> $fila['nombre'],
+                    "apellido"=>$fila['apellido'],
+                    "direccion"=>$fila['direccion'],
+                    "telefono"=>$fila['telefono'],
+                    "dpi"=>$fila['dpi'],
+                    "correo"=>$fila['correo'],
+                    "pass"=>$fila['pass'],
+                );
+            }
+            return $vector;
         }
 
         public function adduser($nombre, $apellido, $direccion, $telefono, $dpi, $correo, $pass){

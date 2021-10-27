@@ -12953,38 +12953,43 @@ var sendData = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(url) {
     var dat,
         answer,
-        json,
         _args = arguments;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
             dat = _args.length > 1 && _args[1] !== undefined ? _args[1] : {};
-            _context.next = 3;
+            _context.prev = 1;
+            _context.next = 4;
             return fetch(url, {
               method: "POST",
               body: JSON.stringify(dat),
               headers: {
                 "Content-Type": "application/json"
               }
+            }).then(function (answer) {
+              return answer.text();
+            }).then(function (text) {
+              return console.log(text);
             });
 
-          case 3:
+          case 4:
             answer = _context.sent;
-            console.log(answer);
-            _context.next = 7;
-            return answer.json();
+            _context.next = 11;
+            break;
 
           case 7:
-            json = _context.sent;
-            console.log(json);
+            _context.prev = 7;
+            _context.t0 = _context["catch"](1);
+            console.log('Error happened here!');
+            console.error(_context.t0);
 
-          case 9:
+          case 11:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee);
+    }, _callee, null, [[1, 7]]);
   }));
 
   return function sendData(_x) {
@@ -13099,32 +13104,39 @@ function App() {
         while (1) {
           switch (_context3.prev = _context3.next) {
             case 0:
-              _context3.next = 2;
+              _context3.prev = 0;
+              _context3.next = 3;
               return fetch(url, {
                 method: "POST",
                 mode: "cors",
                 headers: {
-                  "Content-Type": "application/json"
+                  'Content-Type': 'application/json'
                 },
-                body: JSON.parse(JSON.stringify(dat))
+                body: JSON.stringify(dat)
               });
 
-            case 2:
+            case 3:
               response = _context3.sent;
-              _context3.next = 5;
+              _context3.next = 6;
               return response.json();
 
-            case 5:
+            case 6:
               json = _context3.sent;
-              console.log(json);
-              console.log(response.json);
+              _context3.next = 13;
+              break;
 
-            case 8:
+            case 9:
+              _context3.prev = 9;
+              _context3.t0 = _context3["catch"](0);
+              console.log('Error happened here!');
+              console.error(_context3.t0);
+
+            case 13:
             case "end":
               return _context3.stop();
           }
         }
-      }, _callee3);
+      }, _callee3, null, [[0, 9]]);
     }));
     return _posdata.apply(this, arguments);
   }
@@ -13269,11 +13281,11 @@ function App() {
   var login = function login(e) {
     e.preventDefault();
     var data = {
-      usuario: refUser.current.value,
-      clave: refPassword.current.value
+      "usuario": refUser.current.value,
+      "clave": refPassword.current.value
     };
     console.log(data);
-    posdata(url_login, data);
+    sendData(url_login, data);
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Formulario, {
