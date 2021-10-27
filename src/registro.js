@@ -72,32 +72,6 @@ function App() {
     console.log(res.data);
   }
 
-  async function posdata(url, dat) {
-    try{
-      const response = await fetch(url, {
-        method: "POST",
-        mode: "cors",
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(dat),
-      });
-      const json = await response.json();
-      //console.log(json);
-      //console.log(response.json);
-    }catch(error){
-      console.log('Error happened here!')
-      console.error(error)
-    }
-    
-  }
-
-  async function logg(e) {
-    e.preventDefault();
-    const obj = { refUser, refPassword };
-    const res = await axios.post(url_login, obj);
-    console.log(res.data);
-  }
   async function addUser(e) {
     if (validetions() != true) {
       alert("hay un error en el campo");
@@ -199,7 +173,7 @@ function App() {
             <Buttons type="submit" id="enviar" onClick={login}>
               <Textbutton>Iniciar Sesión</Textbutton>
             </Buttons>
-            <Buttons type="submit" onClick={cambiotamaño}>
+            <Buttons type="button" onClick={cambiotamaño}>
               <Textbutton>Crear Usuario</Textbutton>
             </Buttons>
           </Buttongrup>
@@ -355,7 +329,7 @@ function App() {
             </Interform1>
             <Interform2>
               <Labell htmlFor="" id="ter">
-                <input type="checkbox" name="terminos" id="termin"></input>
+                <Confirm type="checkbox" name="terminos" id="termin"></Confirm>
                 Aceptar Terminos y Condiciones
               </Labell>
               <Buttongrup id="bt">

@@ -13093,105 +13093,24 @@ function App() {
     return _getUser.apply(this, arguments);
   }
 
-  function posdata(_x2, _x3) {
-    return _posdata.apply(this, arguments);
-  }
-
-  function _posdata() {
-    _posdata = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(url, dat) {
-      var response, json;
-      return regeneratorRuntime.wrap(function _callee3$(_context3) {
-        while (1) {
-          switch (_context3.prev = _context3.next) {
-            case 0:
-              _context3.prev = 0;
-              _context3.next = 3;
-              return fetch(url, {
-                method: "POST",
-                mode: "cors",
-                headers: {
-                  'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(dat)
-              });
-
-            case 3:
-              response = _context3.sent;
-              _context3.next = 6;
-              return response.json();
-
-            case 6:
-              json = _context3.sent;
-              _context3.next = 13;
-              break;
-
-            case 9:
-              _context3.prev = 9;
-              _context3.t0 = _context3["catch"](0);
-              console.log('Error happened here!');
-              console.error(_context3.t0);
-
-            case 13:
-            case "end":
-              return _context3.stop();
-          }
-        }
-      }, _callee3, null, [[0, 9]]);
-    }));
-    return _posdata.apply(this, arguments);
-  }
-
-  function logg(_x4) {
-    return _logg.apply(this, arguments);
-  }
-
-  function _logg() {
-    _logg = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(e) {
-      var obj, res;
-      return regeneratorRuntime.wrap(function _callee4$(_context4) {
-        while (1) {
-          switch (_context4.prev = _context4.next) {
-            case 0:
-              e.preventDefault();
-              obj = {
-                refUser: refUser,
-                refPassword: refPassword
-              };
-              _context4.next = 4;
-              return axios__WEBPACK_IMPORTED_MODULE_5___default().post(url_login, obj);
-
-            case 4:
-              res = _context4.sent;
-              console.log(res.data);
-
-            case 6:
-            case "end":
-              return _context4.stop();
-          }
-        }
-      }, _callee4);
-    }));
-    return _logg.apply(this, arguments);
-  }
-
-  function addUser(_x5) {
+  function addUser(_x2) {
     return _addUser.apply(this, arguments);
   }
 
   function _addUser() {
-    _addUser = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5(e) {
+    _addUser = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(e) {
       var obj, res;
-      return regeneratorRuntime.wrap(function _callee5$(_context5) {
+      return regeneratorRuntime.wrap(function _callee3$(_context3) {
         while (1) {
-          switch (_context5.prev = _context5.next) {
+          switch (_context3.prev = _context3.next) {
             case 0:
               if (!(validetions() != true)) {
-                _context5.next = 4;
+                _context3.next = 4;
                 break;
               }
 
               alert("hay un error en el campo");
-              _context5.next = 11;
+              _context3.next = 11;
               break;
 
             case 4:
@@ -13206,33 +13125,33 @@ function App() {
                 correo: correo,
                 pass: pass
               };
-              _context5.next = 9;
+              _context3.next = 9;
               return axios__WEBPACK_IMPORTED_MODULE_5___default().post("http://localhost:3000/api/index.php", obj);
 
             case 9:
-              res = _context5.sent;
+              res = _context3.sent;
               console.log(res.data);
 
             case 11:
             case "end":
-              return _context5.stop();
+              return _context3.stop();
           }
         }
-      }, _callee5);
+      }, _callee3);
     }));
     return _addUser.apply(this, arguments);
   }
 
-  function updateuser(_x6) {
+  function updateuser(_x3) {
     return _updateuser.apply(this, arguments);
   }
 
   function _updateuser() {
-    _updateuser = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee6(e) {
+    _updateuser = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(e) {
       var obj, res;
-      return regeneratorRuntime.wrap(function _callee6$(_context6) {
+      return regeneratorRuntime.wrap(function _callee4$(_context4) {
         while (1) {
-          switch (_context6.prev = _context6.next) {
+          switch (_context4.prev = _context4.next) {
             case 0:
               obj = {
                 id: id,
@@ -13244,19 +13163,19 @@ function App() {
                 correo: correo,
                 pass: pass
               };
-              _context6.next = 3;
+              _context4.next = 3;
               return axios__WEBPACK_IMPORTED_MODULE_5___default().put("http://localhost:3000/api/", obj);
 
             case 3:
-              res = _context6.sent;
+              res = _context4.sent;
               console.log(res.data);
 
             case 5:
             case "end":
-              return _context6.stop();
+              return _context4.stop();
           }
         }
-      }, _callee6);
+      }, _callee4);
     }));
     return _updateuser.apply(this, arguments);
   }
@@ -13334,7 +13253,7 @@ function App() {
     id: "enviar",
     onClick: login
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Iniciar Sesi\xF3n")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Buttons, {
-    type: "submit",
+    type: "button",
     onClick: cambiotamaño
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Crear Usuario"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Ocultar, {
     id: "sing"
@@ -13474,7 +13393,7 @@ function App() {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Leyend, null, "leyenda"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Interform2, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Labell, {
     htmlFor: "",
     id: "ter"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Confirm, {
     type: "checkbox",
     name: "terminos",
     id: "termin"
