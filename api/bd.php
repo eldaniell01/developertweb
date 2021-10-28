@@ -11,6 +11,11 @@
             $dbname = 'hotelfinal';
             $username = 'root';
             $password = '12Intercambios';
+            /*
+            $host = 'mysql5045.site4now.net';
+            $dbname = 'db_a7b1db_hotel';
+            $username = 'a7b1db_hotel';
+            $password = 'lamaquina123';*/
             try{
                 $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
                 return $conn;

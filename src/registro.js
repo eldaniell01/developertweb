@@ -13,6 +13,8 @@ import {
   Textbutton,
   Inputsgrup,
   Buttonsinputs,
+  Groups,
+  Links,
   Textbox,
   Buttongrup,
   Leyend,
@@ -25,30 +27,29 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faUserTie, faKey } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 
-const url_login = "http://localhost:3000/api/login.php";
+const url_login = "https://localhost:3000/api/login.php";
 
 const sendData = async (url, dat = {}) => {
-  try{
+  try {
     const answer = await fetch(url, {
       method: "POST",
       body: JSON.stringify(dat),
       headers: {
         "Content-Type": "application/json",
       },
-    }).then(answer=>answer.text())
-    .then(text => console.log(text));
+    })
+      .then((answer) => answer.text())
+      .then((text) => console.log(text));
     //console.log(answer);
     //const json = await answer.json();
     //console.log(json);
-  }catch(error){
-    console.log('Error happened here!')
-    console.error(error)
-
+  } catch (error) {
+    console.log("Error happened here!");
+    console.error(error);
   }
-  
 };
 
-function App() {
+function Registro() {
   const [list, setlist] = useState([]);
   const [nombre, setnombre] = useState("");
   const [apellido, setapellido] = useState("");
@@ -67,7 +68,7 @@ function App() {
     getUser();
   }, []);
   async function getUser() {
-    const res = await axios.get("http://localhost:3000/api/index.php");
+    const res = await axios.get("https://localhost:3000/api/index.php");
     setlist(res.data);
     console.log(res.data);
   }
@@ -79,7 +80,7 @@ function App() {
       alert("todo");
       e.preventDefault();
       const obj = { nombre, apellido, direccion, telefono, dpi, correo, pass };
-      const res = await axios.post("http://localhost:3000/api/index.php", obj);
+      const res = await axios.post("https://localhost:3000/api/index.php", obj);
 
       console.log(res.data);
     }
@@ -117,241 +118,256 @@ function App() {
     setbandera(true);
   }
   const login = (e) => {
-    e.preventDefault();
-    const data = {
-      "usuario": refUser.current.value,
-      "clave": refPassword.current.value,
-    };
-    console.log(data);
-    sendData(url_login, data);
+    if (validarlog() != true) {
+      console.log("error");
+    } else {
+      e.preventDefault();
+      const data = {
+        usuario: refUser.current.value,
+        clave: refPassword.current.value,
+      };
+      console.log(data);
+      sendData(url_login, data);
+    }
   };
 
   return (
     <>
-      <main>
-        <Formulario  id="log">
-          <Title htmlFor="">Hotel</Title>
-          <Labell htmlFor="">Email</Labell>
-          <Inputsgrup>
-            <Textbox
-              type="text"
-              name="user"
-              placeholder="Email"
-              id="email1"
-              ref={refUser}
-            ></Textbox>
-            <Iconvalue icon={faCheck}></Iconvalue>
-            <Iconuser icon={faUserTie}></Iconuser>
-          </Inputsgrup>
-          <Leyend>leyenda</Leyend>
-          <Labell htmlFor="">Contraseña</Labell>
-          <Inputsgrup>
-            <Textbox
-              type="password"
-              name="password"
-              placeholder="******"
-              id="pass"
-              ref={refPassword}
-            ></Textbox>
-            <Iconvalue icon={faCheck}></Iconvalue>
-            <Iconuser icon={faKey} onClick={showpass}></Iconuser>
-          </Inputsgrup>
-          <Leyend id="leyenl">leyenda</Leyend>
-          <div>
-            <Labell htmlFor="" id="ter">
-              <Confirm
-                type="checkbox"
-                name="terminos"
-                id="terminos"
-                onClick={showpass}
-              ></Confirm>
-              Mostrartrar contraseña
-            </Labell>
-          </div>
-
-          <Buttongrup id="bt">
-            <Buttons type="submit" id="enviar" onClick={login}>
-              <Textbutton>Iniciar Sesión</Textbutton>
-            </Buttons>
-            <Buttons type="button" onClick={cambiotamaño}>
-              <Textbutton>Crear Usuario</Textbutton>
-            </Buttons>
-          </Buttongrup>
-        </Formulario>
-      </main>
-      <main>
-        <Ocultar id="sing">
-          <Title htmlFor="">Hotel</Title>
-          <Formulario2 name="form2" id="form2" onSubmit={chec1}>
-            <Interform1>
-              <div>
-                <Labell htmlFor="">Nombre</Labell>
-                <Inputsgrup>
-                  <Textbox
-                    id="name"
-                    type="text"
-                    pattern="^[A-Za-zñÑÁÉÍÓÚáéíóú ]+$"
-                    maxlength="40"
-                    required
-                    placeholder="Nombre"
-                    onChange={(e) => setnombre(e.target.value)}
-                    value={nombre}
-                  ></Textbox>
-                  <Iconvalue icon={faCheck}></Iconvalue>
-                </Inputsgrup>
-                <Leyend>leyenda</Leyend>
-              </div>
-              <div>
-                <Labell htmlFor="">Apellido</Labell>
-                <Inputsgrup>
-                  <Textbox
-                    id="last_name"
-                    type="text"
-                    pattern="^[A-Za-zñÑÁÉÍÓÚáéíóú ]+$"
-                    maxlength="40"
-                    required
-                    placeholder="Apellido"
-                    onChange={(e) => setapellido(e.target.value)}
-                    value={apellido}
-                  ></Textbox>
-                  <Iconvalue icon={faCheck}></Iconvalue>
-                </Inputsgrup>
-                <Leyend>leyenda</Leyend>
-              </div>
-
-              <div>
-                <Labell htmlFor="">Dirección</Labell>
-                <Inputsgrup>
-                  <Textbox
-                    id="address"
-                    type="text"
-                    pattern="^[A-Za-zñÑÁÉÍÓÚáéíóú.1-9 ]+$"
-                    maxlength="50"
-                    required
-                    placeholder="Dirección"
-                    onChange={(e) => setdireccion(e.target.value)}
-                    value={direccion}
-                  ></Textbox>
-                  <Iconvalue icon={faCheck}></Iconvalue>
-                </Inputsgrup>
-                <Leyend>leyenda</Leyend>
-              </div>
-
-              <div>
-                <Labell htmlFor="">Teléfono</Labell>
-                <Inputsgrup>
-                  <Textbox
-                    id="phone"
-                    type="text"
-                    pattern="^[0-9]+$"
-                    maxlength="8"
-                    minLength="8"
-                    required
-                    placeholder="Teléfono"
-                    onChange={(e) => settelefono(e.target.value)}
-                    value={telefono}
-                  ></Textbox>
-                  <Iconvalue icon={faCheck}></Iconvalue>
-                </Inputsgrup>
-                <Leyend>leyenda</Leyend>
-              </div>
-
-              <div>
-                <Labell htmlFor="">DPI o Nit</Labell>
-                <Inputsgrup>
-                  <Textbox
-                    id="dpi"
-                    type="text"
-                    pattern="^[0-9]+$"
-                    maxlength="13"
-                    minLength="13"
-                    required
-                    placeholder="DPI o Nit"
-                    onChange={(e) => setdpi(e.target.value)}
-                    value={dpi}
-                  ></Textbox>
-                  <Iconvalue icon={faCheck}></Iconvalue>
-                </Inputsgrup>
-                <Leyend>leyenda</Leyend>
-              </div>
-
-              <div>
-                <Labell htmlFor="">Correo Electronico</Labell>
-                <Inputsgrup>
-                  <Textbox
-                    id="email"
-                    type="text"
-                    pattern="^[a-z_@.]+$"
-                    maxlength="50"
-                    required
-                    placeholder="Correo Electronico"
-                    onChange={(e) => setcorreo(e.target.value)}
-                    value={correo}
-                  ></Textbox>
-                  <Iconvalue id="ch" icon={faCheck}></Iconvalue>
-                </Inputsgrup>
-                <Leyend>leyenda</Leyend>
-              </div>
-              <div>
-                <Labell htmlFor="">Contraseña</Labell>
-                <Inputsgrup>
-                  <Textbox
-                    type="password"
-                    pattern="^[0-9A-ZáéíóúÁÉÍÓÚa-z_*@#. ]+$"
-                    minLength="7"
-                    required
-                    placeholder="*********"
-                    id="pass2"
-                    onChange={(e) => setpass(e.target.value)}
-                    value={pass}
-                  ></Textbox>
-                  <Iconvalue id="v" icon={faCheck}></Iconvalue>
-                  <Iconuser icon={faKey} onClick={showpass}></Iconuser>
-                </Inputsgrup>
-                <Leyend>leyenda</Leyend>
-              </div>
-              <div>
-                <Labell htmlFor="">Repetir Contraseña</Labell>
-                <Inputsgrup>
-                  <Textbox
-                    type="password"
-                    pattern="^[0-9A-ZáéíóúÁÉÍÓÚa-z_*@#. ]+$"
-                    minLength="7"
-                    required
-                    placeholder="*********"
-                    id="pass3"
-                  ></Textbox>
-                  <Iconvalue id="v" icon={faCheck}></Iconvalue>
-                  <Iconuser icon={faKey} onClick={showpass}></Iconuser>
-                </Inputsgrup>
-                <Leyend>leyenda</Leyend>
-              </div>
-            </Interform1>
-            <Interform2>
+      <div className="login">
+        <main>
+          <Formulario id="log">
+            <Title htmlFor="">Hotel</Title>
+            <Labell htmlFor="">Email</Labell>
+            <Inputsgrup>
+              <Textbox
+                type="text"
+                name="user"
+                placeholder="Email"
+                id="email1"
+                ref={refUser}
+              ></Textbox>
+              <Iconvalue icon={faCheck}></Iconvalue>
+              <Iconuser icon={faUserTie}></Iconuser>
+            </Inputsgrup>
+            <Leyend>leyenda</Leyend>
+            <Labell htmlFor="">Contraseña</Labell>
+            <Inputsgrup>
+              <Textbox
+                type="password"
+                name="password"
+                placeholder="******"
+                id="pass"
+                ref={refPassword}
+              ></Textbox>
+              <Iconvalue icon={faCheck}></Iconvalue>
+              <Iconuser icon={faKey} onClick={showpass}></Iconuser>
+            </Inputsgrup>
+            <Leyend id="leyenl">leyenda</Leyend>
+            <div>
               <Labell htmlFor="" id="ter">
-                <Confirm type="checkbox" name="terminos" id="termin"></Confirm>
-                Aceptar Terminos y Condiciones
+                <Confirm
+                  type="checkbox"
+                  name="terminos"
+                  id="terminos"
+                  onClick={showpass}
+                ></Confirm>
+                Mostrartrar contraseña
               </Labell>
-              <Buttongrup id="bt">
-                <Buttons
-                  type="button"
-                  onClick={(e) => addUser(e)}
-                  value="Registrar"
-                >
-                  <Textbutton>Registrar Usuario</Textbutton>
-                </Buttons>
-                <Buttons
-                  type="button"
-                  onClick={ocultarregistro}
-                  value="Regresar"
-                >
-                  <Textbutton>Regresar</Textbutton>
-                </Buttons>
-              </Buttongrup>
-            </Interform2>
-          </Formulario2>
-        </Ocultar>
-      </main>
+            </div>
+
+            <Buttongrup id="bt">
+              <Buttons type="submit" id="enviar" onClick={login}>
+                <Textbutton>Iniciar Sesión</Textbutton>
+              </Buttons>
+              <Buttons type="button" onClick={cambiotamaño}>
+                <Textbutton>Crear Usuario</Textbutton>
+              </Buttons>
+            </Buttongrup>
+            <Groups>
+              <Links href="C:\Users\danie\OneDrive\Documents\GitHub\developertweb\dist\home.html">
+                VER HABITACIONES COMO INVITADO
+              </Links>
+            </Groups>
+          </Formulario>
+        </main>
+        <main>
+          <Ocultar id="sing">
+            <Title htmlFor="">Hotel</Title>
+            <Formulario2 name="form2" id="form2" onSubmit={chec1}>
+              <Interform1>
+                <div>
+                  <Labell htmlFor="">Nombre</Labell>
+                  <Inputsgrup>
+                    <Textbox
+                      id="name"
+                      type="text"
+                      pattern="^[A-Za-zñÑÁÉÍÓÚáéíóú ]+$"
+                      maxlength="40"
+                      required
+                      placeholder="Nombre"
+                      onChange={(e) => setnombre(e.target.value)}
+                      value={nombre}
+                    ></Textbox>
+                    <Iconvalue icon={faCheck}></Iconvalue>
+                  </Inputsgrup>
+                  <Leyend>leyenda</Leyend>
+                </div>
+                <div>
+                  <Labell htmlFor="">Apellido</Labell>
+                  <Inputsgrup>
+                    <Textbox
+                      id="last_name"
+                      type="text"
+                      pattern="^[A-Za-zñÑÁÉÍÓÚáéíóú ]+$"
+                      maxlength="40"
+                      required
+                      placeholder="Apellido"
+                      onChange={(e) => setapellido(e.target.value)}
+                      value={apellido}
+                    ></Textbox>
+                    <Iconvalue icon={faCheck}></Iconvalue>
+                  </Inputsgrup>
+                  <Leyend>leyenda</Leyend>
+                </div>
+
+                <div>
+                  <Labell htmlFor="">Dirección</Labell>
+                  <Inputsgrup>
+                    <Textbox
+                      id="address"
+                      type="text"
+                      pattern="^[A-Za-zñÑÁÉÍÓÚáéíóú.1-9 ]+$"
+                      maxlength="50"
+                      required
+                      placeholder="Dirección"
+                      onChange={(e) => setdireccion(e.target.value)}
+                      value={direccion}
+                    ></Textbox>
+                    <Iconvalue icon={faCheck}></Iconvalue>
+                  </Inputsgrup>
+                  <Leyend>leyenda</Leyend>
+                </div>
+
+                <div>
+                  <Labell htmlFor="">Teléfono</Labell>
+                  <Inputsgrup>
+                    <Textbox
+                      id="phone"
+                      type="text"
+                      pattern="^[0-9]+$"
+                      maxlength="8"
+                      minLength="8"
+                      required
+                      placeholder="Teléfono"
+                      onChange={(e) => settelefono(e.target.value)}
+                      value={telefono}
+                    ></Textbox>
+                    <Iconvalue icon={faCheck}></Iconvalue>
+                  </Inputsgrup>
+                  <Leyend>leyenda</Leyend>
+                </div>
+
+                <div>
+                  <Labell htmlFor="">DPI o Nit</Labell>
+                  <Inputsgrup>
+                    <Textbox
+                      id="dpi"
+                      type="text"
+                      pattern="^[0-9]+$"
+                      maxlength="13"
+                      minLength="13"
+                      required
+                      placeholder="DPI o Nit"
+                      onChange={(e) => setdpi(e.target.value)}
+                      value={dpi}
+                    ></Textbox>
+                    <Iconvalue icon={faCheck}></Iconvalue>
+                  </Inputsgrup>
+                  <Leyend>leyenda</Leyend>
+                </div>
+
+                <div>
+                  <Labell htmlFor="">Correo Electronico</Labell>
+                  <Inputsgrup>
+                    <Textbox
+                      id="email"
+                      type="text"
+                      pattern="^[a-z_@.]+$"
+                      maxlength="50"
+                      required
+                      placeholder="Correo Electronico"
+                      onChange={(e) => setcorreo(e.target.value)}
+                      value={correo}
+                    ></Textbox>
+                    <Iconvalue id="ch" icon={faCheck}></Iconvalue>
+                  </Inputsgrup>
+                  <Leyend>leyenda</Leyend>
+                </div>
+                <div>
+                  <Labell htmlFor="">Contraseña</Labell>
+                  <Inputsgrup>
+                    <Textbox
+                      type="password"
+                      pattern="^[0-9A-ZáéíóúÁÉÍÓÚa-z_*@#. ]+$"
+                      minLength="7"
+                      required
+                      placeholder="*********"
+                      id="pass2"
+                      onChange={(e) => setpass(e.target.value)}
+                      value={pass}
+                    ></Textbox>
+                    <Iconvalue id="v" icon={faCheck}></Iconvalue>
+                    <Iconuser icon={faKey} onClick={showpass}></Iconuser>
+                  </Inputsgrup>
+                  <Leyend>leyenda</Leyend>
+                </div>
+                <div>
+                  <Labell htmlFor="">Repetir Contraseña</Labell>
+                  <Inputsgrup>
+                    <Textbox
+                      type="password"
+                      pattern="^[0-9A-ZáéíóúÁÉÍÓÚa-z_*@#. ]+$"
+                      minLength="7"
+                      required
+                      placeholder="*********"
+                      id="pass3"
+                    ></Textbox>
+                    <Iconvalue id="v" icon={faCheck}></Iconvalue>
+                    <Iconuser icon={faKey} onClick={showpass}></Iconuser>
+                  </Inputsgrup>
+                  <Leyend>leyenda</Leyend>
+                </div>
+              </Interform1>
+              <Interform2>
+                <Labell htmlFor="" id="ter">
+                  <Confirm
+                    type="checkbox"
+                    name="terminos"
+                    id="termin"
+                  ></Confirm>
+                  Aceptar Terminos y Condiciones
+                </Labell>
+                <Buttongrup id="bt">
+                  <Buttons
+                    type="button"
+                    onClick={(e) => addUser(e)}
+                    value="Registrar"
+                  >
+                    <Textbutton>Registrar Usuario</Textbutton>
+                  </Buttons>
+                  <Buttons
+                    type="button"
+                    onClick={ocultarregistro}
+                    value="Regresar"
+                  >
+                    <Textbutton>Regresar</Textbutton>
+                  </Buttons>
+                </Buttongrup>
+              </Interform2>
+            </Formulario2>
+          </Ocultar>
+        </main>
+      </div>
     </>
   );
 }
@@ -638,26 +654,4 @@ function chec1(e) {
   e.preventDefault();
 }
 
-
-
-function sendform(e){
-  e.preventDefault();
-  if(document.getElementById("enviar")){
-    document.getElementById("enviar").addEventListener('click', function(e){
-      e.preventDefault();
-      let formd = document.getElementById("log");
-      let data = new FormData(formd);
-      fetch('"https://localhost:3000/log.php',{
-        method: 'POST',
-        body: data
-      }).then(datos => datos.json())
-      .then(datosformulario=>{
-        console.log(datosformulario);
-      })
-    
-    });
-  }else{
-    console.log("error");
-  }
-}
-export default App;
+export default Registro;

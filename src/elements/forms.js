@@ -141,4 +141,31 @@ const Buttonsinputs = styled.input`
     }
 `
 
-export {Formulario, Ocultar, Buttonsinputs, Confirm, Formulario2,  Interform1, Interform2, Title, Textbutton, Labell, Inputsgrup, Buttons, Textbox, Leyend, Iconvalue, Buttongrup, Iconuser};
+const Links = styled.a`
+    list-style: none;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.8em;
+    color: black;
+    transition: 0.3s;
+    &::hover{
+        color: ${colores.complet};
+    }
+`
+const Groups = styled.div`
+    display: flex;
+    justify-content: center;
+`
+
+const Navgroup = styled.div`
+    background: #CFE6E0;
+    width: 100%;
+    height: 170px;
+    position: absolute;
+    top: 0%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+`
+export {Formulario, Navgroup, Groups, Links, Ocultar, Buttonsinputs, Confirm, Formulario2,  Interform1, Interform2, Title, Textbutton, Labell, Inputsgrup, Buttons, Textbox, Leyend, Iconvalue, Buttongrup, Iconuser};
