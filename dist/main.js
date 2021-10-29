@@ -12853,6 +12853,8 @@ module.exports = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Formulario": () => (/* binding */ Formulario),
+/* harmony export */   "Iconnav": () => (/* binding */ Iconnav),
+/* harmony export */   "Grouplink": () => (/* binding */ Grouplink),
 /* harmony export */   "Navgroup": () => (/* binding */ Navgroup),
 /* harmony export */   "Groups": () => (/* binding */ Groups),
 /* harmony export */   "Links": () => (/* binding */ Links),
@@ -12875,7 +12877,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
-var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16, _templateObject17, _templateObject18, _templateObject19, _templateObject20;
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16, _templateObject17, _templateObject18, _templateObject19, _templateObject20, _templateObject21, _templateObject22;
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
@@ -12903,9 +12905,11 @@ var Confirm = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_t
 var Interform1 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 25px;\n"])));
 var Interform2 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject16 || (_templateObject16 = _taggedTemplateLiteral(["\n    margin: 15px;\n    padding: 20px;\n    justify-content: center;\n\n"])));
 var Buttonsinputs = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject17 || (_templateObject17 = _taggedTemplateLiteral(["\n    background: #CDE5F7;\n    transition: 0.4s;\n    margin: 10px;\n    width: 150px;\n    height: 40px;\n    line-height: 40px;\n    border: none;\n    text-align: center;\n    align-items: center;\n    border-radius: 10px;\n    &:hover{\n        background: #82C3F5;\n    }\n"])));
-var Links = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a(_templateObject18 || (_templateObject18 = _taggedTemplateLiteral(["\n    list-style: none;\n    font-family: 'Noto Sans', sans-serif;\n    font-size: 0.8em;\n    color: black;\n    transition: 0.3s;\n    &::hover{\n        color: ", ";\n    }\n"])), colores.complet);
-var Groups = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject19 || (_templateObject19 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: center;\n"])));
-var Navgroup = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject20 || (_templateObject20 = _taggedTemplateLiteral(["\n    background: #CFE6E0;\n    width: 100%;\n    height: 170px;\n    position: absolute;\n    top: 0%;\n    display: flex;\n    flex-flow: row wrap;\n    justify-content: center;\n    align-items: center;\n    transition: 0.5s;\n"])));
+var Links = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a(_templateObject18 || (_templateObject18 = _taggedTemplateLiteral(["\n    list-style: none;\n    font-family: 'Noto Sans', sans-serif;\n    font-size: 0.9em;\n    font-weight: 700;\n    margin: 15px;\n    color: black;\n    transition: 0.3s;\n    \n    &:hover{\n        color: ", ";\n        \n    }\n"])), colores.complet);
+var Groups = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject19 || (_templateObject19 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: center;\n    \n"])));
+var Navgroup = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject20 || (_templateObject20 = _taggedTemplateLiteral(["\n    background: #CDE5F7;\n    width: 100%;\n    height: 170px;\n    position: absolute;\n    top: 0%;\n    display: flex;\n    padding: 15px;\n    flex-flow: row wrap;\n    justify-content: center;\n    align-items: center;\n    transition: 0.5s;\n"])));
+var Grouplink = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject21 || (_templateObject21 = _taggedTemplateLiteral(["\n    margin: 10px;\n    list-style: none;\n    font-family: 'Noto Sans', sans-serif;\n    text-decoration: none;\n    font-weight: 700;\n   \n    color: black;\n    width: auto;\n    height: 75px;\n    display: flex;\n    flex-flow: column;\n    justify-content: center;\n    align-items: center;\n    transition: 0.9s;\n    &:hover{\n        \n        background-color: #C9C9C9;\n    }\n"])));
+var Iconnav = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_0__.FontAwesomeIcon)(_templateObject22 || (_templateObject22 = _taggedTemplateLiteral(["\n    margin: 10px;\n    font-size: 32px;\n"])));
 
 
 /***/ }),
@@ -12961,12 +12965,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
 /* harmony import */ var _elements_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./elements/forms */ "./src/elements/forms.js");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _registro__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./registro */ "./src/registro.js");
 /* harmony import */ var _hom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./hom */ "./src/hom.js");
+/* harmony import */ var _we__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./we */ "./src/we.js");
+
 
 
 
@@ -12980,12 +12987,31 @@ __webpack_require__.r(__webpack_exports__);
  //<Registro></Registro>
 
 function App() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Navgroup, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
-    path: "/home",
-    exact: true
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_hom__WEBPACK_IMPORTED_MODULE_7__["default"], null)))));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.HashRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Navgroup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Grouplink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconnav, {
+    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faHouseUser
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Link, {
+    to: "/"
+  }, "INICIO")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Grouplink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconnav, {
+    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faIdCardAlt,
+    to: "/registro"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Link, {
+    to: "/registro"
+  }, "NOSOTROS")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Grouplink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconnav, {
+    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faHeadset
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Link, {
+    to: "/registro"
+  }, "CONTACTO")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Grouplink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconnav, {
+    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faUserTie
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Link, {
+    to: "/registro"
+  }, "INICIAR SESI\xD3N O REGISTRARSE"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
+    path: "/registro",
+    component: _registro__WEBPACK_IMPORTED_MODULE_6__["default"]
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null));
+}
+
+function home() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "hola mundo");
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
@@ -13351,7 +13377,7 @@ function Registro() {
     onClick: cambiotamaño
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Crear Usuario"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Groups, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Links, {
     href: "C:\\Users\\danie\\OneDrive\\Documents\\GitHub\\developertweb\\dist\\home.html"
-  }, "VER HABITACIONES COMO INVITADO")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Ocultar, {
+  }, "REGRESAR")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Ocultar, {
     id: "sing"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, {
     htmlFor: ""
@@ -13758,6 +13784,41 @@ function chec1(e) {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Registro);
+
+/***/ }),
+
+/***/ "./src/we.js":
+/*!*******************!*\
+  !*** ./src/we.js ***!
+  \*******************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var _elements_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./elements/forms */ "./src/elements/forms.js");
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+
+
+
+function We() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "oldd");
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (We);
 
 /***/ }),
 
@@ -22905,7 +22966,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap);"]);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\r\n    margin: 0%;\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n    background-size: cover;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-position: center center;\r\n\r\n}\r\n.login{\r\n    background: #F2F2F2;\r\n    width: 550px;\r\n    height: 100%;\r\n    position: absolute;\r\n    right: 0%;\r\n    display: flex;\r\n    flex-flow: row wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n    transition: 0.5s;\r\n    \r\n    font-family: 'Noto Sans', sans-serif;\r\n    font-weight: 700;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/app.css"],"names":[],"mappings":"AACA;IACI,UAAU;IACV,yDAAqE;IACrE,sBAAsB;IACtB,4BAA4B;IAC5B,4BAA4B;IAC5B,kCAAkC;;AAEtC;AACA;IACI,mBAAmB;IACnB,YAAY;IACZ,YAAY;IACZ,kBAAkB;IAClB,SAAS;IACT,aAAa;IACb,mBAAmB;IACnB,uBAAuB;IACvB,mBAAmB;IACnB,gBAAgB;;IAEhB,oCAAoC;IACpC,gBAAgB;AACpB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');\r\nbody{\r\n    margin: 0%;\r\n    background-image: url(./img/lissete-laverde-_qp5lbyVQtE-unsplash.jpg);\r\n    background-size: cover;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-position: center center;\r\n\r\n}\r\n.login{\r\n    background: #F2F2F2;\r\n    width: 550px;\r\n    height: 100%;\r\n    position: absolute;\r\n    right: 0%;\r\n    display: flex;\r\n    flex-flow: row wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n    transition: 0.5s;\r\n    \r\n    font-family: 'Noto Sans', sans-serif;\r\n    font-weight: 700;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\r\n    margin: 0%;\r\n    padding: 0%;\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n    background-size: cover;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-position: center center;\r\n\r\n}\r\n.login{\r\n    background: #F2F2F2;\r\n    width: 550px;\r\n    height: 100%;\r\n    position: absolute;\r\n    right: 0%;\r\n    display: flex;\r\n    flex-flow: row wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n    transition: 0.5s;\r\n    \r\n    font-family: 'Noto Sans', sans-serif;\r\n    font-weight: 700;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/app.css"],"names":[],"mappings":"AACA;IACI,UAAU;IACV,WAAW;IACX,yDAAqE;IACrE,sBAAsB;IACtB,4BAA4B;IAC5B,4BAA4B;IAC5B,kCAAkC;;AAEtC;AACA;IACI,mBAAmB;IACnB,YAAY;IACZ,YAAY;IACZ,kBAAkB;IAClB,SAAS;IACT,aAAa;IACb,mBAAmB;IACnB,uBAAuB;IACvB,mBAAmB;IACnB,gBAAgB;;IAEhB,oCAAoC;IACpC,gBAAgB;AACpB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');\r\nbody{\r\n    margin: 0%;\r\n    padding: 0%;\r\n    background-image: url(./img/lissete-laverde-_qp5lbyVQtE-unsplash.jpg);\r\n    background-size: cover;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-position: center center;\r\n\r\n}\r\n.login{\r\n    background: #F2F2F2;\r\n    width: 550px;\r\n    height: 100%;\r\n    position: absolute;\r\n    right: 0%;\r\n    display: flex;\r\n    flex-flow: row wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n    transition: 0.5s;\r\n    \r\n    font-family: 'Noto Sans', sans-serif;\r\n    font-weight: 700;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

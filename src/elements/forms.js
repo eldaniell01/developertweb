@@ -144,28 +144,59 @@ const Buttonsinputs = styled.input`
 const Links = styled.a`
     list-style: none;
     font-family: 'Noto Sans', sans-serif;
-    font-size: 0.8em;
+    font-size: 0.9em;
+    font-weight: 700;
+    margin: 15px;
     color: black;
     transition: 0.3s;
-    &::hover{
+    
+    &:hover{
         color: ${colores.complet};
+        
     }
 `
 const Groups = styled.div`
     display: flex;
     justify-content: center;
+    
 `
 
 const Navgroup = styled.div`
-    background: #CFE6E0;
+    background: #CDE5F7;
     width: 100%;
     height: 170px;
     position: absolute;
     top: 0%;
     display: flex;
+    padding: 15px;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     transition: 0.5s;
 `
-export {Formulario, Navgroup, Groups, Links, Ocultar, Buttonsinputs, Confirm, Formulario2,  Interform1, Interform2, Title, Textbutton, Labell, Inputsgrup, Buttons, Textbox, Leyend, Iconvalue, Buttongrup, Iconuser};
+const Grouplink = styled.div`
+    margin: 10px;
+    list-style: none;
+    font-family: 'Noto Sans', sans-serif;
+    text-decoration: none;
+    font-weight: 700;
+   
+    color: black;
+    width: auto;
+    height: 75px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.9s;
+    &:hover{
+        
+        background-color: #C9C9C9;
+    }
+`
+
+const Iconnav = styled(FontAwesomeIcon)`
+    margin: 10px;
+    font-size: 32px;
+`
+export {Formulario, Iconnav, Grouplink, Navgroup, Groups, Links, Ocultar, Buttonsinputs, Confirm, Formulario2,  Interform1, Interform2, Title, Textbutton, Labell, Inputsgrup, Buttons, Textbox, Leyend, Iconvalue, Buttongrup, Iconuser};

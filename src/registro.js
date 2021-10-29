@@ -185,7 +185,7 @@ function Registro() {
             </Buttongrup>
             <Groups>
               <Links href="C:\Users\danie\OneDrive\Documents\GitHub\developertweb\dist\home.html">
-                VER HABITACIONES COMO INVITADO
+                REGRESAR
               </Links>
             </Groups>
           </Formulario>
