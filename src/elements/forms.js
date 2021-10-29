@@ -194,9 +194,25 @@ const Grouplink = styled.div`
         background-color: #C9C9C9;
     }
 `
-
 const Iconnav = styled(FontAwesomeIcon)`
     margin: 10px;
     font-size: 32px;
 `
-export {Formulario, Iconnav, Grouplink, Navgroup, Groups, Links, Ocultar, Buttonsinputs, Confirm, Formulario2,  Interform1, Interform2, Title, Textbutton, Labell, Inputsgrup, Buttons, Textbox, Leyend, Iconvalue, Buttongrup, Iconuser};
+const Habitaciones =styled.div`
+    position: relative;
+    border-radius: 15px;
+    top: 175px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 90%;
+    
+    
+    background-color: #F0F0EB;
+`
+const Descrip =styled.div`
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+`
+export {Formulario, Descrip, Habitaciones, Iconnav, Grouplink, Navgroup, Groups, Links, Ocultar, Buttonsinputs, Confirm, Formulario2,  Interform1, Interform2, Title, Textbutton, Labell, Inputsgrup, Buttons, Textbox, Leyend, Iconvalue, Buttongrup, Iconuser};

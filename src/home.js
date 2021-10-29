@@ -18,12 +18,11 @@ import {
   Textbox,
   Buttongrup,
   Leyend,
-  Iconvalue,
-  Iconuser,
-  Interform1,
+ 
   Navgroup,
   Grouplink,
   Iconnav,
+  Habitaciones,
   Interform2,
 } from "./elements/forms";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -49,7 +48,8 @@ function App() {
           <Navgroup>
             <Grouplink>
               <Iconnav icon={faHouseUser}></Iconnav>
-              <Link to="/">INICIO</Link>
+              <Link to="/hom">INICIO</Link>
+              
             </Grouplink>
             <Grouplink>
               <Iconnav icon={faIdCardAlt} to="/registro"></Iconnav>
@@ -66,10 +66,12 @@ function App() {
           </Navgroup>
           <Switch>
             <Route path="/registro" component={Registro}></Route>
+            <Route path="/hom" component={Home}>
+            </Route>
           </Switch>
         </div>
       </HashRouter>
-      <main></main>
+      
     </>
   );
 }

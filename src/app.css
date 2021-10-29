@@ -19,8 +19,14 @@ body{
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    transition: 0.5s;
+    transition: 0.9s;
     
     font-family: 'Noto Sans', sans-serif;
     font-weight: 700;
+}
+
+.inicio{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }

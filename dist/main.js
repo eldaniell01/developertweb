@@ -12853,6 +12853,8 @@ module.exports = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Formulario": () => (/* binding */ Formulario),
+/* harmony export */   "Descrip": () => (/* binding */ Descrip),
+/* harmony export */   "Habitaciones": () => (/* binding */ Habitaciones),
 /* harmony export */   "Iconnav": () => (/* binding */ Iconnav),
 /* harmony export */   "Grouplink": () => (/* binding */ Grouplink),
 /* harmony export */   "Navgroup": () => (/* binding */ Navgroup),
@@ -12877,7 +12879,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
-var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16, _templateObject17, _templateObject18, _templateObject19, _templateObject20, _templateObject21, _templateObject22;
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16, _templateObject17, _templateObject18, _templateObject19, _templateObject20, _templateObject21, _templateObject22, _templateObject23, _templateObject24;
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
@@ -12910,6 +12912,8 @@ var Groups = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_temp
 var Navgroup = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject20 || (_templateObject20 = _taggedTemplateLiteral(["\n    background: #CDE5F7;\n    width: 100%;\n    height: 170px;\n    position: absolute;\n    top: 0%;\n    display: flex;\n    padding: 15px;\n    flex-flow: row wrap;\n    justify-content: center;\n    align-items: center;\n    transition: 0.5s;\n"])));
 var Grouplink = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject21 || (_templateObject21 = _taggedTemplateLiteral(["\n    margin: 10px;\n    list-style: none;\n    font-family: 'Noto Sans', sans-serif;\n    text-decoration: none;\n    font-weight: 700;\n   \n    color: black;\n    width: auto;\n    height: 75px;\n    display: flex;\n    flex-flow: column;\n    justify-content: center;\n    align-items: center;\n    transition: 0.9s;\n    &:hover{\n        \n        background-color: #C9C9C9;\n    }\n"])));
 var Iconnav = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_0__.FontAwesomeIcon)(_templateObject22 || (_templateObject22 = _taggedTemplateLiteral(["\n    margin: 10px;\n    font-size: 32px;\n"])));
+var Habitaciones = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject23 || (_templateObject23 = _taggedTemplateLiteral(["\n    position: relative;\n    border-radius: 15px;\n    top: 175px;\n    display: flex;\n    flex-flow: column;\n    justify-content: center;\n    width: 90%;\n    \n    \n    background-color: #F0F0EB;\n"])));
+var Descrip = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject24 || (_templateObject24 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-flow: row;\n    justify-content: space-evenly;\n"])));
 
 
 /***/ }),
@@ -12942,7 +12946,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Home() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "hola");
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "inicio"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Habitaciones, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Habitaci\xF3n Simple"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Habitaci\xF3n Simple")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Habitaci\xF3n Simple"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Habitaci\xF3n Doble"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Habitaci\xF3n Triple"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Habitaci\xF3n Cuadruple")))));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);
@@ -12990,7 +12996,7 @@ function App() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.HashRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Navgroup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Grouplink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconnav, {
     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faHouseUser
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Link, {
-    to: "/"
+    to: "/hom"
   }, "INICIO")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Grouplink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconnav, {
     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faIdCardAlt,
     to: "/registro"
@@ -13007,7 +13013,10 @@ function App() {
   }, "INICIAR SESI\xD3N O REGISTRARSE"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
     path: "/registro",
     component: _registro__WEBPACK_IMPORTED_MODULE_6__["default"]
-  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
+    path: "/hom",
+    component: _hom__WEBPACK_IMPORTED_MODULE_7__["default"]
+  })))));
 }
 
 function home() {
@@ -22966,7 +22975,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap);"]);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\r\n    margin: 0%;\r\n    padding: 0%;\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n    background-size: cover;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-position: center center;\r\n\r\n}\r\n.login{\r\n    background: #F2F2F2;\r\n    width: 550px;\r\n    height: 100%;\r\n    position: absolute;\r\n    right: 0%;\r\n    display: flex;\r\n    flex-flow: row wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n    transition: 0.5s;\r\n    \r\n    font-family: 'Noto Sans', sans-serif;\r\n    font-weight: 700;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/app.css"],"names":[],"mappings":"AACA;IACI,UAAU;IACV,WAAW;IACX,yDAAqE;IACrE,sBAAsB;IACtB,4BAA4B;IAC5B,4BAA4B;IAC5B,kCAAkC;;AAEtC;AACA;IACI,mBAAmB;IACnB,YAAY;IACZ,YAAY;IACZ,kBAAkB;IAClB,SAAS;IACT,aAAa;IACb,mBAAmB;IACnB,uBAAuB;IACvB,mBAAmB;IACnB,gBAAgB;;IAEhB,oCAAoC;IACpC,gBAAgB;AACpB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');\r\nbody{\r\n    margin: 0%;\r\n    padding: 0%;\r\n    background-image: url(./img/lissete-laverde-_qp5lbyVQtE-unsplash.jpg);\r\n    background-size: cover;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-position: center center;\r\n\r\n}\r\n.login{\r\n    background: #F2F2F2;\r\n    width: 550px;\r\n    height: 100%;\r\n    position: absolute;\r\n    right: 0%;\r\n    display: flex;\r\n    flex-flow: row wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n    transition: 0.5s;\r\n    \r\n    font-family: 'Noto Sans', sans-serif;\r\n    font-weight: 700;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\r\n    margin: 0%;\r\n    padding: 0%;\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n    background-size: cover;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-position: center center;\r\n\r\n}\r\n.login{\r\n    background: #F2F2F2;\r\n    width: 550px;\r\n    height: 100%;\r\n    position: absolute;\r\n    right: 0%;\r\n    display: flex;\r\n    flex-flow: row wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n    transition: 0.9s;\r\n    \r\n    font-family: 'Noto Sans', sans-serif;\r\n    font-weight: 700;\r\n}\r\n\r\n.inicio{\r\n    width: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n}", "",{"version":3,"sources":["webpack://./src/app.css"],"names":[],"mappings":"AACA;IACI,UAAU;IACV,WAAW;IACX,yDAAqE;IACrE,sBAAsB;IACtB,4BAA4B;IAC5B,4BAA4B;IAC5B,kCAAkC;;AAEtC;AACA;IACI,mBAAmB;IACnB,YAAY;IACZ,YAAY;IACZ,kBAAkB;IAClB,SAAS;IACT,aAAa;IACb,mBAAmB;IACnB,uBAAuB;IACvB,mBAAmB;IACnB,gBAAgB;;IAEhB,oCAAoC;IACpC,gBAAgB;AACpB;;AAEA;IACI,WAAW;IACX,aAAa;IACb,uBAAuB;AAC3B","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');\r\nbody{\r\n    margin: 0%;\r\n    padding: 0%;\r\n    background-image: url(./img/lissete-laverde-_qp5lbyVQtE-unsplash.jpg);\r\n    background-size: cover;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-position: center center;\r\n\r\n}\r\n.login{\r\n    background: #F2F2F2;\r\n    width: 550px;\r\n    height: 100%;\r\n    position: absolute;\r\n    right: 0%;\r\n    display: flex;\r\n    flex-flow: row wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n    transition: 0.9s;\r\n    \r\n    font-family: 'Noto Sans', sans-serif;\r\n    font-weight: 700;\r\n}\r\n\r\n.inicio{\r\n    width: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
