@@ -23,6 +23,7 @@ import {
   Iconuser,
   Interform1,
   Interform2,
+  Img,
   Descrip
 } from "./elements/forms";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -36,10 +37,10 @@ function Home(){
           <Descrip>
             <div>
               <Title>Habitación Simple</Title>
-              <Textbutton>Habitación Simple</Textbutton>
+              
             </div>
             <div>
-            <Title>Habitación Simple</Title>
+              <img src="img/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg"></img>
             </div>
           </Descrip>
           <Descrip>
