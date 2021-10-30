@@ -12915,7 +12915,7 @@ var Grouplink = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_t
 var Iconnav = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_0__.FontAwesomeIcon)(_templateObject22 || (_templateObject22 = _taggedTemplateLiteral(["\n    margin: 10px;\n    font-size: 32px;\n"])));
 var Habitaciones = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject23 || (_templateObject23 = _taggedTemplateLiteral(["\n    position: relative;\n    border-radius: 15px;\n    top: 175px;\n    display: flex;\n    flex-flow: column;\n    justify-content: center;\n    width: 90%;\n    \n    \n    background-color: #F0F0EB;\n"])));
 var Descrip = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject24 || (_templateObject24 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-flow: row;\n    justify-content: space-evenly;\n    padding: 10px;\n"])));
-var Img = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templateObject25 || (_templateObject25 = _taggedTemplateLiteral(["\n    width: 300px;\n    border-radius: 10px;\n    box-shadow: 2px 2px 5px #999;\n"])));
+var Img = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templateObject25 || (_templateObject25 = _taggedTemplateLiteral(["\n    width: 300px;\n    border-radius: 10px;\n    box-shadow: 2px 2px 5px #999;\n    transition: 0.5s;\n    &:hover{\n        box-shadow: 6px 6px 10px #999;\n    }\n"])));
 
 
 /***/ }),
@@ -12939,6 +12939,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _src_img_vojtech_bruzek_Yrxr3bsPdS0_unsplash_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! .././src/img/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg */ "./src/img/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg");
+/* harmony import */ var _src_img_alexander_kaunas_Fk9d0cxYqC4_unsplash_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! .././src/img/alexander-kaunas-Fk9d0cxYqC4-unsplash.jpg */ "./src/img/alexander-kaunas-Fk9d0cxYqC4-unsplash.jpg");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _pages_simple__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/simple */ "./src/pages/simple.js");
+/* harmony import */ var _pages_doble__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/doble */ "./src/pages/doble.js");
+
+
+
+
 
 
 
@@ -12950,11 +12959,27 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Home() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.HashRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "inicio"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Habitaciones, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Habitaci\xF3n Simple")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Img, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Habitaciones, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Link, {
+    to: "/pages/simple"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Habitaci\xF3n Simple")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Es una habitaci\xF3n amplia para una o dos personas, con ba\xF1o personal.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Link, {
+    to: "/pages/simple"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Img, {
     src: _src_img_vojtech_bruzek_Yrxr3bsPdS0_unsplash_jpg__WEBPACK_IMPORTED_MODULE_6__
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Habitaci\xF3n Doble"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Habitaci\xF3n Triple"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Habitaci\xF3n Cuadruple")))));
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Link, {
+    to: "/pages/doble"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Img, {
+    src: _src_img_alexander_kaunas_Fk9d0cxYqC4_unsplash_jpg__WEBPACK_IMPORTED_MODULE_7__
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Link, {
+    to: "/pages/doble"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Habitaci\xF3n Doble")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Es una habitaci\xF3n amplia para cuatro personas o m\xE1s."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Habitaci\xF3n Triple"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Habitaci\xF3n Cuadruple"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
+    path: "/pages/simple",
+    component: _pages_simple__WEBPACK_IMPORTED_MODULE_8__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
+    path: "/pages/doble",
+    component: _pages_doble__WEBPACK_IMPORTED_MODULE_9__["default"]
+  }))))));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);
@@ -13030,6 +13055,77 @@ function home() {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
+
+/***/ }),
+
+/***/ "./src/pages/doble.js":
+/*!****************************!*\
+  !*** ./src/pages/doble.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var _elements_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../elements/forms */ "./src/elements/forms.js");
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+
+
+
+function Doble() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Habitaciones, null, "hola mundo");
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Doble);
+
+/***/ }),
+
+/***/ "./src/pages/simple.js":
+/*!*****************************!*\
+  !*** ./src/pages/simple.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var _elements_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../elements/forms */ "./src/elements/forms.js");
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+
+
+
+
+function Simple() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Habitaciones, null, "hola");
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Simple);
 
 /***/ }),
 
@@ -58482,6 +58578,17 @@ module.exports = "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%
 
 "use strict";
 module.exports = "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 8 8%27%3e%3cpath fill=%27%23198754%27 d=%27M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z%27/%3e%3c/svg%3e";
+
+/***/ }),
+
+/***/ "./src/img/alexander-kaunas-Fk9d0cxYqC4-unsplash.jpg":
+/*!***********************************************************!*\
+  !*** ./src/img/alexander-kaunas-Fk9d0cxYqC4-unsplash.jpg ***!
+  \***********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "bd9f916a074b783a93bc.jpg";
 
 /***/ }),
 

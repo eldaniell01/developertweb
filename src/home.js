@@ -39,6 +39,7 @@ import { HashRouter, Switch, Route, Link } from "react-router-dom";
 import Registro from "./registro";
 import Home from "./hom";
 import We from "./we";
+
 //<Registro></Registro>
 function App() {
   return (

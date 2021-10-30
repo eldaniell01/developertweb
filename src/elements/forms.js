@@ -222,5 +222,9 @@ const Img = styled.img`
     width: 300px;
     border-radius: 10px;
     box-shadow: 2px 2px 5px #999;
+    transition: 0.5s;
+    &:hover{
+        box-shadow: 6px 6px 10px #999;
+    }
 `
 export {Formulario, Img, Descrip, Habitaciones, Iconnav, Grouplink, Navgroup, Groups, Links, Ocultar, Buttonsinputs, Confirm, Formulario2,  Interform1, Interform2, Title, Textbutton, Labell, Inputsgrup, Buttons, Textbox, Leyend, Iconvalue, Buttongrup, Iconuser};
