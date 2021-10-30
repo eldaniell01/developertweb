@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+
 const colores ={
     border: "#218DA6",
     error: "#F20530",
@@ -214,9 +215,12 @@ const Descrip =styled.div`
     display: flex;
     flex-flow: row;
     justify-content: space-evenly;
+    padding: 10px;
 `
 
 const Img = styled.img`
-    width: 30%;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #999;
 `
 export {Formulario, Img, Descrip, Habitaciones, Iconnav, Grouplink, Navgroup, Groups, Links, Ocultar, Buttonsinputs, Confirm, Formulario2,  Interform1, Interform2, Title, Textbutton, Labell, Inputsgrup, Buttons, Textbox, Leyend, Iconvalue, Buttongrup, Iconuser};

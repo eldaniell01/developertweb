@@ -12914,8 +12914,8 @@ var Navgroup = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_te
 var Grouplink = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject21 || (_templateObject21 = _taggedTemplateLiteral(["\n    margin: 10px;\n    list-style: none;\n    font-family: 'Noto Sans', sans-serif;\n    text-decoration: none;\n    font-weight: 700;\n   \n    color: black;\n    width: auto;\n    height: 75px;\n    display: flex;\n    flex-flow: column;\n    justify-content: center;\n    align-items: center;\n    transition: 0.9s;\n    &:hover{\n        \n        background-color: #C9C9C9;\n    }\n"])));
 var Iconnav = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_0__.FontAwesomeIcon)(_templateObject22 || (_templateObject22 = _taggedTemplateLiteral(["\n    margin: 10px;\n    font-size: 32px;\n"])));
 var Habitaciones = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject23 || (_templateObject23 = _taggedTemplateLiteral(["\n    position: relative;\n    border-radius: 15px;\n    top: 175px;\n    display: flex;\n    flex-flow: column;\n    justify-content: center;\n    width: 90%;\n    \n    \n    background-color: #F0F0EB;\n"])));
-var Descrip = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject24 || (_templateObject24 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-flow: row;\n    justify-content: space-evenly;\n"])));
-var Img = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templateObject25 || (_templateObject25 = _taggedTemplateLiteral(["\n    width: 30%;\n"])));
+var Descrip = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject24 || (_templateObject24 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-flow: row;\n    justify-content: space-evenly;\n    padding: 10px;\n"])));
+var Img = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templateObject25 || (_templateObject25 = _taggedTemplateLiteral(["\n    width: 300px;\n    border-radius: 10px;\n    box-shadow: 2px 2px 5px #999;\n"])));
 
 
 /***/ }),
@@ -12938,6 +12938,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _src_img_vojtech_bruzek_Yrxr3bsPdS0_unsplash_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! .././src/img/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg */ "./src/img/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg");
+
 
 
 
@@ -12950,8 +12952,8 @@ __webpack_require__.r(__webpack_exports__);
 function Home() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "inicio"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Habitaciones, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Habitaci\xF3n Simple")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: "img/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Habitaciones, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Habitaci\xF3n Simple")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Img, {
+    src: _src_img_vojtech_bruzek_Yrxr3bsPdS0_unsplash_jpg__WEBPACK_IMPORTED_MODULE_6__
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Habitaci\xF3n Doble"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Habitaci\xF3n Triple"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Habitaci\xF3n Cuadruple")))));
 }
 
@@ -58491,6 +58493,17 @@ module.exports = "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%
 
 "use strict";
 module.exports = __webpack_require__.p + "ddf535954d8b9bf4361d.jpg";
+
+/***/ }),
+
+/***/ "./src/img/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg":
+/*!*********************************************************!*\
+  !*** ./src/img/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg ***!
+  \*********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "056e9036cee2ef9bc0dd.jpg";
 
 /***/ }),
 

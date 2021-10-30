@@ -29,6 +29,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faUserTie, faKey } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
+import img1 from ".././src/img/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg";
 
 function Home(){
     return(
@@ -40,7 +41,7 @@ function Home(){
               
             </div>
             <div>
-              <img src="img/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg"></img>
+              <Img src={img1}></Img>
             </div>
           </Descrip>
           <Descrip>
