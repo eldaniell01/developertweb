@@ -202,7 +202,7 @@ const Iconnav = styled(FontAwesomeIcon)`
 const Habitaciones =styled.div`
     position: relative;
     border-radius: 15px;
-    top: 100px;
+    top: 60px;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -219,7 +219,7 @@ const Descrip =styled.div`
 `
 
 const Img = styled.img`
-    width: 300px;
+    width: 400px;
     border-radius: 10px;
     box-shadow: 2px 2px 5px #999;
     transition: 0.5s;
@@ -232,5 +232,21 @@ const Texth = styled.p`
     font-family: 'Noto Sans', sans-serif;
     font-weight: bold;
     font-size: 1.4em;
+    margin: 15px;
 `
-export {Formulario, Texth, Img, Descrip, Habitaciones, Iconnav, Grouplink, Navgroup, Groups, Links, Ocultar, Buttonsinputs, Confirm, Formulario2,  Interform1, Interform2, Title, Textbutton, Labell, Inputsgrup, Buttons, Textbox, Leyend, Iconvalue, Buttongrup, Iconuser};
+
+const Roms = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 25px;
+    margin: 15px;
+`
+const Rom = styled.div`
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+`
+export {Formulario, Roms, Rom, Texth, Img, Descrip, Habitaciones, Iconnav, Grouplink, Navgroup, Groups, Links, Ocultar, Buttonsinputs, Confirm, Formulario2,  Interform1, Interform2, Title, Textbutton, Labell, Inputsgrup, Buttons, Textbox, Leyend, Iconvalue, Buttongrup, Iconuser};

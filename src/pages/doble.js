@@ -23,17 +23,49 @@ import {
   Interform1,
   Habitaciones,
   Interform2,
+  Texth,
+  Roms,
+  Img,
+  Rom,
 } from "../elements/forms";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faUserTie, faKey } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
+import { HashRouter, Switch, Route, Link } from "react-router-dom";
+import img7 from ".././img/neonbrand-Wp7t4cWN-68-unsplash.jpg";
+import img8 from ".././img/sidekix-media-WgkA3CSFrjc-unsplash.jpg";
 
-function Doble(){
-    return(
-        <div className="inicio">
-            <Habitaciones>hola</Habitaciones>
-        </div>
-        
-    );
+function Doble() {
+  return (
+    <div className="inicio">
+      <Habitaciones>
+        <Roms>
+          <Rom>
+            <Link to="/pages/formpago">
+              <Img src={img7}></Img>
+            </Link>
+            <Texth>Q. 300.00</Texth>
+            <Link to="/pages/formpago">
+              <Buttons>
+                <Textbutton>Reservar</Textbutton>
+              </Buttons>
+            </Link>
+          </Rom>
+
+          <Rom>
+            <Link to="/pages/formpago">
+              <Img src={img8}></Img>
+            </Link>
+            <Texth>Q. 300.00</Texth>
+            <Link to="/pages/formpago">
+              <Buttons>
+                <Textbutton>Reservar</Textbutton>
+              </Buttons>
+            </Link>
+          </Rom>
+        </Roms>
+      </Habitaciones>
+    </div>
+  );
 }
 export default Doble;
