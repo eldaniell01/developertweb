@@ -3,9 +3,6 @@ import { render } from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
 import {
-  Formulario,
-  Confirm,
-  Formulario2,
   Ocultar,
   Buttons,
   Title,
@@ -18,7 +15,6 @@ import {
   Textbox,
   Buttongrup,
   Leyend,
- 
   Navgroup,
   Grouplink,
   Iconnav,
@@ -44,6 +40,7 @@ import Simple from "./pages/simple";
 import Doble from "./pages/doble";
 import Cuadruple from "./pages/cuadruple";
 import Triple from "./pages/triple";
+import Formpay from "./pages/formpago";
 //<Registro></Registro>
 function App() {
   return (
@@ -54,8 +51,9 @@ function App() {
         <Route path="/registro" component={Registro}></Route>
         <Route path="/pages/simple" component={Simple}></Route>
         <Route path="/pages/doble" component={Doble}></Route>
-              <Route path="/pages/triple" component={Cuadruple}></Route>
-              <Route path="/pages/cuadruple" component={Triple}></Route>
+        <Route path="/pages/triple" component={Cuadruple}></Route>
+        <Route path="/pages/cuadruple" component={Triple}></Route>
+        <Route path="/pages/formpago" component={Formpay}></Route>
       </HashRouter>
     </>
     /*<div>
