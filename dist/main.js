@@ -12883,7 +12883,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
-var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16, _templateObject17, _templateObject18, _templateObject19, _templateObject20, _templateObject21, _templateObject22, _templateObject23, _templateObject24, _templateObject25, _templateObject26, _templateObject27, _templateObject28;
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16, _templateObject17, _templateObject18, _templateObject19, _templateObject20, _templateObject21, _templateObject22, _templateObject23, _templateObject24, _templateObject25, _templateObject26, _templateObject27, _templateObject28, _templateObject29;
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
@@ -12922,6 +12922,7 @@ var Img = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templat
 var Texth = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject26 || (_templateObject26 = _taggedTemplateLiteral(["\n    font-family: 'Noto Sans', sans-serif;\n    font-weight: bold;\n    font-size: 1.4em;\n    margin: 15px;\n"])));
 var Roms = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject27 || (_templateObject27 = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    justify-items: center;\n    gap: 25px;\n    margin: 15px;\n"])));
 var Rom = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject28 || (_templateObject28 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-flow: column;\n    justify-content: center;\n    align-items: center;\n\n"])));
+var Formulario3 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form(_templateObject29 || (_templateObject29 = _taggedTemplateLiteral(["\n    display: grid;\n"])));
 
 
 /***/ }),
@@ -13367,7 +13368,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Formpay() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "hola"));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null);
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Formpay);

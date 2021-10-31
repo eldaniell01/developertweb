@@ -249,4 +249,8 @@ const Rom = styled.div`
     align-items: center;
 
 `
+
+const Formulario3 =styled.form`
+    display: grid;
+`
 export {Formulario, Roms, Rom, Texth, Img, Descrip, Habitaciones, Iconnav, Grouplink, Navgroup, Groups, Links, Ocultar, Buttonsinputs, Confirm, Formulario2,  Interform1, Interform2, Title, Textbutton, Labell, Inputsgrup, Buttons, Textbox, Leyend, Iconvalue, Buttongrup, Iconuser};
