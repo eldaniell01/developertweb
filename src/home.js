@@ -51,8 +51,8 @@ function App() {
         <Route path="/registro" component={Registro}></Route>
         <Route path="/pages/simple" component={Simple}></Route>
         <Route path="/pages/doble" component={Doble}></Route>
-        <Route path="/pages/triple" component={Cuadruple}></Route>
-        <Route path="/pages/cuadruple" component={Triple}></Route>
+        <Route path="/pages/triple" component={Triple}></Route>
+        <Route path="/pages/cuadruple" component={Cuadruple}></Route>
         <Route path="/pages/formpago" component={Formpay}></Route>
       </HashRouter>
     </>

@@ -52,7 +52,7 @@ function Simple() {
               </Buttons>
             </Link>
           </Rom>
-
+          <hr width="1" size="500" />
           <Rom>
             <Link to="/pages/formpago">
               <Img src={img6}></Img>

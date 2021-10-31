@@ -34,9 +34,9 @@ import axios from "axios";
 import { HashRouter, Switch, Route, Link } from "react-router-dom";
 import img9 from ".././img/francesca-tosolini-tHkJAMcO3QE-unsplash.jpg";
 import img10 from ".././img/alice-kang-Bc_uN5PeErA-unsplash.jpg";
-function Triple(){
-    return(
-        <div className="inicio">
+function Triple() {
+  return (
+    <div className="inicio">
       <Habitaciones>
         <Roms>
           <Rom>
@@ -50,7 +50,7 @@ function Triple(){
               </Buttons>
             </Link>
           </Rom>
-
+          <hr width="1" size="500" />
           <Rom>
             <Link to="/pages/formpago">
               <Img src={img10}></Img>
@@ -65,7 +65,6 @@ function Triple(){
         </Roms>
       </Habitaciones>
     </div>
-        
-    );
+  );
 }
 export default Triple;
