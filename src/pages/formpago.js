@@ -33,7 +33,7 @@ import { HashRouter, Switch, Route, Link } from "react-router-dom";
 function Formpay() {
   return (
     <>
-      <h1>hola</h1>
+      
     </>
   );
 }
