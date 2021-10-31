@@ -30,8 +30,9 @@ import axios from "axios";
 import { HashRouter, Switch, Route, Link } from "react-router-dom";
 function Simple(){
     return(
+      <div className="inicio">
         <Habitaciones>hola</Habitaciones>
-        
+      </div>
     );
 }
 export default Simple;

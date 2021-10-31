@@ -202,7 +202,7 @@ const Iconnav = styled(FontAwesomeIcon)`
 const Habitaciones =styled.div`
     position: relative;
     border-radius: 15px;
-    top: 175px;
+    top: 100px;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -227,4 +227,10 @@ const Img = styled.img`
         box-shadow: 6px 6px 10px #999;
     }
 `
-export {Formulario, Img, Descrip, Habitaciones, Iconnav, Grouplink, Navgroup, Groups, Links, Ocultar, Buttonsinputs, Confirm, Formulario2,  Interform1, Interform2, Title, Textbutton, Labell, Inputsgrup, Buttons, Textbox, Leyend, Iconvalue, Buttongrup, Iconuser};
+
+const Texth = styled.p`
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.4em;
+`
+export {Formulario, Texth, Img, Descrip, Habitaciones, Iconnav, Grouplink, Navgroup, Groups, Links, Ocultar, Buttonsinputs, Confirm, Formulario2,  Interform1, Interform2, Title, Textbutton, Labell, Inputsgrup, Buttons, Textbox, Leyend, Iconvalue, Buttongrup, Iconuser};

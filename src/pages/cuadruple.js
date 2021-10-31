@@ -27,13 +27,12 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faUserTie, faKey } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
-
-function Doble(){
+import { HashRouter, Switch, Route, Link } from "react-router-dom";
+function Cuadruple(){
     return(
         <div className="inicio">
             <Habitaciones>hola</Habitaciones>
         </div>
-        
     );
 }
-export default Doble;
+export default Cuadruple;

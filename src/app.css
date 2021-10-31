@@ -30,3 +30,8 @@ body{
     display: flex;
     justify-content: center;
 }
+.centrado{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

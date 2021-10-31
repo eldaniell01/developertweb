@@ -12853,6 +12853,7 @@ module.exports = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Formulario": () => (/* binding */ Formulario),
+/* harmony export */   "Texth": () => (/* binding */ Texth),
 /* harmony export */   "Img": () => (/* binding */ Img),
 /* harmony export */   "Descrip": () => (/* binding */ Descrip),
 /* harmony export */   "Habitaciones": () => (/* binding */ Habitaciones),
@@ -12880,7 +12881,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
-var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16, _templateObject17, _templateObject18, _templateObject19, _templateObject20, _templateObject21, _templateObject22, _templateObject23, _templateObject24, _templateObject25;
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16, _templateObject17, _templateObject18, _templateObject19, _templateObject20, _templateObject21, _templateObject22, _templateObject23, _templateObject24, _templateObject25, _templateObject26;
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
@@ -12913,9 +12914,10 @@ var Groups = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_temp
 var Navgroup = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject20 || (_templateObject20 = _taggedTemplateLiteral(["\n    background: #CDE5F7;\n    width: 100%;\n    height: 170px;\n    position: absolute;\n    top: 0%;\n    display: flex;\n    padding: 15px;\n    flex-flow: row wrap;\n    justify-content: center;\n    align-items: center;\n    transition: 0.5s;\n"])));
 var Grouplink = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject21 || (_templateObject21 = _taggedTemplateLiteral(["\n    margin: 10px;\n    list-style: none;\n    font-family: 'Noto Sans', sans-serif;\n    text-decoration: none;\n    font-weight: 700;\n   \n    color: black;\n    width: auto;\n    height: 75px;\n    display: flex;\n    flex-flow: column;\n    justify-content: center;\n    align-items: center;\n    transition: 0.9s;\n    &:hover{\n        \n        background-color: #C9C9C9;\n    }\n"])));
 var Iconnav = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_0__.FontAwesomeIcon)(_templateObject22 || (_templateObject22 = _taggedTemplateLiteral(["\n    margin: 10px;\n    font-size: 32px;\n"])));
-var Habitaciones = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject23 || (_templateObject23 = _taggedTemplateLiteral(["\n    position: relative;\n    border-radius: 15px;\n    top: 175px;\n    display: flex;\n    flex-flow: column;\n    justify-content: center;\n    width: 90%;\n    \n    \n    background-color: #F0F0EB;\n"])));
+var Habitaciones = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject23 || (_templateObject23 = _taggedTemplateLiteral(["\n    position: relative;\n    border-radius: 15px;\n    top: 100px;\n    display: flex;\n    flex-flow: column;\n    justify-content: center;\n    width: 90%;\n    \n    \n    background-color: #F0F0EB;\n"])));
 var Descrip = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject24 || (_templateObject24 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-flow: row;\n    justify-content: space-evenly;\n    padding: 10px;\n"])));
 var Img = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templateObject25 || (_templateObject25 = _taggedTemplateLiteral(["\n    width: 300px;\n    border-radius: 10px;\n    box-shadow: 2px 2px 5px #999;\n    transition: 0.5s;\n    &:hover{\n        box-shadow: 6px 6px 10px #999;\n    }\n"])));
+var Texth = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject26 || (_templateObject26 = _taggedTemplateLiteral(["\n    font-family: 'Noto Sans', sans-serif;\n    font-weight: bold;\n    font-size: 1.4em;\n"])));
 
 
 /***/ }),
@@ -12940,10 +12942,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _src_img_vojtech_bruzek_Yrxr3bsPdS0_unsplash_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! .././src/img/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg */ "./src/img/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg");
 /* harmony import */ var _src_img_alexander_kaunas_Fk9d0cxYqC4_unsplash_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! .././src/img/alexander-kaunas-Fk9d0cxYqC4-unsplash.jpg */ "./src/img/alexander-kaunas-Fk9d0cxYqC4-unsplash.jpg");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var _pages_simple__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/simple */ "./src/pages/simple.js");
-/* harmony import */ var _pages_doble__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/doble */ "./src/pages/doble.js");
+/* harmony import */ var _src_img_roberto_nickson_emqnSQwQQDo_unsplash_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! .././src/img/roberto-nickson-emqnSQwQQDo-unsplash.jpg */ "./src/img/roberto-nickson-emqnSQwQQDo-unsplash.jpg");
+/* harmony import */ var _src_img_sidekix_media_xroM8RaMnSI_unsplash_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! .././src/img/sidekix-media-xroM8RaMnSI-unsplash.jpg */ "./src/img/sidekix-media-xroM8RaMnSI-unsplash.jpg");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _pages_simple__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/simple */ "./src/pages/simple.js");
+/* harmony import */ var _pages_doble__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/doble */ "./src/pages/doble.js");
+/* harmony import */ var _pages_cuadruple__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/cuadruple */ "./src/pages/cuadruple.js");
+/* harmony import */ var _pages_triple__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/triple */ "./src/pages/triple.js");
+
+
+
+
 
 
 
@@ -12959,27 +12968,43 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Home() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.HashRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.HashRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "inicio"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Habitaciones, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Link, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Habitaciones, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "centrado"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Link, {
     to: "/pages/simple"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Habitaci\xF3n Simple")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Es una habitaci\xF3n amplia para una o dos personas, con ba\xF1o personal.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Link, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Texth, null, "Habitaci\xF3n Simple")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Es una habitaci\xF3n amplia para una o dos personas, con ba\xF1o personal.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Link, {
     to: "/pages/simple"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Img, {
     src: _src_img_vojtech_bruzek_Yrxr3bsPdS0_unsplash_jpg__WEBPACK_IMPORTED_MODULE_6__
-  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Link, {
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "centrado"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Link, {
     to: "/pages/doble"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Img, {
     src: _src_img_alexander_kaunas_Fk9d0cxYqC4_unsplash_jpg__WEBPACK_IMPORTED_MODULE_7__
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Link, {
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "centrado"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Link, {
     to: "/pages/doble"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Habitaci\xF3n Doble")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Es una habitaci\xF3n amplia para cuatro personas o m\xE1s."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Habitaci\xF3n Triple"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Title, null, "Habitaci\xF3n Cuadruple"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
-    path: "/pages/simple",
-    component: _pages_simple__WEBPACK_IMPORTED_MODULE_8__["default"]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
-    path: "/pages/doble",
-    component: _pages_doble__WEBPACK_IMPORTED_MODULE_9__["default"]
-  }))))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Texth, null, "Habitaci\xF3n Doble")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Es una habitaci\xF3n amplia para cuatro personas o m\xE1s."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "centrado"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Link, {
+    to: "/pages/triple"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Texth, null, "Habitaci\xF3n Triple")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Es una habitaci\xF3n amplia para una o dos personas, con ba\xF1o personal.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Link, {
+    to: "/pages/triple"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Img, {
+    src: _src_img_roberto_nickson_emqnSQwQQDo_unsplash_jpg__WEBPACK_IMPORTED_MODULE_8__
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Descrip, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Link, {
+    to: "/pages/cuadruple"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Img, {
+    src: _src_img_sidekix_media_xroM8RaMnSI_unsplash_jpg__WEBPACK_IMPORTED_MODULE_9__
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "centrado"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.Link, {
+    to: "/pages/cuadruple"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Texth, null, "Habitaci\xF3n Cuadruple")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Textbutton, null, "Es una habitaci\xF3n amplia para cuatro personas o m\xE1s.")))))));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);
@@ -13002,14 +13027,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
 /* harmony import */ var _elements_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./elements/forms */ "./src/elements/forms.js");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _registro__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./registro */ "./src/registro.js");
 /* harmony import */ var _hom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./hom */ "./src/hom.js");
 /* harmony import */ var _we__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./we */ "./src/we.js");
+/* harmony import */ var _navegaci_n__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./navegación */ "./src/navegación.js");
+/* harmony import */ var _pages_simple__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/simple */ "./src/pages/simple.js");
+/* harmony import */ var _pages_doble__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/doble */ "./src/pages/doble.js");
+/* harmony import */ var _pages_cuadruple__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/cuadruple */ "./src/pages/cuadruple.js");
+/* harmony import */ var _pages_triple__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/triple */ "./src/pages/triple.js");
+
+
+
+
+
 
 
 
@@ -13024,30 +13058,52 @@ __webpack_require__.r(__webpack_exports__);
  //<Registro></Registro>
 
 function App() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.HashRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Navgroup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Grouplink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconnav, {
-    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faHouseUser
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Link, {
-    to: "/hom"
-  }, "INICIO")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Grouplink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconnav, {
-    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faIdCardAlt,
-    to: "/registro"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Link, {
-    to: "/registro"
-  }, "NOSOTROS")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Grouplink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconnav, {
-    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faHeadset
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Link, {
-    to: "/registro"
-  }, "CONTACTO")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Grouplink, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Iconnav, {
-    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_10__.faUserTie
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Link, {
-    to: "/registro"
-  }, "INICIAR SESI\xD3N O REGISTRARSE"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
-    path: "/registro",
-    component: _registro__WEBPACK_IMPORTED_MODULE_6__["default"]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.HashRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_navegaci_n__WEBPACK_IMPORTED_MODULE_9__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
     path: "/hom",
     component: _hom__WEBPACK_IMPORTED_MODULE_7__["default"]
-  })))));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+    path: "/registro",
+    component: _registro__WEBPACK_IMPORTED_MODULE_6__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+    path: "/pages/simple",
+    component: _pages_simple__WEBPACK_IMPORTED_MODULE_10__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+    path: "/pages/doble",
+    component: _pages_doble__WEBPACK_IMPORTED_MODULE_11__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+    path: "/pages/triple",
+    component: _pages_cuadruple__WEBPACK_IMPORTED_MODULE_12__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
+    path: "/pages/cuadruple",
+    component: _pages_triple__WEBPACK_IMPORTED_MODULE_13__["default"]
+  })))
+  /*<div>
+  <Navgroup>
+    <Grouplink>
+      <Iconnav icon={faHouseUser}></Iconnav>
+      <Link to="/hom">INICIO</Link>
+      
+    </Grouplink>
+    <Grouplink>
+      <Iconnav icon={faIdCardAlt} to="/registro"></Iconnav>
+      <Link to="/navegacion">NOSOTROS</Link>
+    </Grouplink>
+    <Grouplink>
+      <Iconnav icon={faHeadset}></Iconnav>
+      <Link to="/registro">CONTACTO</Link>
+    </Grouplink>
+    <Grouplink>
+      <Iconnav icon={faUserTie}></Iconnav>
+      <Link to="/registro">INICIAR SESIÓN O REGISTRARSE</Link>
+    </Grouplink>
+  </Navgroup>
+  <Switch>
+    <Route path="/registro" component={Registro}></Route>
+    <Route path="/navegacion" component={Navegacion}></Route>
+    <Route path="/hom" component={Home}></Route>
+  </Switch>
+  </div>*/
+  ;
 }
 
 function home() {
@@ -13055,6 +13111,145 @@ function home() {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
+
+/***/ }),
+
+/***/ "./src/navegación.js":
+/*!***************************!*\
+  !*** ./src/navegación.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Navegacion)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _elements_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./elements/forms */ "./src/elements/forms.js");
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+
+
+
+
+
+var Navegacion = /*#__PURE__*/function (_Component) {
+  _inherits(Navegacion, _Component);
+
+  var _super = _createSuper(Navegacion);
+
+  function Navegacion() {
+    _classCallCheck(this, Navegacion);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(Navegacion, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
+        className: "navbar navbar-expand-lg navbar-dark bg-dark"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+        className: "navbar-brand",
+        to: "/hom"
+      }, "HOTEL"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "collapse navbar-collapse",
+        id: "navbarSupportedContent"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+        className: "navbar-nav mr-auto"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+        className: "nav-item active"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+        className: "nav-link",
+        to: "/hom"
+      }, "INICIO")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+        className: "nav-item"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+        className: "nav-link",
+        to: "/"
+      }, "NOSOTROS")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+        className: "nav-item"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+        className: "nav-link",
+        to: "/"
+      }, "CONTACTO")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+        className: "nav-item"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+        className: "nav-link",
+        to: "/registro"
+      }, "INICIAR SESI\xD3N O REGISTRARSE")))));
+    }
+  }]);
+
+  return Navegacion;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+
+
+/***/ }),
+
+/***/ "./src/pages/cuadruple.js":
+/*!********************************!*\
+  !*** ./src/pages/cuadruple.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var _elements_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../elements/forms */ "./src/elements/forms.js");
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+
+
+
+
+function Cuadruple() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "inicio"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Habitaciones, null, "hola"));
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Cuadruple);
 
 /***/ }),
 
@@ -13086,7 +13281,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Doble() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Habitaciones, null, "hola mundo");
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "inicio"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Habitaciones, null, "hola"));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Doble);
@@ -13122,10 +13319,50 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Simple() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Habitaciones, null, "hola");
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "inicio"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Habitaciones, null, "hola"));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Simple);
+
+/***/ }),
+
+/***/ "./src/pages/triple.js":
+/*!*****************************!*\
+  !*** ./src/pages/triple.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var _elements_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../elements/forms */ "./src/elements/forms.js");
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+
+
+
+
+function Triple() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "inicio"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_3__.Habitaciones, null, "hola"));
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Triple);
 
 /***/ }),
 
@@ -23077,7 +23314,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap);"]);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\r\n    margin: 0%;\r\n    padding: 0%;\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n    background-size: cover;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-position: center center;\r\n\r\n}\r\n.login{\r\n    background: #F2F2F2;\r\n    width: 550px;\r\n    height: 100%;\r\n    position: absolute;\r\n    right: 0%;\r\n    display: flex;\r\n    flex-flow: row wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n    transition: 0.9s;\r\n    \r\n    font-family: 'Noto Sans', sans-serif;\r\n    font-weight: 700;\r\n}\r\n\r\n.inicio{\r\n    width: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n}", "",{"version":3,"sources":["webpack://./src/app.css"],"names":[],"mappings":"AACA;IACI,UAAU;IACV,WAAW;IACX,yDAAqE;IACrE,sBAAsB;IACtB,4BAA4B;IAC5B,4BAA4B;IAC5B,kCAAkC;;AAEtC;AACA;IACI,mBAAmB;IACnB,YAAY;IACZ,YAAY;IACZ,kBAAkB;IAClB,SAAS;IACT,aAAa;IACb,mBAAmB;IACnB,uBAAuB;IACvB,mBAAmB;IACnB,gBAAgB;;IAEhB,oCAAoC;IACpC,gBAAgB;AACpB;;AAEA;IACI,WAAW;IACX,aAAa;IACb,uBAAuB;AAC3B","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');\r\nbody{\r\n    margin: 0%;\r\n    padding: 0%;\r\n    background-image: url(./img/lissete-laverde-_qp5lbyVQtE-unsplash.jpg);\r\n    background-size: cover;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-position: center center;\r\n\r\n}\r\n.login{\r\n    background: #F2F2F2;\r\n    width: 550px;\r\n    height: 100%;\r\n    position: absolute;\r\n    right: 0%;\r\n    display: flex;\r\n    flex-flow: row wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n    transition: 0.9s;\r\n    \r\n    font-family: 'Noto Sans', sans-serif;\r\n    font-weight: 700;\r\n}\r\n\r\n.inicio{\r\n    width: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\r\n    margin: 0%;\r\n    padding: 0%;\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n    background-size: cover;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-position: center center;\r\n\r\n}\r\n.login{\r\n    background: #F2F2F2;\r\n    width: 550px;\r\n    height: 100%;\r\n    position: absolute;\r\n    right: 0%;\r\n    display: flex;\r\n    flex-flow: row wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n    transition: 0.9s;\r\n    \r\n    font-family: 'Noto Sans', sans-serif;\r\n    font-weight: 700;\r\n}\r\n\r\n.inicio{\r\n    width: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n}\r\n.centrado{\r\n    justify-content: center;\r\n    align-items: center;\r\n    text-align: center;\r\n}", "",{"version":3,"sources":["webpack://./src/app.css"],"names":[],"mappings":"AACA;IACI,UAAU;IACV,WAAW;IACX,yDAAqE;IACrE,sBAAsB;IACtB,4BAA4B;IAC5B,4BAA4B;IAC5B,kCAAkC;;AAEtC;AACA;IACI,mBAAmB;IACnB,YAAY;IACZ,YAAY;IACZ,kBAAkB;IAClB,SAAS;IACT,aAAa;IACb,mBAAmB;IACnB,uBAAuB;IACvB,mBAAmB;IACnB,gBAAgB;;IAEhB,oCAAoC;IACpC,gBAAgB;AACpB;;AAEA;IACI,WAAW;IACX,aAAa;IACb,uBAAuB;AAC3B;AACA;IACI,uBAAuB;IACvB,mBAAmB;IACnB,kBAAkB;AACtB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');\r\nbody{\r\n    margin: 0%;\r\n    padding: 0%;\r\n    background-image: url(./img/lissete-laverde-_qp5lbyVQtE-unsplash.jpg);\r\n    background-size: cover;\r\n    background-repeat: no-repeat;\r\n    background-attachment: fixed;\r\n    background-position: center center;\r\n\r\n}\r\n.login{\r\n    background: #F2F2F2;\r\n    width: 550px;\r\n    height: 100%;\r\n    position: absolute;\r\n    right: 0%;\r\n    display: flex;\r\n    flex-flow: row wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n    transition: 0.9s;\r\n    \r\n    font-family: 'Noto Sans', sans-serif;\r\n    font-weight: 700;\r\n}\r\n\r\n.inicio{\r\n    width: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n}\r\n.centrado{\r\n    justify-content: center;\r\n    align-items: center;\r\n    text-align: center;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -58600,6 +58837,28 @@ module.exports = __webpack_require__.p + "bd9f916a074b783a93bc.jpg";
 
 "use strict";
 module.exports = __webpack_require__.p + "ddf535954d8b9bf4361d.jpg";
+
+/***/ }),
+
+/***/ "./src/img/roberto-nickson-emqnSQwQQDo-unsplash.jpg":
+/*!**********************************************************!*\
+  !*** ./src/img/roberto-nickson-emqnSQwQQDo-unsplash.jpg ***!
+  \**********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "4c30c95c60fa8a19f396.jpg";
+
+/***/ }),
+
+/***/ "./src/img/sidekix-media-xroM8RaMnSI-unsplash.jpg":
+/*!********************************************************!*\
+  !*** ./src/img/sidekix-media-xroM8RaMnSI-unsplash.jpg ***!
+  \********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "bd24049ab7682a698f68.jpg";
 
 /***/ }),
 

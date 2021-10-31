@@ -27,8 +27,8 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faUserTie, faKey } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
-
-function Doble(){
+import { HashRouter, Switch, Route, Link } from "react-router-dom";
+function Triple(){
     return(
         <div className="inicio">
             <Habitaciones>hola</Habitaciones>
@@ -36,4 +36,4 @@ function Doble(){
         
     );
 }
-export default Doble;
+export default Triple;

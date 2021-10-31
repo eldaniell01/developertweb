@@ -35,45 +35,55 @@ import {
   faHouseUser,
 } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
-import { HashRouter, Switch, Route, Link } from "react-router-dom";
+import { HashRouter, Router, Switch, Route, Link } from "react-router-dom";
 import Registro from "./registro";
 import Home from "./hom";
 import We from "./we";
-
+import Navegacion from "./navegación";
+import Simple from "./pages/simple";
+import Doble from "./pages/doble";
+import Cuadruple from "./pages/cuadruple";
+import Triple from "./pages/triple";
 //<Registro></Registro>
 function App() {
   return (
     <>
       <HashRouter>
-        <div>
-          <Navgroup>
-            <Grouplink>
-              <Iconnav icon={faHouseUser}></Iconnav>
-              <Link to="/hom">INICIO</Link>
-              
-            </Grouplink>
-            <Grouplink>
-              <Iconnav icon={faIdCardAlt} to="/registro"></Iconnav>
-              <Link to="/registro">NOSOTROS</Link>
-            </Grouplink>
-            <Grouplink>
-              <Iconnav icon={faHeadset}></Iconnav>
-              <Link to="/registro">CONTACTO</Link>
-            </Grouplink>
-            <Grouplink>
-              <Iconnav icon={faUserTie}></Iconnav>
-              <Link to="/registro">INICIAR SESIÓN O REGISTRARSE</Link>
-            </Grouplink>
-          </Navgroup>
-          <Switch>
-            <Route path="/registro" component={Registro}></Route>
-            <Route path="/hom" component={Home}>
-            </Route>
-          </Switch>
-        </div>
+        <Navegacion></Navegacion>
+        <Route path="/hom" component={Home}></Route>
+        <Route path="/registro" component={Registro}></Route>
+        <Route path="/pages/simple" component={Simple}></Route>
+        <Route path="/pages/doble" component={Doble}></Route>
+              <Route path="/pages/triple" component={Cuadruple}></Route>
+              <Route path="/pages/cuadruple" component={Triple}></Route>
       </HashRouter>
-      
     </>
+    /*<div>
+    <Navgroup>
+      <Grouplink>
+        <Iconnav icon={faHouseUser}></Iconnav>
+        <Link to="/hom">INICIO</Link>
+        
+      </Grouplink>
+      <Grouplink>
+        <Iconnav icon={faIdCardAlt} to="/registro"></Iconnav>
+        <Link to="/navegacion">NOSOTROS</Link>
+      </Grouplink>
+      <Grouplink>
+        <Iconnav icon={faHeadset}></Iconnav>
+        <Link to="/registro">CONTACTO</Link>
+      </Grouplink>
+      <Grouplink>
+        <Iconnav icon={faUserTie}></Iconnav>
+        <Link to="/registro">INICIAR SESIÓN O REGISTRARSE</Link>
+      </Grouplink>
+    </Navgroup>
+    <Switch>
+      <Route path="/registro" component={Registro}></Route>
+      <Route path="/navegacion" component={Navegacion}></Route>
+      <Route path="/hom" component={Home}></Route>
+    </Switch>
+  </div>*/
   );
 }
 function home() {
