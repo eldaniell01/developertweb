@@ -12853,6 +12853,10 @@ module.exports = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Formulario": () => (/* binding */ Formulario),
+/* harmony export */   "Selectbox": () => (/* binding */ Selectbox),
+/* harmony export */   "Optionselect": () => (/* binding */ Optionselect),
+/* harmony export */   "Dateop": () => (/* binding */ Dateop),
+/* harmony export */   "Formulario3": () => (/* binding */ Formulario3),
 /* harmony export */   "Roms": () => (/* binding */ Roms),
 /* harmony export */   "Rom": () => (/* binding */ Rom),
 /* harmony export */   "Texth": () => (/* binding */ Texth),
@@ -12883,7 +12887,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
-var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16, _templateObject17, _templateObject18, _templateObject19, _templateObject20, _templateObject21, _templateObject22, _templateObject23, _templateObject24, _templateObject25, _templateObject26, _templateObject27, _templateObject28, _templateObject29;
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16, _templateObject17, _templateObject18, _templateObject19, _templateObject20, _templateObject21, _templateObject22, _templateObject23, _templateObject24, _templateObject25, _templateObject26, _templateObject27, _templateObject28, _templateObject29, _templateObject30, _templateObject31, _templateObject32;
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
@@ -12909,7 +12913,7 @@ var Formulario2 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form
 var Ocultar = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n    display: none;\n    flex-flow: column;\n    justify-content: center;\n"])));
 var Confirm = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n    border-radius: 3px solid;\n    margin: 15px;\n"])));
 var Interform1 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 25px;\n"])));
-var Interform2 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject16 || (_templateObject16 = _taggedTemplateLiteral(["\n    margin: 15px;\n    padding: 20px;\n    justify-content: center;\n\n"])));
+var Interform2 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject16 || (_templateObject16 = _taggedTemplateLiteral(["\n    margin: 15px;\n    padding: 20px;\n    justify-content: center;\n    justify-items: center;\n    align-items: center;\n    align-self: center;\n\n"])));
 var Buttonsinputs = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject17 || (_templateObject17 = _taggedTemplateLiteral(["\n    background: #CDE5F7;\n    transition: 0.4s;\n    margin: 10px;\n    width: 150px;\n    height: 40px;\n    line-height: 40px;\n    border: none;\n    text-align: center;\n    align-items: center;\n    border-radius: 10px;\n    &:hover{\n        background: #82C3F5;\n    }\n"])));
 var Links = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a(_templateObject18 || (_templateObject18 = _taggedTemplateLiteral(["\n    list-style: none;\n    font-family: 'Noto Sans', sans-serif;\n    font-size: 0.9em;\n    font-weight: 700;\n    margin: 15px;\n    color: black;\n    transition: 0.3s;\n    \n    &:hover{\n        color: ", ";\n        \n    }\n"])), colores.complet);
 var Groups = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject19 || (_templateObject19 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: center;\n    \n"])));
@@ -12922,7 +12926,10 @@ var Img = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templat
 var Texth = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject26 || (_templateObject26 = _taggedTemplateLiteral(["\n    font-family: 'Noto Sans', sans-serif;\n    font-weight: bold;\n    font-size: 1.4em;\n    margin: 15px;\n"])));
 var Roms = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject27 || (_templateObject27 = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    justify-items: center;\n    gap: 25px;\n    margin: 15px;\n"])));
 var Rom = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject28 || (_templateObject28 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-flow: column;\n    justify-content: center;\n    align-items: center;\n\n"])));
-var Formulario3 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form(_templateObject29 || (_templateObject29 = _taggedTemplateLiteral(["\n    display: grid;\n"])));
+var Formulario3 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form(_templateObject29 || (_templateObject29 = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    \n    gap: 25px;\n    margin: 15px;\n"])));
+var Selectbox = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].select(_templateObject30 || (_templateObject30 = _taggedTemplateLiteral(["\n    font-family: 'Noto Sans', sans-serif;\n    font-weight: bold;\n    font-size: 0.9em;\n    font-weight: 700;\n    text-align: center;\n"])));
+var Optionselect = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].option(_templateObject31 || (_templateObject31 = _taggedTemplateLiteral(["\n    background-color: #EDEDE6;\n    font-family: 'Noto Sans', sans-serif;\n    font-weight: bold;\n    font-size: 0.9em;\n    font-weight: 700;\n    text-align: center;\n    &:hover{\n        background-color: #EDEDE6;\n    }\n"])));
+var Dateop = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject32 || (_templateObject32 = _taggedTemplateLiteral(["\n    background-color: #EDEDE6;\n    font-family: 'Noto Sans', sans-serif;\n    font-weight: bold;\n    font-size: 0.9em;\n    font-weight: 600;\n    border-radius: 8px;\n    &:hover{\n        background-color: #EDEDE6;\n    }\n"])));
 
 
 /***/ }),
@@ -13368,7 +13375,24 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Formpay() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "inicio"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Habitaciones, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Formulario, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Title, null, "Reservaci\xF3n de Habitaci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Interform1, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Interform2, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Labell, null, "Nombre"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Textbox, {
+    type: "text"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Interform2, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Labell, null, "Apellido"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Textbox, {
+    type: "text"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Interform2, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Labell, null, "DPI"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Textbox, {
+    type: "text"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Interform2, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Labell, null, "Direcci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Textbox, {
+    type: "text"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Interform2, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Labell, null, "Tel\xE9fono"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Textbox, {
+    type: "text"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Roms, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Interform2, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Labell, null, "Fecha de reservaci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Dateop, {
+    type: "date",
+    name: "fechaesperada",
+    min: "2018-01-01",
+    max: "2021-12-31"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Interform2, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Labell, null, "Tipo de Habitaci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Selectbox, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Optionselect, null, "hola"))))))));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Formpay);

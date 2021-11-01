@@ -123,6 +123,9 @@ const Interform2 = styled.div`
     margin: 15px;
     padding: 20px;
     justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-self: center;
 
 `
 
@@ -252,5 +255,39 @@ const Rom = styled.div`
 
 const Formulario3 =styled.form`
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    gap: 25px;
+    margin: 15px;
 `
-export {Formulario, Roms, Rom, Texth, Img, Descrip, Habitaciones, Iconnav, Grouplink, Navgroup, Groups, Links, Ocultar, Buttonsinputs, Confirm, Formulario2,  Interform1, Interform2, Title, Textbutton, Labell, Inputsgrup, Buttons, Textbox, Leyend, Iconvalue, Buttongrup, Iconuser};
+
+const Selectbox = styled.select`
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+    font-weight: 700;
+    text-align: center;
+`
+const Optionselect = styled.option`
+    background-color: #EDEDE6;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+    font-weight: 700;
+    text-align: center;
+    &:hover{
+        background-color: #EDEDE6;
+    }
+`
+const Dateop = styled.input`
+    background-color: #EDEDE6;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+    font-weight: 600;
+    border-radius: 8px;
+    &:hover{
+        background-color: #EDEDE6;
+    }
+`
+export {Formulario, Selectbox, Optionselect, Dateop, Formulario3, Roms, Rom, Texth, Img, Descrip, Habitaciones, Iconnav, Grouplink, Navgroup, Groups, Links, Ocultar, Buttonsinputs, Confirm, Formulario2,  Interform1, Interform2, Title, Textbutton, Labell, Inputsgrup, Buttons, Textbox, Leyend, Iconvalue, Buttongrup, Iconuser};
