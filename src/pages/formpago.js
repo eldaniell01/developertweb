@@ -77,7 +77,34 @@ function Formpay() {
               <Optionselect>hola</Optionselect>
             </Selectbox>
           </Interform2>
+          <Interform2>
+            <Labell>Alquiler de Vehículos</Labell>
+            <Selectbox>
+              <Optionselect>hola</Optionselect>
+            </Selectbox>
+          </Interform2>
+          <Interform2>
+            <Labell> Elegir tipo de Traslado</Labell>
+            <Selectbox>
+              <Optionselect>hola</Optionselect>
+            </Selectbox>
+          </Interform2>
+          <Interform2>
+            <Labell>Agregar desayunos</Labell>
+            <Selectbox>
+              <Optionselect>hola</Optionselect>
+            </Selectbox>
+          </Interform2>
         </Roms>
+        <hr/>
+        <Roms>
+          <div></div>
+          
+          <Buttons type="button"><Textbutton>Reservar</Textbutton></Buttons>
+
+       
+          
+          </Roms>
       </Formulario>
       </Habitaciones>
     </div>

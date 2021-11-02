@@ -12,7 +12,8 @@ const colores ={
 const Formulario = styled.form`
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
+    
+    gap: 15px;
     
 `
 
@@ -256,7 +257,6 @@ const Rom = styled.div`
 const Formulario3 =styled.form`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
     gap: 25px;
     margin: 15px;
 `

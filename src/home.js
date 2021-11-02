@@ -41,6 +41,7 @@ import Doble from "./pages/doble";
 import Cuadruple from "./pages/cuadruple";
 import Triple from "./pages/triple";
 import Formpay from "./pages/formpago";
+import Dashboard from "./pages/dashboard";
 //<Registro></Registro>
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
         <Route path="/pages/triple" component={Triple}></Route>
         <Route path="/pages/cuadruple" component={Cuadruple}></Route>
         <Route path="/pages/formpago" component={Formpay}></Route>
+        <Route path="/pages/dashboard" component={Dashboard}></Route>
       </HashRouter>
     </>
     /*<div>

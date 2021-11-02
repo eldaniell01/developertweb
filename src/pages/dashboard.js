@@ -1,5 +1,5 @@
 import React from "react";
-import ChartistGraph from "react-chartist";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
 import {
@@ -33,7 +33,7 @@ import { HashRouter, Switch, Route, Link } from "react-router-dom";
 function Dashboard() {
   return (
     <>
-      
+      <h1>hola</h1>
     </>
   );
 }

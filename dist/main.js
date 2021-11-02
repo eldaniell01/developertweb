@@ -12898,7 +12898,7 @@ var colores = {
   error: "#F20530",
   complet: "#3FD49B"
 };
-var Formulario = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: 1fr;\n    gap: 10px;\n    \n"])));
+var Formulario = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: 1fr;\n    \n    gap: 15px;\n    \n"])));
 var Labell = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].label(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: center;\n    font-weight: 700;\n    font-size: 1.1em;\n    align-items: center;\n"])));
 var Inputsgrup = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    position: relative;\n"])));
 var Textbox = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    width: 100%;\n    background: white;\n    border: 3px;\n    border-radius: 10px;\n    height: 45px;\n    text-align: center;\n    padding: 0 40px 0 40px;\n    line-height: 45px;\n    transition: 0.5s ease all;\n    border: 3px solid transparent;\n    &:focus{\n        border: 3px solid ", ";\n        outline: none;\n        cursor: pointer;\n    }\n"])), colores.border);
@@ -12926,7 +12926,7 @@ var Img = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templat
 var Texth = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject26 || (_templateObject26 = _taggedTemplateLiteral(["\n    font-family: 'Noto Sans', sans-serif;\n    font-weight: bold;\n    font-size: 1.4em;\n    margin: 15px;\n"])));
 var Roms = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject27 || (_templateObject27 = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    justify-items: center;\n    gap: 25px;\n    margin: 15px;\n"])));
 var Rom = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject28 || (_templateObject28 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-flow: column;\n    justify-content: center;\n    align-items: center;\n\n"])));
-var Formulario3 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form(_templateObject29 || (_templateObject29 = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    \n    gap: 25px;\n    margin: 15px;\n"])));
+var Formulario3 = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].form(_templateObject29 || (_templateObject29 = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 25px;\n    margin: 15px;\n"])));
 var Selectbox = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].select(_templateObject30 || (_templateObject30 = _taggedTemplateLiteral(["\n    font-family: 'Noto Sans', sans-serif;\n    font-weight: bold;\n    font-size: 0.9em;\n    font-weight: 700;\n    text-align: center;\n"])));
 var Optionselect = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].option(_templateObject31 || (_templateObject31 = _taggedTemplateLiteral(["\n    background-color: #EDEDE6;\n    font-family: 'Noto Sans', sans-serif;\n    font-weight: bold;\n    font-size: 0.9em;\n    font-weight: 700;\n    text-align: center;\n    &:hover{\n        background-color: #EDEDE6;\n    }\n"])));
 var Dateop = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject32 || (_templateObject32 = _taggedTemplateLiteral(["\n    background-color: #EDEDE6;\n    font-family: 'Noto Sans', sans-serif;\n    font-weight: bold;\n    font-size: 0.9em;\n    font-weight: 600;\n    border-radius: 8px;\n    &:hover{\n        background-color: #EDEDE6;\n    }\n"])));
@@ -13041,8 +13041,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _registro__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./registro */ "./src/registro.js");
 /* harmony import */ var _hom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./hom */ "./src/hom.js");
 /* harmony import */ var _we__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./we */ "./src/we.js");
@@ -13052,6 +13052,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_cuadruple__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/cuadruple */ "./src/pages/cuadruple.js");
 /* harmony import */ var _pages_triple__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/triple */ "./src/pages/triple.js");
 /* harmony import */ var _pages_formpago__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/formpago */ "./src/pages/formpago.js");
+/* harmony import */ var _pages_dashboard__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/dashboard */ "./src/pages/dashboard.js");
+
 
 
 
@@ -13072,27 +13074,30 @@ __webpack_require__.r(__webpack_exports__);
  //<Registro></Registro>
 
 function App() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.HashRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_navegaci_n__WEBPACK_IMPORTED_MODULE_9__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.HashRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_navegaci_n__WEBPACK_IMPORTED_MODULE_9__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
     path: "/hom",
     component: _hom__WEBPACK_IMPORTED_MODULE_7__["default"]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
     path: "/registro",
     component: _registro__WEBPACK_IMPORTED_MODULE_6__["default"]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
     path: "/pages/simple",
     component: _pages_simple__WEBPACK_IMPORTED_MODULE_10__["default"]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
     path: "/pages/doble",
     component: _pages_doble__WEBPACK_IMPORTED_MODULE_11__["default"]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
     path: "/pages/triple",
     component: _pages_triple__WEBPACK_IMPORTED_MODULE_13__["default"]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
     path: "/pages/cuadruple",
     component: _pages_cuadruple__WEBPACK_IMPORTED_MODULE_12__["default"]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_16__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
     path: "/pages/formpago",
     component: _pages_formpago__WEBPACK_IMPORTED_MODULE_14__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Route, {
+    path: "/pages/dashboard",
+    component: _pages_dashboard__WEBPACK_IMPORTED_MODULE_15__["default"]
   })))
   /*<div>
   <Navgroup>
@@ -13290,6 +13295,40 @@ function Cuadruple() {
 
 /***/ }),
 
+/***/ "./src/pages/dashboard.js":
+/*!********************************!*\
+  !*** ./src/pages/dashboard.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var _elements_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../elements/forms */ "./src/elements/forms.js");
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+
+
+
+
+function Dashboard() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "hola"));
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Dashboard);
+
+/***/ }),
+
 /***/ "./src/pages/doble.js":
 /*!****************************!*\
   !*** ./src/pages/doble.js ***!
@@ -13392,7 +13431,9 @@ function Formpay() {
     name: "fechaesperada",
     min: "2018-01-01",
     max: "2021-12-31"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Interform2, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Labell, null, "Tipo de Habitaci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Selectbox, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Optionselect, null, "hola"))))))));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Interform2, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Labell, null, "Tipo de Habitaci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Selectbox, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Optionselect, null, "hola"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Interform2, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Labell, null, "Alquiler de Veh\xEDculos"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Selectbox, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Optionselect, null, "hola"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Interform2, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Labell, null, " Elegir tipo de Traslado"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Selectbox, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Optionselect, null, "hola"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Interform2, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Labell, null, "Agregar desayunos"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Selectbox, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Optionselect, null, "hola")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Roms, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Buttons, {
+    type: "button"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_elements_forms__WEBPACK_IMPORTED_MODULE_2__.Textbutton, null, "Reservar")))))));
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Formpay);
