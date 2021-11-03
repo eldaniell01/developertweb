@@ -47,7 +47,7 @@ function Home() {
           <Habitaciones>
             <Descrip>
               <div className="centrado">
-                <Link to="/pages/simple">
+                <Link to="/pages/formpago">
                   <Texth>Habitación Simple</Texth>
                 </Link>
                 <Textbutton>
@@ -56,7 +56,7 @@ function Home() {
                 </Textbutton>
               </div>
               <div>
-                <Link to="/pages/simple">
+                <Link to="/pages/formpago">
                   <Img src={img1}></Img>
                 </Link>
               </div>
@@ -64,12 +64,12 @@ function Home() {
             <hr />
             <Descrip>
             <div className="centrado">
-                <Link to="/pages/doble">
+                <Link to="/pages/formpago">
                   <Img src={img2}></Img>
                 </Link>
               </div>
               <div className="centrado">
-                <Link to="/pages/doble">
+                <Link to="/pages/formpago">
                   <Texth>Habitación Doble</Texth>
                 </Link>
                 <Textbutton>
@@ -80,7 +80,7 @@ function Home() {
             <hr />
             <Descrip>
             <div className="centrado">
-                <Link to="/pages/triple">
+                <Link to="/pages/formpago">
                   <Texth>Habitación Triple</Texth>
                 </Link>
                 <Textbutton>
@@ -89,7 +89,7 @@ function Home() {
                 </Textbutton>
               </div>
               <div>
-                <Link to="/pages/triple">
+                <Link to="/pages/formpago">
                   <Img src={img3}></Img>
                 </Link>
               </div>
@@ -97,12 +97,12 @@ function Home() {
             <hr />
             <Descrip>
               <div>
-                <Link to="/pages/cuadruple">
+                <Link to="/pages/formpago">
                   <Img src={img4}></Img>
                 </Link>
               </div>
               <div className="centrado">
-                <Link to="/pages/cuadruple">
+                <Link to="/pages/formpago">
                   <Texth>Habitación Cuadruple</Texth>
                 
                 </Link>

@@ -55,8 +55,8 @@ export default class Navegacion extends Component {
             </li>
   
             <li className="nav-item">
-              <Link className="nav-link" to="/">
-                CONTACTO
+              <Link className="nav-link" to="/pages/formpago">
+                RESERVAR HABITACIÓN
               </Link>
             </li>
   

@@ -26,8 +26,9 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faUserTie, faKey } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
+import { text } from "@fortawesome/fontawesome-svg-core";
 
-const url_login = "https://localhost:3000/api/login.php";
+const url_login = "http://localhost:3000/api/login.php";
 
 const sendData = async (url, dat = {}) => {
   try {
@@ -40,14 +41,18 @@ const sendData = async (url, dat = {}) => {
     })
       .then((answer) => answer.text())
       .then((text) => console.log(text));
-    //console.log(answer);
-    //const json = await answer.json();
-    //console.log(json);
+      
+      
   } catch (error) {
     console.log("Error happened here!");
     console.error(error);
   }
 };
+
+function mostrar(n){
+  document.getElementById("email1").innerHTML = n.nombre[0];
+}
+
 
 function Registro() {
   const [list, setlist] = useState([]);
@@ -68,7 +73,7 @@ function Registro() {
     getUser();
   }, []);
   async function getUser() {
-    const res = await axios.get("https://localhost:3000/api/index.php");
+    const res = await axios.get("http://localhost:3000/api/index.php");
     setlist(res.data);
     console.log(res.data);
   }
@@ -80,7 +85,7 @@ function Registro() {
       alert("todo");
       e.preventDefault();
       const obj = { nombre, apellido, direccion, telefono, dpi, correo, pass };
-      const res = await axios.post("https://localhost:3000/api/index.php", obj);
+      const res = await axios.post("http://localhost:3000/api/index.php", obj);
 
       console.log(res.data);
     }
@@ -128,6 +133,7 @@ function Registro() {
       };
       console.log(data);
       sendData(url_login, data);
+     
     }
   };
 
