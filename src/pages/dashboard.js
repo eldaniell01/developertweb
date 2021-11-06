@@ -33,7 +33,7 @@ import { HashRouter, Switch, Route, Link } from "react-router-dom";
 function Dashboard() {
   return (
     <>
-      <h1>hola</h1>
+      <h1>hola mundo </h1>
     </>
   );
 }

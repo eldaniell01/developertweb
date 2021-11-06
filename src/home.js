@@ -42,22 +42,34 @@ import Cuadruple from "./pages/cuadruple";
 import Triple from "./pages/triple";
 import Formpay from "./pages/formpago";
 import Dashboard from "./pages/dashboard";
+import Rutas from "./rutas";
 //<Registro></Registro>
 function App() {
+  const [conectado, setconectado] = useState(false);
+    const acceder = (estado)=>{
+        setconectado(estado);
+    }
   return (
-    <>
+    
+   
+        conectado ? <Dashboard/> : <Registro acceder ={acceder}/>
+
+    /*<>
+    
       <HashRouter>
         <Navegacion></Navegacion>
         <Route path="/hom" component={Home}></Route>
         <Route path="/registro" component={Registro}></Route>
+        <Route path="/rutas" component={Rutas}></Route>
         <Route path="/pages/simple" component={Simple}></Route>
         <Route path="/pages/doble" component={Doble}></Route>
         <Route path="/pages/triple" component={Triple}></Route>
         <Route path="/pages/cuadruple" component={Cuadruple}></Route>
         <Route path="/pages/formpago" component={Formpay}></Route>
-        <Route path="/pages/dashboard" component={Dashboard}></Route>
+        
       </HashRouter>
-    </>
+      
+    </>*/
     /*<div>
     <Navgroup>
       <Grouplink>

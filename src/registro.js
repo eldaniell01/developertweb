@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import props from "prop-types";
 import { render } from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
@@ -30,7 +31,7 @@ import { text } from "@fortawesome/fontawesome-svg-core";
 
 const url_login = "http://localhost:3000/api/login.php";
 
-const sendData = async (url, dat = {}) => {
+const sendData = async (url, dat) => {
   try {
     const answer = await fetch(url, {
       method: "POST",
@@ -39,14 +40,16 @@ const sendData = async (url, dat = {}) => {
         "Content-Type": "application/json",
       },
     })
-      .then((answer) => answer.text())
+      .then((answer) => answer.json())
       .then((text) => console.log(text));
-      
+     
+      return text;
       
   } catch (error) {
     console.log("Error happened here!");
     console.error(error);
   }
+  
 };
 
 function mostrar(n){
@@ -54,7 +57,7 @@ function mostrar(n){
 }
 
 
-function Registro() {
+function Registro(props) {
   const [list, setlist] = useState([]);
   const [nombre, setnombre] = useState("");
   const [apellido, setapellido] = useState("");
@@ -122,18 +125,19 @@ function Registro() {
     setpass("");
     setbandera(true);
   }
-  const login = (e) => {
+  const login = async (e) => {
     if (validarlog() != true) {
       console.log("error");
     } else {
       e.preventDefault();
       const data = {
-        usuario: refUser.current.value,
-        clave: refPassword.current.value,
+        "usuario": refUser.current.value,
+        "clave": refPassword.current.value,
       };
       console.log(data);
-      sendData(url_login, data);
-     
+      const respuesta = await sendData(url_login, data);
+      console.log("desde el evento", respuesta);
+      props.acceder(respuesta.conectado);
     }
   };
 

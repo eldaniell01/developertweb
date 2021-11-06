@@ -9,10 +9,10 @@
         $data = json_decode(file_get_contents("php://input"), true);
         $correo = $data['usuario'];
         $pass = $data['clave'];
-		$vector = array();
+		
 		$api = new executes();
 		$vector = $api->login($correo, $pass);
-		$json =json_encode($vector);
+		$json =json_encode(array('conectado'=>true, $vector));
 		echo $json;
 	}
 
