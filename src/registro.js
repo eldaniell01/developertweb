@@ -654,6 +654,9 @@ function validetions(e) {
   return dat;
 }
 
+
+
+
 function chec1(e) {
   if (!document.getElementById("termin").checked) {
     alert("debe de aceptar los terminos");
